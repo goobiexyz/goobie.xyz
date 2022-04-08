@@ -31,12 +31,16 @@ The height is the full container height */
 
   /* Apply the mask image and mask size variables */
   mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+  -webkit-mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
   mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+  -webkit-mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
 
   /* Position the content gradient in the top left, and the
 scroll gradient in the top right */
   mask-position: 0 0, 100% 0;
+  -webkit-mask-position: 0 0, 100% 0;
 
   /* We don't repeat our mask images */
   mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-repeat: no-repeat, no-repeat;
 }
