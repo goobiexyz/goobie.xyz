@@ -127,7 +127,7 @@
 
     time {
       display: block;
-      font-family: mono;
+      font-family: monospace;
       margin-top: 6px;
       font-size: 0.9rem;
     }
