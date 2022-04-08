@@ -18,7 +18,7 @@
     {#each queue as comm}
       <div class='queue-item'>
         <span class='name'>{comm.name}</span>
-        <span class='labels'>{comm.labels.map(l => l.name).join(',')}</span>
+        <span class='labels'>{comm.labels.map(l => l.name).join(', ')}</span>
       </div>
     {/each}
   </ScrollBox>
