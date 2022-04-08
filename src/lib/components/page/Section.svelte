@@ -124,6 +124,7 @@
       -webkit-mask-position: center;
       -webkit-mask-size: 10px;
       -webkit-mask-repeat: repeat no-repeat; // 'space' produced buggy results
+      // I found an article about maybe using an svg line instead, in bookmarks
 
       width: 50%;
       content: ' ';
