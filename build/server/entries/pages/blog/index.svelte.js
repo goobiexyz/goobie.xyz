@@ -1,6 +1,6 @@
 import { c as create_ssr_component, e as escape, h as subscribe, d as each, v as validate_component } from "../../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../../chunks/Page-3fef82e1.js";
-import { p as page, P as PageControls } from "../../../chunks/stores-c8d7d4bc.js";
+import { P as Page, S as Section } from "../../../chunks/Page-961fbe05.js";
+import { p as page, P as PageControls } from "../../../chunks/stores-05150326.js";
 import { c as convertDate } from "../../../chunks/convert-date-825a956c.js";
 import "remark";
 import "strip-markdown";

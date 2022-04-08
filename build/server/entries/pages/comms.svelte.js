@@ -1,6 +1,6 @@
 import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component, d as each } from "../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../chunks/Page-3fef82e1.js";
-import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-b1193484.js";
+import { P as Page, S as Section } from "../../chunks/Page-961fbe05.js";
+import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-27f41b2a.js";
 /* empty css                                                            */const thumbsDir = "/images/thumbs/comms/";
 const charArt = {
   extraCharPrice: "10",
@@ -161,7 +161,7 @@ const CommsQueue = create_ssr_component(($$result, $$props, $$bindings, slots) =
     default: () => {
       return `${each(queue, (comm) => {
         return `<div class="${"queue-item svelte-wxfy9x"}"><span class="${"name svelte-wxfy9x"}">${escape(comm.name)}</span>
-        <span class="${"labels svelte-wxfy9x"}">${escape(comm.labels.map((l) => l.name).join(","))}</span>
+        <span class="${"labels svelte-wxfy9x"}">${escape(comm.labels.map((l) => l.name).join(", "))}</span>
       </div>`;
       })}`;
     }
