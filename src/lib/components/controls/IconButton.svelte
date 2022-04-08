@@ -32,6 +32,10 @@
     mask-position: center;
     mask-repeat: no-repeat;
 
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+
     &.white {
       background: white;
     }
@@ -41,27 +45,35 @@
 
     &.logo {
       mask-image: url('/images/icons/b_logo.svg');
+      -webkit-mask-image: url('/images/icons/b_logo.svg');
     }
     &.twitter {
       mask-image: url('/images/icons/b_twitter.svg');
+      -webkit-mask-image: url('/images/icons/b_twitter.svg');
     }
     &.youtube {
       mask-image: url('/images/icons/b_youtube.svg');
+      -webkit-mask-image: url('/images/icons/b_youtube.svg');
     }
     &.soundcloud {
       mask-image: url('/images/icons/b_soundcloud.svg');
+      -webkit-mask-image: url('/images/icons/b_soundcloud.svg');
     }
     &.github {
       mask-image: url('/images/icons/b_github.svg');
+      -webkit-mask-image: url('/images/icons/b_github.svg');
     }
     &.close {
       mask-image: url('/images/icons/b_close.svg');
+      -webkit-mask-image: url('/images/icons/b_close.svg');
     }
     &.right-arrow {
       mask-image: url('/images/icons/b_arrow_r.svg');
+      -webkit-mask-image: url('/images/icons/b_arrow_r.svg');
     }
     &.left-arrow {
       mask-image: url('/images/icons/b_arrow_l.svg');
+      -webkit-mask-image: url('/images/icons/b_arrow_l.svg');
     }
     &.back-circle {
       background: none;

@@ -119,6 +119,12 @@
       mask-size: 10px;
       mask-repeat: space no-repeat;
 
+      -webkit-mask-image: url('/images/borders/blue_dot.svg');
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;
+      -webkit-mask-size: 10px;
+      -webkit-mask-repeat: repeat no-repeat; // 'space' produced buggy results
+
       width: 50%;
       content: ' ';
     }
