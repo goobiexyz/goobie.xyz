@@ -3,7 +3,7 @@ import { P as Page, S as Section } from "../../chunks/Page-3fef82e1.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-b1193484.js";
 /* empty css                                                            *//* empty css                                                          */import { c as convertDate } from "../../chunks/convert-date-825a956c.js";
-import { M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-008ad407.js";
+import { M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-ada17a0f.js";
 /* empty css                                                             */import "../../chunks/SvelteMarkdown-bfd616a7.js";
 var NavButton_svelte_svelte_type_style_lang = "";
 const css$5 = {
@@ -257,7 +257,7 @@ const css$1 = {
 };
 const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { post } = $$props;
-  let thumbnail = "api" + post.attributes.thumbnail.data.attributes.formats.thumbnail.url;
+  let thumbnail = "https://api.graciebell.art" + post.attributes.thumbnail.data.attributes.formats.thumbnail.url;
   let type = post.attributes.media_type;
   let title = post.attributes.title;
   let date = post.attributes.date;

@@ -1,7 +1,7 @@
 import { c as create_ssr_component, h as subscribe, v as validate_component, d as each, a as add_attribute, e as escape } from "../../chunks/index-bbc75d3b.js";
 import { P as Page, S as Section } from "../../chunks/Page-3fef82e1.js";
 import { P as PageControls, p as page } from "../../chunks/stores-c8d7d4bc.js";
-import { M as MediaModal } from "../../chunks/MediaModal-008ad407.js";
+import { M as MediaModal } from "../../chunks/MediaModal-ada17a0f.js";
 /* empty css                                                             */import "../../chunks/convert-date-825a956c.js";
 import "../../chunks/SvelteMarkdown-bfd616a7.js";
 var art_svelte_svelte_type_style_lang = "";
@@ -12,7 +12,7 @@ const css = {
 let pageSize = 15;
 async function load({ fetch }) {
   let params = [`filters[media_type][$eq]=art`, `pagination[pageSize]=${pageSize}`];
-  let res = await fetch(`/api/posts?${params.join("&")}`);
+  let res = await fetch(`https://api.graciebell.art/api/posts?${params.join("&")}`);
   let data = await res.json();
   return {
     props: { pagination: data.meta.pagination }
@@ -46,7 +46,7 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { title: "Art" }, {}, 
             return `${validate_component(PageControls, "PageControls").$$render($$result, { pageNum, lastPage }, {}, {})}
 
     <div class="${"gallery svelte-q4wnzr"}">${each(posts, (post) => {
-              return `<button${add_attribute("title", post.attributes.title, 0)} class="${"svelte-q4wnzr"}"><img src="${"/api" + escape(post.attributes.thumbnail.data.attributes.url)}" alt="${""}" class="${"svelte-q4wnzr"}">
+              return `<button${add_attribute("title", post.attributes.title, 0)} class="${"svelte-q4wnzr"}"><img src="${"https://api.graciebell.art" + escape(post.attributes.thumbnail.data.attributes.formats.thumbnail.url)}" alt="${""}" class="${"svelte-q4wnzr"}">
         </button>`;
             })}</div>`;
           }

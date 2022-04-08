@@ -15,16 +15,6 @@
     "src": "src/routes/api/graciebot/output-channels.js",
     "isEntry": true
   },
-  "src/routes/api/uploads/[fileName].ts": {
-    "file": "entries/endpoints/api/uploads/_fileName_.ts.js",
-    "src": "src/routes/api/uploads/[fileName].ts",
-    "isEntry": true
-  },
-  "src/routes/api/posts.ts": {
-    "file": "entries/endpoints/api/posts.ts.js",
-    "src": "src/routes/api/posts.ts",
-    "isEntry": true
-  },
   ".svelte-kit/runtime/components/layout.svelte": {
     "file": "entries/fallbacks/layout.svelte.js",
     "src": ".svelte-kit/runtime/components/layout.svelte",
@@ -51,7 +41,7 @@
       "_social-links-dba47162.js",
       "_ScrollBox-b1193484.js",
       "_convert-date-825a956c.js",
-      "_MediaModal-008ad407.js",
+      "_MediaModal-ada17a0f.js",
       "_SvelteMarkdown-bfd616a7.js"
     ],
     "css": [
@@ -145,7 +135,7 @@
       "_index-bbc75d3b.js",
       "_Page-3fef82e1.js",
       "_stores-c8d7d4bc.js",
-      "_MediaModal-008ad407.js",
+      "_MediaModal-ada17a0f.js",
       "_convert-date-825a956c.js",
       "_SvelteMarkdown-bfd616a7.js"
     ],
@@ -176,8 +166,8 @@
       "assets/Flex2Col.svelte_svelte_type_style_lang-8755eb98.css"
     ]
   },
-  "_MediaModal-008ad407.js": {
-    "file": "chunks/MediaModal-008ad407.js",
+  "_MediaModal-ada17a0f.js": {
+    "file": "chunks/MediaModal-ada17a0f.js",
     "imports": [
       "_index-bbc75d3b.js",
       "_convert-date-825a956c.js",

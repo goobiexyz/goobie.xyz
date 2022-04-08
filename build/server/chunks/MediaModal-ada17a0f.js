@@ -69,7 +69,7 @@ const css$2 = {
 const MusicCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   createEventDispatcher();
   let { meta } = $$props;
-  let cover = "/api" + meta.thumbnail.data.attributes.url;
+  let cover = "https://api.graciebell.art" + meta.thumbnail.data.attributes.url;
   if ($$props.meta === void 0 && $$bindings.meta && meta !== void 0)
     $$bindings.meta(meta);
   $$result.css.add(css$2);
@@ -94,7 +94,7 @@ const ModalContent = create_ssr_component(($$result, $$props, $$bindings, slots)
     $$bindings.post(post);
   $$result.css.add(css$1);
   return `<div class="${"content svelte-xjgstc"}">${type == "art" ? `${validate_component(Image, "Image").$$render($$result, {
-    src: "/api" + post.attributes.media_file.data.attributes.formats.medium.url
+    src: "https://api.graciebell.art" + post.attributes.media_file.data.attributes.formats.large.url
   }, {}, {})}` : `${type == "blog" ? `${validate_component(BlogPost, "BlogPost").$$render($$result, { meta: post.attributes }, {}, {})}` : `${type == "video" ? `${validate_component(VideoCard, "VideoCard").$$render($$result, { videoID: post.attributes.video_id }, {}, {})}` : `${type == "music" ? `${validate_component(MusicCard, "MusicCard").$$render($$result, { meta: post.attributes }, {}, {})}` : ``}`}`}`}
 </div>`;
 });
