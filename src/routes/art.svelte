@@ -7,7 +7,7 @@
       `filters[media_type][$eq]=art`, // filter only art
       `pagination[pageSize]=${pageSize}` // posts per page
     ]
-    let res = await fetch(`/api/posts?${params.join('&')}`)
+    let res = await fetch(`https://api.graciebell.art/api/posts?${params.join('&')}`)
     let data = await res.json()
     return {
       props: {
@@ -61,7 +61,7 @@
       `populate[0]=thumbnail`, // get the thumbnail
       `populate[1]=media_file` // get the actual image
     ]
-    let res = await fetch(`/api/posts?${params.join('&')}`)
+    let res = await fetch(`https://api.graciebell.art/api/posts?${params.join('&')}`)
     let resJson = await res.json()
     posts = resJson.data
   }
@@ -93,7 +93,7 @@
       {#each posts as post}
         <button title={post.attributes.title} on:click={() => openModal(post)}>
           <img
-            src='/api{post.attributes.thumbnail.data.attributes.url}'
+            src='https://api.graciebell.art{post.attributes.thumbnail.data.attributes.formats.thumbnail.url}'
             alt=''
           />
         </button>

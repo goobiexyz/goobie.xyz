@@ -10,7 +10,7 @@
   let isLoading = true
   let posts = []
   onMount(async () => {
-    await fetch('/api/posts?sort=date:desc&populate[0]=thumbnail&populate[1]=media_file&pagination[limit]=5').then((res) => { // get max 5
+    await fetch('https://api.graciebell.art/api/posts?sort=date:desc&populate[0]=thumbnail&populate[1]=media_file&pagination[limit]=5').then((res) => { // get max 5
       res.json().then((json) => {
         posts = json.data
         isLoading = false

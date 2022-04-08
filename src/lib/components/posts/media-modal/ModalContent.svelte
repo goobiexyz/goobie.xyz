@@ -11,7 +11,7 @@
 
 <div class='content' on:click>
   {#if type == 'art'}
-    <Image src='/api{post.attributes.media_file.data.attributes.formats.medium.url}' on:load />
+    <Image src='https://api.graciebell.art{post.attributes.media_file.data.attributes.formats.large.url}' on:load />
 
   {:else if type == 'blog'}
     <BlogPost meta={post.attributes} on:load />

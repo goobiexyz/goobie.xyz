@@ -7,7 +7,7 @@
   let wavesurfer
   let isPaused = true
   let isLoading = true
-  let cover = '/api'+meta.thumbnail.data.attributes.url
+  let cover = 'https://api.graciebell.art'+meta.thumbnail.data.attributes.url
 
   function initWavesurfer() {
     wavesurfer = window.WaveSurfer.create({
@@ -27,7 +27,7 @@
       isLoading = false
     })
 
-    wavesurfer.load('/api'+meta.media_file.data.attributes.url)
+    wavesurfer.load('https://api.graciebell.art'+meta.media_file.data.attributes.url)
   }
 
 

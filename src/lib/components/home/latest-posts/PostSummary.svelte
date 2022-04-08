@@ -4,7 +4,7 @@
   import convertDate from '$lib/convert-date.js'
 
   export let post
-  let thumbnail = 'api'+post.attributes.thumbnail.data.attributes.formats.thumbnail.url
+  let thumbnail = 'https://api.graciebell.art'+post.attributes.thumbnail.data.attributes.formats.thumbnail.url
   let type = post.attributes.media_type
   let title = post.attributes.title
   let date = post.attributes.date
