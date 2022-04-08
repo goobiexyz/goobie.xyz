@@ -66,12 +66,19 @@
     }
 
     /* Webkit / Blink */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-button {
+      background: transparent;
+      height: 3px
+    }
     &::-webkit-scrollbar-thumb {
         background-color: white;
-        &.black {
-          background-color: var(--black);
-        }
         border-radius: 9999px; /* always round */
+    }
+    &.black::-webkit-scrollbar-thumb {
+        background-color: var(--black);
     }
 
     &::-webkit-scrollbar-track {
