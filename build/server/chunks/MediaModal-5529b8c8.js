@@ -90,11 +90,20 @@ const css$1 = {
 const ModalContent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { post } = $$props;
   let type = post.attributes.media_type;
+  let artImage;
+  if (type === "art") {
+    let large = post.attributes.media_file.data.attributes.formats.large;
+    if (large) {
+      artImage = large.url;
+    } else {
+      artImage = post.attributes.media_file.data.attributes.url;
+    }
+  }
   if ($$props.post === void 0 && $$bindings.post && post !== void 0)
     $$bindings.post(post);
   $$result.css.add(css$1);
   return `<div class="${"content svelte-xjgstc"}">${type == "art" ? `${validate_component(Image, "Image").$$render($$result, {
-    src: "https://api.graciebell.art" + post.attributes.media_file.data.attributes.formats.large.url
+    src: "https://api.graciebell.art" + artImage
   }, {}, {})}` : `${type == "blog" ? `${validate_component(BlogPost, "BlogPost").$$render($$result, { meta: post.attributes }, {}, {})}` : `${type == "video" ? `${validate_component(VideoCard, "VideoCard").$$render($$result, { videoID: post.attributes.video_id }, {}, {})}` : `${type == "music" ? `${validate_component(MusicCard, "MusicCard").$$render($$result, { meta: post.attributes }, {}, {})}` : ``}`}`}`}
 </div>`;
 });
