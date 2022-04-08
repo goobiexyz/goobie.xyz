@@ -1,0 +1,6 @@
+@mixin remove-link-style {
+  a, a:visited {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}

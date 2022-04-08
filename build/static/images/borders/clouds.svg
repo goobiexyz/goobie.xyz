@@ -1,0 +1,9 @@
+<svg width="100%" height="100%" viewBox="0 0 100 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="Artboard1" x="0" y="0" width="100" height="50" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="Artboard11" serif:id="Artboard1" x="0" y="0" width="100" height="50"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <path d="M-25,25L-25,0L125,0L125,25C125,38.798 113.798,50 100,50C86.202,50 75,38.798 75,25C75,38.798 63.798,50 50,50C36.202,50 25,38.798 25,25C25,38.798 13.798,50 0,50C-13.798,50 -25,38.798 -25,25Z" style="fill:white;"/>
+    </g>
+</svg>

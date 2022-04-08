@@ -1,0 +1,122 @@
+{
+  "thumbsDir" : "/images/thumbs/comms/",
+  "charArt" : {
+    "extraCharPrice" : "10",
+    "options" : [
+      {
+        "name"    : "View",
+        "choices" : [
+          {
+            "name"    : "Close-up",
+            "price"   : "25",
+            "thumb"   : "view_closeup.jpg",
+            "notes"   : "",
+            "code"    : "CU"
+          },
+          {
+            "name"    : "Medium",
+            "price"   : "30",
+            "thumb"   : "view_medium.jpg",
+            "notes"   : "",
+            "code"    : "M"
+          },
+          {
+            "name"    : "Wide",
+            "price"   : "40",
+            "thumb"   : "view_wide.jpg",
+            "notes"   : "",
+            "code"    : "W"
+          }
+        ]
+      },
+
+      {
+        "name"    : "Background",
+        "choices" : [
+          {
+            "name"    : "Simple",
+            "price"   : "0",
+            "thumb"   : "bg_simple.jpg",
+            "notes"   : "",
+            "code"    : ""
+          },
+          {
+            "name"    : "Detailed",
+            "price"   : "10",
+            "thumb"   : "bg_detailed.jpg",
+            "notes"   : "May cost more or less depending on the complexity of the order",
+            "code"    : "BG"
+          },
+          {
+            "name"    : "Photo",
+            "price"   : "0",
+            "thumb"   : "bg_photo.jpg",
+            "notes"   : "You have to provide the photo",
+            "code"    : "PH"
+          }
+        ]
+      },
+
+      {
+        "name"    : "Render",
+        "choices" : [
+          {
+            "name"    : "Sketch",
+            "price"   : "0",
+            "thumb"   : "render_sketch.jpg",
+            "notes"   : "",
+            "code"    : "SK"
+          },
+          {
+            "name"    : "Flat Color",
+            "price"   : "5",
+            "thumb"   : "render_flat.jpg",
+            "notes"   : "",
+            "code"    : "FC"
+          },
+          {
+            "name"    : "Shaded",
+            "price"   : "10",
+            "thumb"   : "render_shaded.jpg",
+            "notes"   : "",
+            "code"    : "S"
+          }
+        ]
+      }
+    ]
+  },
+
+  "extras" : [
+    {
+      "name"   : "Vector Face",
+      "price"  : "20",
+      "thumb"  : "xtra_vector_face.jpg",
+      "notes"  : "Choose between lined or lineless",
+      "code"   : "VEC"
+    },
+
+    {
+      "name"    : "Social Stickers",
+      "price"   : "20",
+      "unit"    : "sticker",
+      "thumb"   : "xtra_stickers.jpg",
+      "notes"   : "First order must have at least 3 stickers, but may have fewer in future purchases.",
+      "code"    : "SS"
+    },
+
+    {
+      "name"    : "Ref Sheet",
+      "price"   : "50",
+      "thumb"   : "xtra_ref.jpg",
+      "notes"   : "May cost more or less depending on the complexity of the order",
+      "code"    : "REF"
+    },
+
+    {
+      "name"    : "Graphic Design",
+      "price"   : "40",
+      "thumb"   : "xtra_graphic_design.jpg",
+      "notes"   : "May cost more or less depending on the complexity of the order"
+    }
+  ]
+}

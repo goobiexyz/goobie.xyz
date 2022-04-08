@@ -1,0 +1,353 @@
+import { c as create_ssr_component, e as escape, a as add_attribute, v as validate_component, b as createEventDispatcher, n as null_to_empty, d as each } from "../../chunks/index-1c4ec740.js";
+import { P as Page, S as Section } from "../../chunks/Page-c010a59d.js";
+import { s as socialLinks } from "../../chunks/Button.svelte_svelte_type_style_lang-99cd0359.js";
+import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-763b0085.js";
+/* empty css                                                            */import { c as convertDate, M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-7361a527.js";
+/* empty css                                                             */var NavButton_svelte_svelte_type_style_lang = "";
+const css$5 = {
+  code: 'a.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK,a.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK:hover,a.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK:focus,a.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK:active{text-decoration:none;color:inherit}.nav-button.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{transition:transform 0.1s;box-sizing:content-box;display:block;position:relative;border:0.4rem white solid;border-radius:1rem;width:4rem;height:4rem;background:0;background-position:center;background-repeat:no-repeat;text-align:center;transition:transform 0.25s, opacity 0.25s;text-decoration:none}.nav-button.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK:hover{transform:scale(1.2)}.nav-button.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK:active{transform:scale(1)}.nav-button.hidden.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{transform:perspective(500px) rotateX(90deg);perspective:500px;opacity:0;pointer-events:none;z-index:-1}.nav-button.s-Uz5zPiP10BVK span.s-Uz5zPiP10BVK{display:inline-block;line-height:4rem;white-space:nowrap;color:white;font-family:"urbane";font-weight:600;transform:translateY(3.5rem)}.nav-button.work.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_star.svg")}.nav-button.comms.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_money.svg")}.nav-button.contact.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_at.svg")}.nav-button.image.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_brush.svg")}.nav-button.design.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_shapes.svg")}.nav-button.music.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_music.svg")}.nav-button.code.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_code.svg")}.nav-button.video.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_video.svg")}.nav-button.comics.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_book.svg")}.nav-button.close.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_close.svg");border:none}.nav-button.back.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{background-image:url("/images/icons/b_back.svg");border:none;position:absolute;left:calc(-1 * 3rem - 76px)}@media only screen and (min-width: 601px){.nav-button.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK::before{content:"";margin-left:-100%}.nav-button.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK::after{content:"";margin-right:-100%}}@media only screen and (max-width: 600px){.nav-button.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{width:3rem;height:3rem;text-align:left;font-size:1.5rem;border:none;text-decoration:underline}.nav-button.back.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{position:static}.nav-button.s-Uz5zPiP10BVK span.s-Uz5zPiP10BVK{text-indent:4rem;height:min-content;line-height:3rem;transform:none}}.s-Uz5zPiP10BVK.s-Uz5zPiP10BVK{}',
+  map: null
+};
+const NavButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { icon } = $$props;
+  let { href } = $$props;
+  let { hidden = false } = $$props;
+  function hide() {
+    hidden = true;
+  }
+  function show() {
+    hidden = false;
+  }
+  if ($$props.icon === void 0 && $$bindings.icon && icon !== void 0)
+    $$bindings.icon(icon);
+  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+    $$bindings.href(href);
+  if ($$props.hidden === void 0 && $$bindings.hidden && hidden !== void 0)
+    $$bindings.hidden(hidden);
+  if ($$props.hide === void 0 && $$bindings.hide && hide !== void 0)
+    $$bindings.hide(hide);
+  if ($$props.show === void 0 && $$bindings.show && show !== void 0)
+    $$bindings.show(show);
+  $$result.css.add(css$5);
+  return `${href ? `<a class="${["nav-button " + escape(icon) + " s-Uz5zPiP10BVK", hidden ? "hidden" : ""].join(" ").trim()}"${add_attribute("href", href, 0)}><span class="${"s-Uz5zPiP10BVK"}">${slots.default ? slots.default({}) : ``}</span></a>` : `<button class="${["nav-button " + escape(icon) + " s-Uz5zPiP10BVK", hidden ? "hidden" : ""].join(" ").trim()}"><span class="${"s-Uz5zPiP10BVK"}">${slots.default ? slots.default({}) : ``}</span></button>`}`;
+});
+var NavBGroup_svelte_svelte_type_style_lang = "";
+const css$4 = {
+  code: ".bgroup.s-V12YLJ6XmvNM{display:grid;position:relative;z-index:0;justify-content:center;align-items:center;grid-template-columns:76px 76px 76px;grid-column-gap:3rem;grid-row-gap:3rem;width:min-content;margin:auto}.bgroup.hidden.s-V12YLJ6XmvNM{display:none;z-index:-100}@media only screen and (max-width: 600px){.bgroup.s-V12YLJ6XmvNM{grid-template-columns:1fr;grid-row-gap:1rem;margin:0}}.s-V12YLJ6XmvNM{}",
+  map: null
+};
+const NavBGroup = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { hidden = false } = $$props;
+  function hide() {
+    hidden = true;
+  }
+  function show() {
+    hidden = false;
+  }
+  if ($$props.hidden === void 0 && $$bindings.hidden && hidden !== void 0)
+    $$bindings.hidden(hidden);
+  if ($$props.hide === void 0 && $$bindings.hide && hide !== void 0)
+    $$bindings.hide(hide);
+  if ($$props.show === void 0 && $$bindings.show && show !== void 0)
+    $$bindings.show(show);
+  $$result.css.add(css$4);
+  return `<div class="${["bgroup s-V12YLJ6XmvNM", hidden ? "hidden" : ""].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
+</div>`;
+});
+var HomeHeader_svelte_svelte_type_style_lang = "";
+const css$3 = {
+  code: '@keyframes s-yb405T7S2vJ0-scroll{100%{background-position:400px 173.2px}}header.s-yb405T7S2vJ0{background:url("/images/backgrounds/bg_dots.svg") repeat;background-size:100px;background-attachment:fixed;animation:8s s-yb405T7S2vJ0-scroll infinite linear;height:max-content;margin-top:0;padding:calc(1.5rem * 2) 1.5rem;overflow:hidden;border-bottom:5rem solid;border-image-slice:0 0 100% 0;border-image-repeat:repeat;border-image-outset:2px;border-image-source:url("/images/borders/benday_inverted.svg")}h1.s-yb405T7S2vJ0{margin-top:1.5rem;text-align:center}nav.s-yb405T7S2vJ0{margin-top:1.5rem;height:224px}.header-body.s-yb405T7S2vJ0{transform:translateY(58px);transition:transform 0.25s;position:relative}.header-body.expanded.s-yb405T7S2vJ0{transform:translateY(0px)}.logo.s-yb405T7S2vJ0{width:32rem}@media only screen and (max-width: 768px){header.s-yb405T7S2vJ0{padding-top:1.5rem;padding-bottom:calc(1.5rem + 1rem)}}@media only screen and (max-width: 600px){.header-body.s-yb405T7S2vJ0{width:80vw;margin:auto;transform:translateY(0)}nav.s-yb405T7S2vJ0{display:block;height:min-content}.logo.s-yb405T7S2vJ0{width:100%}}.s-yb405T7S2vJ0{}',
+  map: null
+};
+const HomeHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let b0, b1, b2, b3, b4, b5, b6, b7, b8, b9;
+  let bgroup0, bgroup1;
+  $$result.css.add(css$3);
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    $$rendered = `<header class="${"s-yb405T7S2vJ0"}"><div class="${"header-bg s-yb405T7S2vJ0"}"></div>
+  <div class="${["header-body s-yb405T7S2vJ0", ""].join(" ").trim()}"><h1 id="${"logo"}" class="${"s-yb405T7S2vJ0"}"><picture class="${"s-yb405T7S2vJ0"}"><source media="${"(max-width: 600px)"}" srcset="${"/images/logo_no_cloud.svg"}" class="${"s-yb405T7S2vJ0"}">
+        <img class="${"logo s-yb405T7S2vJ0"}" src="${"/images/logo.svg"}" alt="${"Gracie Bell: Multimedia Artist"}"></picture></h1>
+
+    <nav class="${"s-yb405T7S2vJ0"}">${validate_component(NavBGroup, "NavBGroup").$$render($$result, { hidden: "true", this: bgroup1 }, {
+      this: ($$value) => {
+        bgroup1 = $$value;
+        $$settled = false;
+      }
+    }, {
+      default: () => {
+        return `${validate_component(NavButton, "NavButton").$$render($$result, { icon: "back", hidden: "true", this: b3 }, {
+          this: ($$value) => {
+            b3 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Back`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "image",
+          href: "art",
+          hidden: "true",
+          this: b4
+        }, {
+          this: ($$value) => {
+            b4 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Art`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "design",
+          href: "design",
+          hidden: "true",
+          this: b5
+        }, {
+          this: ($$value) => {
+            b5 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Design`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "comics",
+          href: "comics",
+          hidden: "true",
+          this: b6
+        }, {
+          this: ($$value) => {
+            b6 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Comics`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "music",
+          href: socialLinks.soundcloud,
+          hidden: "true",
+          this: b7
+        }, {
+          this: ($$value) => {
+            b7 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Music`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "code",
+          href: socialLinks.github,
+          hidden: "true",
+          this: b8
+        }, {
+          this: ($$value) => {
+            b8 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Code`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "video",
+          href: socialLinks.youtube,
+          hidden: "true",
+          this: b9
+        }, {
+          this: ($$value) => {
+            b9 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Videos`;
+          }
+        })}`;
+      }
+    })}
+
+      ${validate_component(NavBGroup, "NavBGroup").$$render($$result, { this: bgroup0 }, {
+      this: ($$value) => {
+        bgroup0 = $$value;
+        $$settled = false;
+      }
+    }, {
+      default: () => {
+        return `${validate_component(NavButton, "NavButton").$$render($$result, { icon: "work", this: b0 }, {
+          this: ($$value) => {
+            b0 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `My Work`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, { icon: "comms", href: "comms", this: b1 }, {
+          this: ($$value) => {
+            b1 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Commissions`;
+          }
+        })}
+        ${validate_component(NavButton, "NavButton").$$render($$result, {
+          icon: "contact",
+          href: "contact",
+          this: b2
+        }, {
+          this: ($$value) => {
+            b2 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => {
+            return `Contact`;
+          }
+        })}`;
+      }
+    })}</nav></div>
+</header>`;
+  } while (!$$settled);
+  return $$rendered;
+});
+var ImgSCaption_svelte_svelte_type_style_lang = "";
+const css$2 = {
+  code: "img.s-ZcFzig13Xsh9{border-radius:16px}figcaption.s-ZcFzig13Xsh9{font-family:'urbane';font-size:small;color:var(--black)}.s-ZcFzig13Xsh9{}",
+  map: null
+};
+const ImgSCaption = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { src } = $$props;
+  let { alt } = $$props;
+  let { width } = $$props;
+  if ($$props.src === void 0 && $$bindings.src && src !== void 0)
+    $$bindings.src(src);
+  if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+    $$bindings.alt(alt);
+  if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+    $$bindings.width(width);
+  $$result.css.add(css$2);
+  return `<figure class="${"s-ZcFzig13Xsh9"}"><img${add_attribute("src", src, 0)}${add_attribute("alt", alt, 0)}${add_attribute("width", width, 0)} class="${"s-ZcFzig13Xsh9"}">
+  <figcaption class="${"s-ZcFzig13Xsh9"}">${slots.default ? slots.default({}) : ``}</figcaption>
+</figure>`;
+});
+var PostSummary_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: 'article.s-FOJYkvUMpkoQ{background:white;padding:calc(1.5rem / 2);border-radius:16px;color:var(--dark-blue);display:flex;width:512px}.col-1.s-FOJYkvUMpkoQ{margin-right:calc(1.5rem / 2)}.content-type.s-FOJYkvUMpkoQ{display:block;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}h3.s-FOJYkvUMpkoQ{font-family:"urbane-bold";font-size:1.25rem}img.s-FOJYkvUMpkoQ{border-radius:10px;height:123px;width:123px;display:block}time.s-FOJYkvUMpkoQ{margin-top:8px;display:block;font-family:monospace}@media only screen and (max-width: 768px){article.s-FOJYkvUMpkoQ{width:100%}}@media only screen and (max-width: 600px){article.s-FOJYkvUMpkoQ{padding:0 0 1.5rem 0;background:none;color:white;border-bottom:1px white dashed;border-radius:0}img.s-FOJYkvUMpkoQ{height:80px;width:80px}}.s-FOJYkvUMpkoQ{}',
+  map: null
+};
+const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { post } = $$props;
+  if (!post.thumb) {
+    post.thumb = "/images/gracie4.png";
+  }
+  if ($$props.post === void 0 && $$bindings.post && post !== void 0)
+    $$bindings.post(post);
+  $$result.css.add(css$1);
+  return `<article class="${"s-FOJYkvUMpkoQ"}"><div class="${"col-1 s-FOJYkvUMpkoQ"}"><img src="${"/posts/" + escape(post.type) + "/thumbs/" + escape(post._id) + ".jpg"}" alt="${""}" class="${"s-FOJYkvUMpkoQ"}"></div>
+
+  <div class="${"col-2 s-FOJYkvUMpkoQ"}"><span class="${"content-type s-FOJYkvUMpkoQ"}">${escape(post.type)}</span>
+    <h3 class="${"s-FOJYkvUMpkoQ"}">${escape(post.title)}</h3>
+    <time class="${"s-FOJYkvUMpkoQ"}">${escape(convertDate(post.date))}</time></div>
+</article>`;
+});
+var LatestPosts_svelte_svelte_type_style_lang = "";
+const css = {
+  code: "div.s-vH8X-oDi7Oww{transition:0.25s opacity}div.hide.s-vH8X-oDi7Oww{opacity:0}button.s-vH8X-oDi7Oww{width:100%;text-align:left;transition:0.1s transform}button.s-vH8X-oDi7Oww:hover{transform:scale(1.05)}button.s-vH8X-oDi7Oww:active{transform:scale(1)}@media only screen and (max-width: 768px){button.s-vH8X-oDi7Oww:hover,button.s-vH8X-oDi7Oww:active{transform:scale(0.95)}}.s-vH8X-oDi7Oww{}",
+  map: null
+};
+const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  createEventDispatcher();
+  let posts = [];
+  $$result.css.add(css);
+  return `<div class="${escape(null_to_empty("hide")) + " s-vH8X-oDi7Oww"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {}, {}, {
+    default: () => {
+      return `${each(posts, (post) => {
+        return `<button class="${"s-vH8X-oDi7Oww"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</button>`;
+      })}`;
+    }
+  })}
+</div>`;
+});
+const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let mediaModal;
+  let $$settled;
+  let $$rendered;
+  do {
+    $$settled = true;
+    $$rendered = `${validate_component(MediaModal, "MediaModal").$$render($$result, { this: mediaModal }, {
+      this: ($$value) => {
+        mediaModal = $$value;
+        $$settled = false;
+      }
+    }, {})}
+${validate_component(HomeHeader, "HomeHeader").$$render($$result, {}, {}, {})}
+${validate_component(Page, "Dfs.Page").$$render($$result, { header: false }, {}, {
+      default: () => {
+        return `${validate_component(Section, "Dfs.Section").$$render($$result, {
+          id: "about",
+          heading: "Meet Gracie",
+          headingColor: "blue"
+        }, {}, {
+          default: () => {
+            return `${validate_component(Flex2Col, "Flex2Col").$$render($$result, {}, {}, {
+              "col-2": () => {
+                return `${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, { slot: "col-2" }, {}, {
+                  default: () => {
+                    return `<p>Hi there! My name is Grace and I call myself a multimedia artist because I&#39;m always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My specialties include graphic design, illustration, coding, video editing, and music composition.
+        </p>
+        <p>My commissions for character art and graphic design are currently OPEN! <a href="${"comms"}">Click here for more information</a>. And don&#39;t hesitate to contact me about any other ideas and projects you may have.
+        </p>`;
+                  }
+                })}`;
+              },
+              "col-1": () => {
+                return `<div slot="${"col-1"}">${validate_component(ImgSCaption, "ImgSCaption").$$render($$result, {
+                  src: "/images/gracie4.png",
+                  width: "220px",
+                  alt: ""
+                }, {}, {
+                  default: () => {
+                    return `Art by <a href="${"https://twitter.com/ponycide"}">Ponycide.</a>`;
+                  }
+                })}</div>`;
+              }
+            })}`;
+          }
+        })}
+
+
+  ${validate_component(Section, "Dfs.Section").$$render($$result, {
+          id: "updates",
+          heading: "What's New?",
+          headingColor: "white",
+          bg: "blue-stripes",
+          topBorder: "clouds"
+        }, {}, {
+          default: () => {
+            return `${validate_component(LatestPosts, "LatestPosts").$$render($$result, {}, {}, {})}`;
+          }
+        })}`;
+      }
+    })}`;
+  } while (!$$settled);
+  return $$rendered;
+});
+export { Routes as default };

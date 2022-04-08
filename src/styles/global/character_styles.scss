@@ -1,0 +1,9 @@
+a {
+  &:link {
+    color: var(--dark-blue);
+  }
+
+  &:visited {
+    color: var(--red);
+  }
+}

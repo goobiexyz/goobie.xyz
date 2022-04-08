@@ -1,0 +1,33 @@
+@font-face {
+  font-family:"urbane";
+  src: url("/fonts/urbane-rounded.woff2") format("woff2");
+  font-display: block;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family:"urbane";
+  src: url("/fonts/urbane-rounded-demibold.woff2") format("woff2");
+  font-display: block;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family:"urbane-bold";
+  src: url("/fonts/urbane-rounded-bold.woff2") format("woff2");
+  font-display: block;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family:"freude";
+  src: url("/fonts/freude.woff2") format("woff2");
+  font-display: block;
+  font-weight: normal;
+}
+
+:root {
+  color: var(--black);
+  font-family: 'urbane';
+}

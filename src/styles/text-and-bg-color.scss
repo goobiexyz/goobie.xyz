@@ -1,0 +1,19 @@
+@mixin text-and-bg-color {
+  &.bg- {
+    &white {
+      background: white;
+    }
+    &blue {
+      background: var(--dark-blue);
+    }
+  }
+
+  &.text- {
+    &white {
+      color: white;
+    }
+    &blue {
+      color: var(--dark-blue);
+    }
+  }
+}
