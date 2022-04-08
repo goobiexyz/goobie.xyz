@@ -1,6 +1,6 @@
 import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component, d as each } from "../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../chunks/Page-961fbe05.js";
-import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-27f41b2a.js";
+import { P as Page, S as Section } from "../../chunks/Page-d1a218d7.js";
+import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-4771f83d.js";
 /* empty css                                                            */const thumbsDir = "/images/thumbs/comms/";
 const charArt = {
   extraCharPrice: "10",

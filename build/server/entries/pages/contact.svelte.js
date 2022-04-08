@@ -1,5 +1,5 @@
 import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component } from "../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../chunks/Page-961fbe05.js";
+import { P as Page, S as Section } from "../../chunks/Page-d1a218d7.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 /* empty css                                                          *//* empty css                                                            *//* empty css                                                             */const css$3 = {
   code: "button.svelte-145akts{transition:transform 0.1s;color:var(--dark-blue);background:white;border-radius:6px;padding:3px 6px 5px;font-weight:bold}button.svelte-145akts:hover{transform:scale(1.2)}button.svelte-145akts:active{transform:scale(1)}button.bg-white.svelte-145akts{background:white}button.bg-blue.svelte-145akts{background:var(--dark-blue)}button.text-white.svelte-145akts{color:white}button.text-blue.svelte-145akts{color:var(--dark-blue)}button.bg-white.svelte-145akts{background:white}button.bg-blue.svelte-145akts{background:var(--dark-blue)}button.outline-blue.svelte-145akts{outline:2px var(--dark-blue) solid}.big.svelte-145akts{font-size:1.2rem;padding:5px 25px 7px 25px}",
