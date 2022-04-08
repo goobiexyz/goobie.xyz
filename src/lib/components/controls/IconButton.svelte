@@ -28,13 +28,13 @@
     padding: 0;
     margin: 0;
 
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
+
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
 
     &.white {
       background: white;
