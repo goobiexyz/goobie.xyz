@@ -109,7 +109,7 @@ const ModalContent = create_ssr_component(($$result, $$props, $$bindings, slots)
 });
 var MediaModal_svelte_svelte_type_style_lang = "";
 const css = {
-  code: '.modal.svelte-1jpmdht.svelte-1jpmdht{position:fixed;width:100vw;height:100vh;background:rgba(0, 0, 0, 0.75);z-index:100;opacity:0;pointer-events:none;transition:opacity 0.25s}.modal.open.svelte-1jpmdht.svelte-1jpmdht{opacity:1;pointer-events:auto}.modal-controls.svelte-1jpmdht.svelte-1jpmdht,.modal-caption.svelte-1jpmdht.svelte-1jpmdht{z-index:200;opacity:1;transition:0.1s opacity}.modal-controls.hide.svelte-1jpmdht.svelte-1jpmdht,.modal-caption.hide.svelte-1jpmdht.svelte-1jpmdht{opacity:0;pointer-events:none}.modal-controls.svelte-1jpmdht.svelte-1jpmdht{position:absolute;top:calc(1.5rem / 2);right:calc(1.5rem / 2)}.modal-caption.svelte-1jpmdht.svelte-1jpmdht{position:absolute;bottom:0;background:rgba(0, 0, 0, 0.8);width:100%;padding:calc(1.5rem / 2);color:white}.modal-caption.svelte-1jpmdht .modal-title.svelte-1jpmdht{font-family:"urbane-bold";font-size:1.4rem;display:block}.modal-caption.svelte-1jpmdht time.svelte-1jpmdht{display:block;font-family:monospace;margin-top:6px;font-size:0.9rem}.modal-body.svelte-1jpmdht.svelte-1jpmdht{display:flex;justify-content:center;align-items:center;width:100%;height:100%}.modal-body.svelte-1jpmdht >*{margin:1.5rem;z-index:150}@keyframes svelte-1jpmdht-loading-icon-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.loading-icon.svelte-1jpmdht.svelte-1jpmdht{z-index:300;width:4rem;height:4rem;pointer-events:none;position:fixed;left:50%;top:50%;margin-top:-2rem;margin-left:-2rem;animation:svelte-1jpmdht-loading-icon-spin 2s linear infinite;opacity:1;transition:opacity 0.1s}.loading-icon.loaded.svelte-1jpmdht.svelte-1jpmdht{opacity:0}.out-click-zone.svelte-1jpmdht.svelte-1jpmdht{position:absolute;height:100vh;width:100vw;z-index:125}',
+  code: '.modal.svelte-mkmglf.svelte-mkmglf{position:fixed;width:100vw;height:100vh;max-height:-moz-available;height:-webkit-fill-available;background:rgba(0, 0, 0, 0.75);z-index:100;opacity:0;pointer-events:none;transition:opacity 0.25s}.modal.open.svelte-mkmglf.svelte-mkmglf{opacity:1;pointer-events:auto}.modal-controls.svelte-mkmglf.svelte-mkmglf,.modal-caption.svelte-mkmglf.svelte-mkmglf{z-index:200;opacity:1;transition:0.1s opacity}.modal-controls.hide.svelte-mkmglf.svelte-mkmglf,.modal-caption.hide.svelte-mkmglf.svelte-mkmglf{opacity:0;pointer-events:none}.modal-controls.svelte-mkmglf.svelte-mkmglf{position:absolute;top:calc(1.5rem / 2);right:calc(1.5rem / 2)}.modal-caption.svelte-mkmglf.svelte-mkmglf{position:absolute;bottom:0;background:rgba(0, 0, 0, 0.8);width:100%;padding:calc(1.5rem / 2);color:white}.modal-caption.svelte-mkmglf .modal-title.svelte-mkmglf{font-family:"urbane-bold";font-size:1.4rem;display:block}.modal-caption.svelte-mkmglf time.svelte-mkmglf{display:block;font-family:monospace;margin-top:6px;font-size:0.9rem}.modal-body.svelte-mkmglf.svelte-mkmglf{display:flex;justify-content:center;align-items:center;width:100%;height:100%}.modal-body.svelte-mkmglf >*{margin:1.5rem;z-index:150}@keyframes svelte-mkmglf-loading-icon-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.loading-icon.svelte-mkmglf.svelte-mkmglf{z-index:300;width:4rem;height:4rem;pointer-events:none;position:fixed;left:50%;top:50%;margin-top:-2rem;margin-left:-2rem;animation:svelte-mkmglf-loading-icon-spin 2s linear infinite;opacity:1;transition:opacity 0.1s}.loading-icon.loaded.svelte-mkmglf.svelte-mkmglf{opacity:0}.out-click-zone.svelte-mkmglf.svelte-mkmglf{position:absolute;height:100vh;max-height:-moz-available;height:-webkit-fill-available;width:100vw;z-index:125}',
   map: null
 };
 const MediaModal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -134,20 +134,20 @@ const MediaModal = create_ssr_component(($$result, $$props, $$bindings, slots) =
   if ($$props.closeModal === void 0 && $$bindings.closeModal && closeModal !== void 0)
     $$bindings.closeModal(closeModal);
   $$result.css.add(css);
-  return `<div class="${["modal svelte-1jpmdht", open ? "open" : ""].join(" ").trim()}"><div class="${"modal-controls " + escape(showControls ? "" : "hide") + " svelte-1jpmdht"}">${validate_component(IconButton, "IconButton").$$render($$result, {
+  return `<div class="${["modal svelte-mkmglf", open ? "open" : ""].join(" ").trim()}"><div class="${"modal-controls " + escape(showControls ? "" : "hide") + " svelte-mkmglf"}">${validate_component(IconButton, "IconButton").$$render($$result, {
     type: "back-circle",
     title: "Back",
     size: "big"
   }, {}, {})}
     </div>
 
-  ${open ? `${post.attributes.media_type == "art" ? `<div class="${"modal-caption " + escape(showControls ? "" : "hide") + " svelte-1jpmdht"}"><span class="${"modal-title svelte-1jpmdht"}">${escape(post.attributes.title)}</span>
-        <time${add_attribute("datetime", post.attributes.date, 0)} class="${"svelte-1jpmdht"}">${escape(convertDate(post.attributes.date))}</time></div>` : ``}` : ``}
+  ${open ? `${post.attributes.media_type == "art" ? `<div class="${"modal-caption " + escape(showControls ? "" : "hide") + " svelte-mkmglf"}"><span class="${"modal-title svelte-mkmglf"}">${escape(post.attributes.title)}</span>
+        <time${add_attribute("datetime", post.attributes.date, 0)} class="${"svelte-mkmglf"}">${escape(convertDate(post.attributes.date))}</time></div>` : ``}` : ``}
 
-  <img class="${["loading-icon svelte-1jpmdht", loaded ? "loaded" : ""].join(" ").trim()}" src="${"/images/icons/loading.svg"}" alt="${"Loading"}">
+  <img class="${["loading-icon svelte-mkmglf", loaded ? "loaded" : ""].join(" ").trim()}" src="${"/images/icons/loading.svg"}" alt="${"Loading"}">
 
-  <div class="${"modal-body svelte-1jpmdht"}">${open ? `${validate_component(ModalContent, "ModalContent").$$render($$result, { post }, {}, {})}` : ``}
-    <div class="${"out-click-zone svelte-1jpmdht"}"></div></div>
+  <div class="${"modal-body svelte-mkmglf"}">${open ? `${validate_component(ModalContent, "ModalContent").$$render($$result, { post }, {}, {})}` : ``}
+    <div class="${"out-click-zone svelte-mkmglf"}"></div></div>
 
 
 </div>`;

@@ -3,7 +3,7 @@ import { P as Page, S as Section } from "../../chunks/Page-d1a218d7.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-4771f83d.js";
 /* empty css                                                            *//* empty css                                                          */import { c as convertDate } from "../../chunks/convert-date-825a956c.js";
-import { M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-e80de7f4.js";
+import { M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-8ba5cc8c.js";
 /* empty css                                                             */import "../../chunks/SvelteMarkdown-bfd616a7.js";
 var NavButton_svelte_svelte_type_style_lang = "";
 const css$5 = {
