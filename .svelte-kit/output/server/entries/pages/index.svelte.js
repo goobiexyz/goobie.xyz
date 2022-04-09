@@ -2,8 +2,8 @@ import { c as create_ssr_component, e as escape, a as add_attribute, v as valida
 import { P as Page, S as Section } from "../../chunks/Page-d1a218d7.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 import { S as ScrollBox, F as Flex2Col } from "../../chunks/ScrollBox-4771f83d.js";
-/* empty css                                                            *//* empty css                                                          */import { c as convertDate } from "../../chunks/convert-date-825a956c.js";
-import { M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-70e1fa0b.js";
+/* empty css                                                            *//* empty css                                                          */import { c as convertDate } from "../../chunks/convert-date-64d95c73.js";
+import { M as MediaModal, S as SpacedDiv } from "../../chunks/MediaModal-010e6fad.js";
 /* empty css                                                             */import "../../chunks/SvelteMarkdown-bfd616a7.js";
 var NavButton_svelte_svelte_type_style_lang = "";
 const css$5 = {
@@ -58,7 +58,7 @@ const NavBGroup = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 var HomeHeader_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: '@keyframes svelte-o9x6y4-scroll{100%{background-position:400px 173.2px}}header.svelte-o9x6y4{background:url("/images/backgrounds/bg_dots.svg") repeat;background-size:100px;background-attachment:fixed;animation:8s svelte-o9x6y4-scroll infinite linear;height:max-content;margin-top:0;padding:calc(1.5rem * 2) 1.5rem;overflow:hidden;border-bottom:5rem solid;border-image-slice:0 0 100% 0;border-image-repeat:repeat;border-image-outset:2px;border-image-source:url("/images/borders/benday_inverted.svg")}h1.svelte-o9x6y4{margin-top:1.5rem;text-align:center}nav.svelte-o9x6y4{margin-top:1.5rem;height:224px}.header-body.svelte-o9x6y4{transform:translateY(58px);transition:transform 0.25s;position:relative}.header-body.expanded.svelte-o9x6y4{transform:translateY(0px)}.logo.svelte-o9x6y4{width:32rem}@media only screen and (max-width: 768px){header.svelte-o9x6y4{padding-top:1.5rem;padding-bottom:calc(1.5rem + 1rem)}}@media only screen and (max-width: 600px){.header-body.svelte-o9x6y4{width:80vw;margin:auto;transform:translateY(0)}nav.svelte-o9x6y4{display:block;height:min-content}.logo.svelte-o9x6y4{width:100%}}',
+  code: '@keyframes svelte-1t9aygh-scroll{100%{background-position:400px 173.2px}}header.svelte-1t9aygh{background:url("/images/backgrounds/bg-dots.png") repeat;background-attachment:fixed;animation:8s svelte-1t9aygh-scroll infinite linear;height:max-content;margin-top:0;padding:calc(1.5rem * 2) 1.5rem;overflow:hidden;border-bottom:5rem solid;border-image-slice:0 0 100% 0;border-image-repeat:repeat;border-image-outset:2px;border-image-source:url("/images/borders/benday_inverted.svg")}h1.svelte-1t9aygh{margin-top:1.5rem;text-align:center}nav.svelte-1t9aygh{margin-top:1.5rem;height:224px}.header-body.svelte-1t9aygh{transform:translateY(58px);transition:transform 0.25s;position:relative}.header-body.expanded.svelte-1t9aygh{transform:translateY(0px)}.logo.svelte-1t9aygh{width:32rem}@media only screen and (max-width: 768px){header.svelte-1t9aygh{padding-top:1.5rem;padding-bottom:calc(1.5rem + 1rem)}}@media only screen and (max-width: 600px){.header-body.svelte-1t9aygh{width:80vw;margin:auto;transform:translateY(0)}nav.svelte-1t9aygh{display:block;height:min-content}.logo.svelte-1t9aygh{width:100%}}',
   map: null
 };
 const HomeHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -69,11 +69,11 @@ const HomeHeader = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = `<header class="${"svelte-o9x6y4"}"><div class="${"header-bg"}"></div>
-  <div class="${["header-body svelte-o9x6y4", ""].join(" ").trim()}"><h1 id="${"logo"}" class="${"svelte-o9x6y4"}"><picture><source media="${"(max-width: 600px)"}" srcset="${"/images/logo_no_cloud.svg"}">
-        <img class="${"logo svelte-o9x6y4"}" src="${"/images/logo.svg"}" alt="${"Gracie Bell: Multimedia Artist"}"></picture></h1>
+    $$rendered = `<header class="${"svelte-1t9aygh"}"><div class="${"header-bg"}"></div>
+  <div class="${["header-body svelte-1t9aygh", ""].join(" ").trim()}"><h1 id="${"logo"}" class="${"svelte-1t9aygh"}"><picture><source media="${"(max-width: 600px)"}" srcset="${"/images/logo_no_cloud.svg"}">
+        <img class="${"logo svelte-1t9aygh"}" src="${"/images/logo.svg"}" alt="${"Gracie Bell: Multimedia Artist"}"></picture></h1>
 
-    <nav class="${"svelte-o9x6y4"}">${validate_component(NavBGroup, "NavBGroup").$$render($$result, { hidden: "true", this: bgroup1 }, {
+    <nav class="${"svelte-1t9aygh"}">${validate_component(NavBGroup, "NavBGroup").$$render($$result, { hidden: "true", this: bgroup1 }, {
       this: ($$value) => {
         bgroup1 = $$value;
         $$settled = false;
