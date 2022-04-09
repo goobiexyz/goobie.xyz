@@ -1,6 +1,6 @@
 function convertDate(d) {
   let date = new Date(Date.parse(d))
-  return `${date.getDate()} ${date.toDateString().substring(4,7).toUpperCase()} ${date.getFullYear()}`
+  return date.toUTCString().substring(5, 16).toUpperCase()
 }
 
 export default convertDate
