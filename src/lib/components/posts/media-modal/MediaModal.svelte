@@ -78,6 +78,8 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
+    max-height: -moz-available;
+    height: -webkit-fill-available;
     background: rgba(0, 0, 0, 0.75);
 
     z-index: 100;
@@ -179,6 +181,8 @@
   .out-click-zone {
     position: absolute;
     height: 100vh;
+    max-height: -moz-available;
+    height: -webkit-fill-available;
     width: 100vw;
     z-index: 125;
   }
