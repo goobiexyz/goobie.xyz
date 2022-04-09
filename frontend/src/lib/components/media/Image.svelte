@@ -10,7 +10,6 @@
   let thisImage = {}
 
   onMount(() => {
-    console.log(src)
     thisImage.onload = () => {
       loaded = true
       dispatch('load')

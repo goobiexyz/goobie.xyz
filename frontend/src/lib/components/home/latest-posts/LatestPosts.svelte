@@ -14,7 +14,6 @@
       res.json().then((json) => {
         posts = json.data
         isLoading = false
-        console.log(posts)
       })
     })
   })

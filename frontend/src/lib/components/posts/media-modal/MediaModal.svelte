@@ -42,7 +42,6 @@
 
   function setHeight() {
     modal.style.minHeight = window.innerHeight + "px"
-    console.log(modal.style.minHeight)
   }
 </script>
 

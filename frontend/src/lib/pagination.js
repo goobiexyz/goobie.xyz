@@ -20,7 +20,6 @@ class PageHandler {
     this.calcMinMax()
     this.page.url.searchParams.set('page', this.pageNum)
     goto(this.page.url.toString())
-    console.log(this.pageNum)
   }
 }
 
