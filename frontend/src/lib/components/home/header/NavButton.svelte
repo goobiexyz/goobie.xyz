@@ -75,6 +75,9 @@
       font-weight: 600;
 
       transform: translateY(3.5rem);
+
+      // This fixed safari clipping it when in a button tag for some reason
+      position: relative; 
     }
 
     &.work {
