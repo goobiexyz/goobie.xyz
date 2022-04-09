@@ -87,8 +87,7 @@
   }
 
   header {
-    background: url('/images/backgrounds/bg_dots.svg') repeat;
-    background-size: 100px;
+    background: url('/images/backgrounds/bg-dots.png') repeat;
     background-attachment: fixed;
     animation: 8s scroll infinite linear;
 
