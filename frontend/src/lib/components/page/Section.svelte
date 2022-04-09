@@ -117,7 +117,7 @@
       -webkit-mask-size: contain;
       -webkit-mask-position: center;
       -webkit-mask-size: 10px;
-      -webkit-mask-repeat: repeat no-repeat; // 'space' produced buggy results
+      -webkit-mask-repeat: space no-repeat; // 'space' produced buggy results on chrome for linux
       // I found an article about maybe using an svg line instead, in bookmarks
 
       mask-image: url('/images/borders/blue_dot.svg');
