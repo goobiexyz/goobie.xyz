@@ -6,6 +6,7 @@
   import { onMount } from 'svelte'
   import convertDate from '$lib/convert-date.js'
 
+  let modal
   let open = false
   let loaded = false
   let showControls = true
@@ -25,6 +26,7 @@
   }
 
   export function openModal(p) {
+    setHeight()
     open = true
     showControls = true
     loaded = false
@@ -36,10 +38,18 @@
     open = false
     body.style.overflow = "auto"
   }
+
+
+  function setHeight() {
+    modal.style.minHeight = window.innerHeight + "px"
+    console.log(modal.style.minHeight)
+  }
 </script>
 
+<svelte:window on:resize={setHeight} />
 
-<div class='modal' class:open>
+
+<div class='modal' class:open bind:this={modal}>
   <div class='modal-controls {showControls ? "" : "hide"}' >
     <IconButton type='back-circle' title='Back' size='big' on:click={closeModal}/>
     <!-- Maybe make the button its own seperate element so it can have the bg -->
