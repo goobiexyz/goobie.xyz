@@ -40,10 +40,7 @@
 
 
 
-<style lang='scss'>
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
     .col-1, .col-2 {
       display: block;
     }
@@ -78,16 +75,11 @@
     }
 
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     .col-1 {
       & :global(img) {
         width: 200px;
       }
     }
-  }
-
-
-  @media only screen and (max-width: $ss) {
-
   }
 </style>
