@@ -1,6 +1,6 @@
-import * as module from '../entries/pages/contact.svelte.js';
+import * as module from '../entries/pages/comics/index.svelte.js';
 
 export { module };
-export const entry = 'pages/contact.svelte-80d66e6f.js';
-export const js = ["pages/contact.svelte-80d66e6f.js","chunks/vendor-e918deec.js","chunks/Page-3700f7bd.js","chunks/social-links-dba47162.js"];
-export const css = ["assets/pages/contact.svelte-c37eb907.css","assets/Button.svelte_svelte_type_style_lang-1965869b.css","assets/Flex2Col.svelte_svelte_type_style_lang-3ddbd93f.css","assets/SpacedDiv.svelte_svelte_type_style_lang-63a942e7.css","assets/Page-a289066e.css"];
+export const entry = 'pages/comics/index.svelte-1dcca0a3.js';
+export const js = ["pages/comics/index.svelte-1dcca0a3.js","chunks/index-c422e2af.js","chunks/Page-6561eed2.js"];
+export const css = ["assets/Page-1f99db3d.css"];

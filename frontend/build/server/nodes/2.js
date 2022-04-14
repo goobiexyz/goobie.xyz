@@ -1,6 +1,6 @@
-import * as module from '../entries/pages/index.svelte.js';
+import * as module from '../entries/pages/art.svelte.js';
 
 export { module };
-export const entry = 'pages/index.svelte-451acab1.js';
-export const js = ["pages/index.svelte-451acab1.js","chunks/vendor-e918deec.js","chunks/Page-3700f7bd.js","chunks/social-links-dba47162.js","chunks/ScrollBox-7cc75c60.js","chunks/MediaModal-567284da.js","chunks/convert-date-64d95c73.js"];
-export const css = ["assets/pages/index.svelte-f39df57f.css","assets/Flex2Col.svelte_svelte_type_style_lang-3ddbd93f.css","assets/Button.svelte_svelte_type_style_lang-1965869b.css","assets/SpacedDiv.svelte_svelte_type_style_lang-63a942e7.css","assets/Page-a289066e.css","assets/ScrollBox-372dc57c.css","assets/MediaModal-ba6fa024.css"];
+export const entry = 'pages/art.svelte-42e98b5a.js';
+export const js = ["pages/art.svelte-42e98b5a.js","chunks/index-c422e2af.js","chunks/Page-6561eed2.js","chunks/singletons-d1fb5791.js","chunks/Image-afc11c1e.js","chunks/MediaModal-9bc59598.js","chunks/SpacedDiv-2f52f935.js"];
+export const css = ["assets/pages/art.svelte-884b4357.css","assets/Page-1f99db3d.css","assets/Image-0c7a6c82.css","assets/MediaModal-c891101e.css","assets/SpacedDiv-a813fb49.css"];
