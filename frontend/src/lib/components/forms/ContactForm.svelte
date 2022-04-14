@@ -28,14 +28,19 @@
 
   <small style='color: var(--red);'>*Required field</small>
 
-  <Button id='submit' bg='blue' color='white' size='big'>Send</Button>
+  <Button
+    id='submit'
+    background='var(--dark-blue)'
+    color='white'
+    size='big'
+    rounded='var(--rounded-1)'>
+    Send
+  </Button>
 </form>
 
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   .required:after {
     content: '*';
     color: var(--red);
@@ -46,7 +51,7 @@
     flex-direction: column;
 
     & :global(>*):not(:first-child) {
-      margin-top: $margin;
+      margin-top: var(--margin);
     }
 
     & :global(#submit) {
@@ -58,7 +63,7 @@
     display: flex;
 
     &>*:not(:last-child) {
-      margin-right: $margin;
+      margin-right: var(--margin);
     }
   }
 

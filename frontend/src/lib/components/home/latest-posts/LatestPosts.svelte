@@ -1,45 +1,38 @@
 <script>
-  export let style = 'big'
+  export let posts
 
-  import { onMount } from 'svelte'
   import PostSummary from './PostSummary.svelte'
   import ScrollBox from '../../layout/ScrollBox.svelte'
+  import SpacedDiv from '$lib/components/layout/SpacedDiv.svelte'
   import { createEventDispatcher } from 'svelte'
-  let dispatch = createEventDispatcher()
 
-  let isLoading = true
-  let posts = []
-  onMount(async () => {
-    await fetch('https://api.graciebell.art/api/posts?sort=date:desc&populate[0]=thumbnail&populate[1]=media_file&pagination[limit]=5').then((res) => { // get max 5
-      res.json().then((json) => {
-        posts = json.data
-        isLoading = false
-      })
-    })
-  })
+  let dispatch = createEventDispatcher()
 </script>
 
 
-<div class={isLoading ? "hide" : ""}>
+<div class='wrapper'>
   <ScrollBox>
-    {#each posts as post}
-      <button on:click={() => dispatch('postClick', { post })}><PostSummary {post} {style} /></button>
-    {/each}
+    <SpacedDiv>
+      {#each posts as post}
+        <button on:click={ () => dispatch( 'postClick', { post } ) }>
+          <PostSummary {post} />
+        </button>
+        <hr />
+      {/each}
+    </SpacedDiv>
   </ScrollBox>
 </div>
 
-<style lang='scss'>
-  @import 'src/styles/breakpoints.scss';
 
-  div {
-    transition: 0.25s opacity;
+<style lang='postcss'>
+  hr {
+    border: none;
+    border-top: 1px white dashed;
 
-    &.hide {
-      opacity: 0;
+    &:last-child {
+      display: none;
     }
   }
-
-
 
   button {
     width: 100%;
@@ -48,18 +41,17 @@
     transition: 0.1s transform;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     &:active {
       transform: scale(1);
     }
   }
 
-  @media only screen and (max-width: $s) {
-    button {
-      &:hover, &:active {
-        transform: scale(0.95);
-      }
+  @media only screen and (max-width: token(breakpoints.s)) {
+    .wrapper {
+      width: min-content;
+      margin: auto;
     }
   }
 </style>

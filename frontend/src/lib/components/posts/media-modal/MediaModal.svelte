@@ -51,14 +51,16 @@
 <div class='modal' class:open bind:this={modal}>
   <div class='modal-controls {showControls ? "" : "hide"}' >
     <IconButton type='back-circle' title='Back' size='big' on:click={closeModal}/>
-    <!-- Maybe make the button its own seperate element so it can have the bg -->
   </div>
 
   {#if open}
     {#if post.attributes.media_type == 'art'}
       <div class='modal-caption {showControls ? "" : "hide"}' on:click={toggleControls}>
-        <span class='modal-title'>{post.attributes.title}</span>
-        <time datetime={post.attributes.date}>{convertDate(post.attributes.date)}</time>
+        <div class='modal-caption-interior'>
+          <span class='modal-title'>{post.attributes.title}</span>
+          <time datetime={post.attributes.date}>{convertDate(post.attributes.date)}</time>
+          <p class='desc'>{post.attributes.description}</p>
+        </div>
       </div>
     {/if}
   {/if}
@@ -75,21 +77,17 @@
     {/if}
     <div class='out-click-zone' on:click={closeModal}></div>
   </div>
-
-
 </div>
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   .modal {
     position: fixed;
     width: 100vw;
     height: 100vh;
     max-height: -moz-available;
     height: -webkit-fill-available;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
 
     z-index: 100;
 
@@ -117,17 +115,20 @@
 
   .modal-controls {
     position: absolute;
-    top: $half-margin;
-    right: $half-margin;
+    bottom: var(--margin);
+    left: var(--margin);
   }
 
 
   .modal-caption {
+    display: flex;
+    justify-content: space-evenly;
+
     position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
     width: 100%;
-    padding: $half-margin;
+    padding: var(--margin);
     color: white;
 
     .modal-title {
@@ -142,6 +143,15 @@
       margin-top: 6px;
       font-size: 0.9rem;
     }
+
+    .desc {
+      margin-top: var(--half-margin);
+    }
+  }
+
+
+  .modal-caption-interior {
+    max-width: var(--s);
   }
 
 
@@ -153,7 +163,7 @@
     height: 100%;
 
     & :global(>*) {
-      margin: $margin;
+      margin: var(--margin);
       z-index: 150;
     }
   }

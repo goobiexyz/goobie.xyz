@@ -14,21 +14,20 @@
   class="nav-button {icon}"
   class:hidden
   {href}>
-  <span><slot></slot></span>
+  <span><slot /></span>
 </a>
 {:else}
 <button
   on:click
   class="nav-button {icon}"
   class:hidden>
-  <span><slot></slot></span>
+  <span><slot /></span>
 </button>
 {/if}
 
 
-<style lang="scss">
-  @import "src/styles/breakpoints.scss";
-  @import "src/styles/button.scss";
+<style lang="postcss">
+  @import "../../../../styles/hover-grow.css";
 
   $bgroup-col: 76px;
   $bgroup-gap: 3rem;
@@ -39,7 +38,7 @@
   }
 
   .nav-button {
-    @include button;
+    @mixin hover-grow;
     box-sizing: content-box;
     display: block;
     position: relative;
@@ -76,8 +75,8 @@
 
       transform: translateY(3.5rem);
 
-      // This fixed safari clipping it when in a button tag for some reason
-      position: relative; 
+      /* This fixed safari clipping it when in a button tag for some reason */
+      position: relative;
     }
 
     &.work {
@@ -115,12 +114,11 @@
       background-image: url("/images/icons/b_back.svg");
       border: none;
       position: absolute;
-      left: calc(-1 * #{$bgroup-gap} - #{$bgroup-col});
+      left: calc(-1 * $bgroup-gap - $bgroup-col);
     }
   }
 
-
-  @media only screen and (min-width: $ss + 1) {
+  @media only screen and (min-width: calc(token(breakpoints.ss) + 1px)) {
     .nav-button::before {
       content: "";
       margin-left: -100%;
@@ -133,7 +131,7 @@
   }
 
 
-  @media only screen and (max-width: $ss) {
+  @media only screen and (max-width: token(breakpoints.ss)) {
     .nav-button {
       width: 3rem;
       height: 3rem;

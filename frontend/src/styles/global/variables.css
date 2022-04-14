@@ -1,0 +1,37 @@
+:root {
+  /* Colors */
+  --blue      : token(colors.blue);
+  --dark-blue : token(colors.darkBlue);
+  --mint      : token(colors.mint);
+  --yellow    : token(colors.yellow);
+  --red       : token(colors.red);
+  --pink      : token(colors.pink);
+  --dark-pink : token(colors.darkPink);
+  --black     : token(colors.black);
+
+  /* Breakpoints */
+  --sss : token(breakpoints.sss);
+  --ss  : token(breakpoints.ss);
+  --s   : token(breakpoints.s);
+  --m   : token(breakpoints.m);
+  --b   : token(breakpoints.b);
+  --bb  : token(breakpoints.bb);
+
+  /* Spacing */
+  --margin: 1.5rem;
+  --half-margin: calc(var(--margin) / 2);
+  --double-margin: calc(var(--margin) * 2);
+
+  /* Border */
+  --border: 6px;
+  --border-thin: 3px;
+
+  /* Rounded */
+  --rounded-1: 6px;
+  --rounded-2: 12px;
+  --rounded-3: 20px;
+  --rounded-full: 9999px;
+
+  /* Misc */
+  --footer-height: 80px;
+}

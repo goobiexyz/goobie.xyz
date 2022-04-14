@@ -1,4 +1,6 @@
 <script>
+  import Image from '$lib/components/media/Image.svelte'
+
   export let thumb
   export let name
   export let price
@@ -7,7 +9,11 @@
 
 
 <div class='comm-card'>
-  <img src={thumb} alt='' />
+  <Image
+    src={thumb}
+    alt=''
+    style='display:block; width:200px; border-radius:var(--rounded-3);'
+  />
   <div class='info'>
     <h4>{name}</h4>
     <span class='price'>{price}</span>
@@ -16,20 +22,12 @@
 </div>
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   .comm-card {
     width: min-content;
-    //height: 308px;
-  }
-  img {
-    display: block;
-    width: 200px;
-    border-radius: 20px;
   }
   .info>* {
-    margin-top: $half-margin;
+    margin-top: var(--half-margin);
   }
   .notes {
     display: block;

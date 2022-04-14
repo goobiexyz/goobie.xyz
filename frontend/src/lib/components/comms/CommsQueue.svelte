@@ -14,7 +14,7 @@
 
 
 <div class='queue-container {isQueueVisible ? '' : 'hidden'}'>
-  <ScrollBox accent='black' height='short' style='thin'>
+  <ScrollBox accent='black' height='320px' border='var(--border-thin)'>
     {#each queue as comm}
       <div class='queue-item'>
         <span class='name'>{comm.name}</span>
@@ -30,6 +30,9 @@
   @import 'src/styles/spacing.scss';
 
   .queue-container {
+    width: 75%;
+    margin: auto;
+
     transition: opacity 1s;
     &.hidden {
       opacity: 0;
@@ -37,7 +40,7 @@
   }
 
   .queue-item {
-    width: 400px;
+    width: 100%;
 
     &:not(:first-child) {
       margin-top: $half-margin;
@@ -56,7 +59,7 @@
   }
 
   @media only screen and (max-width: $s) {
-    .queue-item {
+    .queue-container {
       width: 100%;
     }
   }

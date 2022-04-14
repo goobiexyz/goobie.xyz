@@ -1,24 +1,27 @@
 <script>
+  import Image from '$lib/components/media/Image.svelte'
+
   export let src
   export let alt
-  export let width
+  export let style
 </script>
 
 
+
 <figure>
-  <img {src} {alt} {width} />
+  <Image {src} {alt} {style} />
   <figcaption><slot></slot></figcaption>
 </figure>
 
 
-<style>
-  /* need to use a mixin to have same styling for ImgS and this one */
 
-  img {
-    border-radius: 16px;
+<style>
+  div {
+    overflow: hidden;
   }
 
   figcaption {
+    margin-top: 6px;
     font-family: 'urbane';
     font-size: small;
     color: var(--black);

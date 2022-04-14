@@ -19,6 +19,8 @@
 
 
 <script>
+  export let pagination
+
   import * as Dfs from '$lib/defaults.js'
   import { onMount } from 'svelte'
   import { goto } from '$app/navigation'
@@ -28,22 +30,12 @@
   import MediaModal from '$lib/components/posts/media-modal/MediaModal.svelte'
   import constrain from '$lib/constrain.ts'
 
-
-  export let pagination
-
-
   let mediaModal
-
-  let posts = []
   let pageNum = 1
   let lastPage = pagination.pageCount
+  let posts = []
 
-
-  onMount(async () => {
-    await getPosts()
-    // maybe do some sort of fade-in loading
-  })
-
+  onMount(getPosts)
 
   async function getPosts() {
     if ($page.url.searchParams.has('page')) {
@@ -52,6 +44,7 @@
       pageNum = 1
     }
 
+    let url = 'https://api.graciebell.art/api/posts'
     let params = [
       `filters[media_type][$eq]=art`, // filter only art
       `sort=date:desc`, // sort by descending date
@@ -61,9 +54,8 @@
       `populate[0]=thumbnail`, // get the thumbnail
       `populate[1]=media_file` // get the actual image
     ]
-    let res = await fetch(`https://api.graciebell.art/api/posts?${params.join('&')}`)
-    let resJson = await res.json()
-    posts = resJson.data
+    let res = await fetch(`${url}?${params.join('&')}`).then(r => r.json())
+    posts = res.data
   }
 
   function changePageBy(n) {
@@ -71,10 +63,6 @@
     $page.url.searchParams.set('page', pageNum)
     goto($page.url.toString())
     getPosts()
-  }
-
-  function openModal(p) {
-    mediaModal.openModal(p)
   }
 </script>
 
@@ -91,9 +79,15 @@
 
     <div class='gallery'>
       {#each posts as post}
-        <button title={post.attributes.title} on:click={() => openModal(post)}>
-          <img
-            src='https://api.graciebell.art{post.attributes.thumbnail.data.attributes.formats.thumbnail.url}'
+        <button
+          title={post.attributes.title}
+          on:click={() => mediaModal.openModal(post)}>
+          <Image
+            src='https://api.graciebell.art{
+              post.attributes.thumbnail.data.
+              attributes.formats.thumbnail.url
+            }'
+            style='border-radius: var(--rounded-2); width: 100%;'
             alt=''
           />
         </button>
@@ -103,26 +97,19 @@
 </Dfs.Page>
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
-  @import 'src/styles/breakpoints.scss';
-
+<style lang='postcss'>
   .gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: $half-margin;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
+    grid-gap: var(--half-margin);
   }
 
   button {
-    transition: 0.1s transform;
+    display: flex;
+
+    transition: 0.06s transform;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.06);
     }
     &:active {
       transform: scale(1);
@@ -130,7 +117,7 @@
   }
 
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     .gallery {
       grid-template-columns: repeat(3, 1fr);
     }

@@ -23,9 +23,7 @@
 </div>
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   .page-controls {
     display: flex;
     align-items: center;
@@ -33,7 +31,7 @@
   }
 
   .page-number {
-    margin: 0 $margin;
+    margin: 0 var(--margin);
     font-size: 1.2rem;
     width: 100px;
     text-align: center;

@@ -23,10 +23,7 @@
 </section>
 
 
-<style lang="scss">
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-
+<style lang="postcss">
   @keyframes scroll {
     100% {
       background-position-x: -60px;
@@ -42,10 +39,10 @@
 
   section {
     overflow: auto;
-    padding: calc(#{$margin} * 4) 0;
+    padding: calc(var(--margin) * 4) 0;
 
     &.simple {
-      padding: $double-margin 0;
+      padding: var(--double-margin) 0;
     }
 
     &.bg- {
@@ -90,10 +87,6 @@
       display: table-cell;
     }
 
-    &:before, &:after {
-
-    }
-
     &.blue {
       &:before, &:after {
         background: var(--blue);
@@ -117,8 +110,9 @@
       -webkit-mask-size: contain;
       -webkit-mask-position: center;
       -webkit-mask-size: 10px;
-      -webkit-mask-repeat: space no-repeat; // 'space' produced buggy results on chrome for linux
-      // I found an article about maybe using an svg line instead, in bookmarks
+      -webkit-mask-repeat: space no-repeat;
+      /* 'space' produced buggy results on chrome for linux */
+      /* I found an article about maybe using an svg line instead, in bookmarks */
 
       mask-image: url('/images/borders/blue_dot.svg');
       mask-size: contain;
@@ -137,18 +131,18 @@
   }
 
   .section-contents {
-    padding: 0 $margin;
+    padding: 0 var(--margin);
     margin: auto;
-    width: calc(#{$m} - #{$double-margin});
+    width: calc(var(--m) - var(--double-margin));
   }
 
   section {
     .section-body.spacing- {
       &normal {
-        & :global(>*) { margin-top: $margin }
+        & :global(>*) { margin-top: var(--margin) }
       }
       &double {
-        & :global(>*) { margin-top: $double-margin }
+        & :global(>*) { margin-top: var(--double-margin) }
       }
     }
 
@@ -159,32 +153,26 @@
     }
   }
 
-  // section.heading {
-  //   .section-body :global(>*:first-child) {
-  //     margin-top: $margin;
-  //   }
-  // }
 
-
-  @media only screen and (max-width: $m) {
+  @media only screen and (max-width: token(breakpoints.m)) {
     .section-contents {
-      width: calc(#{$s} - #{$double-margin});
+      width: calc(var(--s) - var(--double-margin));
     }
   }
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     section {
-      padding: calc(#{$margin} * 3) 0;
+      padding: calc(var(--margin) * 3) 0;
     }
 
     .section-contents {
-      width: calc(#{$ss} - #{$double-margin});
+      width: calc(var(--ss) - var(--double-margin));
     }
   }
 
-  @media only screen and (max-width: $ss) {
+  @media only screen and (max-width: token(breakpoints.ss)) {
     section {
-      padding: $margin 0;
+      padding: var(--margin) 0;
     }
 
     .section-contents {

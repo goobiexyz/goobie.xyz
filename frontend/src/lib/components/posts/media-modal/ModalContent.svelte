@@ -7,7 +7,7 @@
   export let post
 
   let type = post.attributes.media_type
-  let artImage // Can you please put the Image bit in its own component
+  let artImage
 
   if (type === 'art') {
     let large = post.attributes.media_file.data.attributes.formats.large
@@ -22,7 +22,7 @@
 
 <div class='content' on:click>
   {#if type == 'art'}
-    <Image src='https://api.graciebell.art{artImage}' on:load />
+    <Image src='https://api.graciebell.art{artImage}' on:load style='max-width: 100%; max-height: calc(100vh - 2 * var(--margin));' />
 
   {:else if type == 'blog'}
     <BlogPost meta={post.attributes} on:load />

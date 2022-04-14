@@ -1,4 +1,3 @@
-import coffee from "vite-plugin-coffee";
 import adapter from "@sveltejs/adapter-node";
 import preprocess from "svelte-preprocess";
 
@@ -8,21 +7,15 @@ const config = {
   // for more information about preprocessors
   preprocess: [
     preprocess({
-      coffeescript: {
-        bare: true,
-      },
+      postcss: true,
     }),
   ],
 
   kit: {
-    adapter: adapter({ out: 'build' }),
+    adapter: adapter({ out: "build" }),
 
     vite: {
-      plugins: [
-        coffee({
-          jsx: false,
-        }),
-      ],
+      plugins: [],
     },
   },
 };

@@ -1,42 +1,35 @@
 <script>
-  export let color = 'blue'
-  export let bg = 'white'
-  export let outline = 'none'
+  export let color = 'var(--dark-blue)'
+  export let background = 'white'
+  export let border = '0'
+  export let borderColor = 'none'
   export let id = ''
-  export let size = ''
+  export let size = 'small'
+  export let rounded = 'var(--rounded-2)'
 </script>
 
 
-<button on:click {id} class='text-{color} bg-{bg} outline-{outline} {size}'><slot></slot></button>
+<button
+  {id}
+  on:click
+  class={size}
+  style={
+    `color: ${color};`+
+    `background: ${background};`+
+    `border: ${border} ${borderColor} solid;`+
+    `border-radius: ${rounded};`
+    }>
+  <slot></slot>
+</button>
 
 
-<style lang='scss'>
-  @import 'src/styles/button.scss';
-  @import 'src/styles/text-and-bg-color.scss';
+<style lang='postcss'>
+  @import '../../../styles/hover-grow.css';
 
   button {
-    @include button;
-    @include text-and-bg-color;
+    @mixin hover-grow 1.15;
 
-    color: var(--dark-blue);
-    &.bg- {
-      &white {
-        background: white;
-      }
-      &blue {
-        background: var(--dark-blue);
-      }
-    }
-
-    &.outline- {
-      &blue {
-        outline: 2px var(--dark-blue) solid;
-      }
-    }
-
-    background: white;
-    border-radius: 6px;
-    padding: 3px 6px 5px;
+    padding: 3px 12px 5px;
     font-weight: bold;
   }
 

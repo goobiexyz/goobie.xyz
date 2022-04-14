@@ -7,12 +7,11 @@
 
 
 <div class="bgroup" class:hidden>
-  <slot></slot>
+  <slot />
 </div>
 
 
-<style lang="scss">
-  @import 'src/styles/breakpoints.scss';
+<style lang="postcss">
   $bgroup-col: 76px;
   $bgroup-gap: 3rem;
 
@@ -34,7 +33,7 @@
     }
   }
 
-  @media only screen and (max-width: $ss) {
+  @media only screen and (max-width: token(breakpoints.ss)) {
     .bgroup {
       grid-template-columns: 1fr;
       grid-row-gap: 1rem;

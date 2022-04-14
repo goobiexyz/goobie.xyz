@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../../chunks/Page-d1a218d7.js";
+import { P as Page, S as Section } from "../../../chunks/Page-02a8f5df.js";
 const Comics = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(Page, "Dfs.Page").$$render($$result, { title: "Comics" }, {}, {
     default: () => {

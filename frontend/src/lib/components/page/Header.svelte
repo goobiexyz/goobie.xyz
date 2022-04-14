@@ -4,19 +4,16 @@
 
 
 <header>
-  <IconLink type='logo' size='big' />
+  <IconLink type='logo' size='medium' />
   <h1><slot></slot></h1>
 </header>
 
 
-<style lang='scss'>
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   header {
     background: var(--pink);
-    padding: $margin;
-    padding-bottom: $half-margin;
+    padding: var(--margin);
+    padding-bottom: var(--half-margin);
 
     border-bottom: 5rem solid;
     border-image: url('/images/borders/benday_pink.svg');
@@ -41,7 +38,7 @@
   }
 
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     h1 {
       font-size: 2rem;
       line-height: 1.4;

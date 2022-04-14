@@ -1,64 +1,46 @@
 <script>
+  import Box from '$lib/components/Box.svelte'
+
   export let accent = 'white'
-  export let height = ''
-  export let style = 'card'
+  export let background = 'none'
+  export let border = 'var(--border)'
+  export let padding = 'var(--margin)'
+  export let height = '600px'
 </script>
 
 
-<div class='latest-posts {accent} style-{style}'>
-<div class='scroll-box {height} {accent}'><slot></slot></div>
-</div>
+<Box style={
+    `background: ${background};`+
+    `border: ${accent} ${border} solid;`+
+    `padding: 0;`
+  }>
+  <div
+    class='scroll-box {accent}'
+    style={
+      `padding: ${padding};`+
+      `height: ${height};`
+    }>
+    <slot />
+  </div>
+</Box>
 
 
-<style lang='scss'>
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-  @import 'src/styles/faded-scroll.scss';
-
-  .latest-posts {
-    &.style- {
-      &card {
-        border-radius: 16px;
-        border: 6px solid white;
-      }
-      &thin {
-        border-radius: 16px;
-        border: 2px solid white;
-      }
-    }
-
-    &.black {
-      border-color: var(--black);
-    }
-
-
-    width: min-content;
-    padding: 2px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+<style lang='postcss'>
+  @import '../../../styles/faded-scroll.css';
 
   .scroll-box {
-    resize: vertical;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 450px;
-    &.short {
-      height: 250px;
-    }
-
     overflow-y: scroll;
-    padding: $margin;
+    padding: var(--margin);
+    margin: 2px;
     & :global(>*):not(:first-child) {
-      margin-top: $margin;
+      margin-top: var(--margin);
     }
 
 
-    @include faded-scroll(12px, $margin);
+    @mixin faded-scroll 12px, var(--margin);
 
 
-    // Scrollbar
+    /* Scrollbar */
     /* Firefox */
     scrollbar-color: white transparent; /* foreground background */
     &.black {
@@ -74,36 +56,20 @@
       height: 3px
     }
     &::-webkit-scrollbar-thumb {
-        background-color: white;
-        border-radius: 9999px; /* always round */
+      background-color: white;
+      border-radius: 9999px; /* always round */
     }
     &.black::-webkit-scrollbar-thumb {
-        background-color: var(--black);
+      background-color: var(--black);
     }
 
     &::-webkit-scrollbar-track {
-        background-color: transparent;
+      background-color: transparent;
     }
   }
 
 
-  @media only screen and (max-width: $s) {
-    .latest-posts {
-      &.style- {
-        &card {
-          border: none;
-          padding: 0;
-          margin-top: 0;
-
-          .scroll-box {
-            margin: 0;
-            padding: $margin var(--scrollbar-width) $margin 0;
-          }
-        }
-      }
-      width: auto;
-    }
-
+  @media only screen and (max-width: token(breakpoints.s)) {
 
   }
 </style>

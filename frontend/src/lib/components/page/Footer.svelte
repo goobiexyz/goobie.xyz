@@ -10,15 +10,14 @@
   <IconLink type='github' />
 </footer>
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
+<style lang='postcss'>
 
   footer {
     display: flex;
     justify-content: center;
-    padding: $margin;
+    padding: var(--margin);
 
-
+    height: var(--footer-height);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -26,7 +25,7 @@
     background-color: var(--black);
 
     & :global(>*) {
-      margin: 0 $half-margin;
+      margin: 0 var(--half-margin);
     }
   }
 </style>

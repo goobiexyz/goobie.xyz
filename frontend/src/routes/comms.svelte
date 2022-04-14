@@ -1,8 +1,8 @@
 <script>
   import * as Dfs from '$lib/defaults.js'
-  import commsData from '$lib/comms-data.json'
+  import commsData from '$lib/data/comms-data.json'
   import CommCard from '$lib/components/comms/CommCard.svelte'
-  import Flex2Col from '$lib/components/layout/Flex2Col.svelte'
+  import FlexCols from '$lib/components/layout/FlexCols.svelte'
   import CommsQueue from '$lib/components/comms/CommsQueue.svelte'
 
   $: innerWidth = 0
@@ -19,8 +19,8 @@
 
 
   <Dfs.Section heading='Info' simple=true>
-  <Flex2Col halfnhalf=true margin='double'>
-    <div slot='col-1'>
+  <FlexCols colGap='var(--double-margin)'>
+    <div class='column' style='flex: 1;'>
       <div class='list'>
         <h3>General Terms:</h3>
         <ul>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div slot='col-2'>
+    <div class='column' style='flex: 1; flex-direction: column;'>
       <div class='list'>
         <h3>I Can Draw:</h3>
         <ul>
@@ -54,7 +54,7 @@
         </ul>
       </div>
     </div>
-  </Flex2Col>
+  </FlexCols>
 
 
 
@@ -107,18 +107,21 @@
 
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
+<style lang='postcss'>
+  .column {
+    flex: 1 1 50%;
+    min-width: 25ch;
+  }
 
   li + li, ul  {
-    margin-top: $half-margin;
+    margin-top: var(--half-margin);
   }
 
   .list {
     font-size: small;
 
     &:not(:first-child) {
-      margin-top: $margin;
+      margin-top: var(--margin);
     }
   }
 
@@ -129,7 +132,7 @@
   }
 
   .option-title + * {
-    margin-top: $half-margin;
+    margin-top: var(--half-margin);
   }
 
   .choices {
@@ -137,7 +140,7 @@
     justify-content: center;
     flex-wrap: wrap;
     & :global(>*) {
-      margin: $half-margin;
+      margin: var(--half-margin);
     }
   }
 </style>

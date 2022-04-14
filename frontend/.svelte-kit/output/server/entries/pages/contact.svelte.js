@@ -1,28 +1,32 @@
 import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component } from "../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../chunks/Page-d1a218d7.js";
+import { P as Page, S as Section } from "../../chunks/Page-02a8f5df.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 /* empty css                                                          *//* empty css                                                            *//* empty css                                                             */const css$3 = {
-  code: "button.svelte-145akts{transition:transform 0.1s;color:var(--dark-blue);background:white;border-radius:6px;padding:3px 6px 5px;font-weight:bold}button.svelte-145akts:hover{transform:scale(1.2)}button.svelte-145akts:active{transform:scale(1)}button.bg-white.svelte-145akts{background:white}button.bg-blue.svelte-145akts{background:var(--dark-blue)}button.text-white.svelte-145akts{color:white}button.text-blue.svelte-145akts{color:var(--dark-blue)}button.bg-white.svelte-145akts{background:white}button.bg-blue.svelte-145akts{background:var(--dark-blue)}button.outline-blue.svelte-145akts{outline:2px var(--dark-blue) solid}.big.svelte-145akts{font-size:1.2rem;padding:5px 25px 7px 25px}",
+  code: "button.svelte-bsmwd5{transition:transform 0.1s;padding:3px 12px 5px;font-weight:bold}button.svelte-bsmwd5:hover{transform:scale(1.2)}button.svelte-bsmwd5:active{transform:scale(1)}.size-big.svelte-bsmwd5{font-size:1.2rem;padding:5px 25px 7px 25px}",
   map: null
 };
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { color = "blue" } = $$props;
-  let { bg = "white" } = $$props;
-  let { outline = "none" } = $$props;
+  let { bgColor = "white" } = $$props;
+  let { borderColor = "none" } = $$props;
   let { id = "" } = $$props;
-  let { size = "" } = $$props;
+  let { size = "small" } = $$props;
   if ($$props.color === void 0 && $$bindings.color && color !== void 0)
     $$bindings.color(color);
-  if ($$props.bg === void 0 && $$bindings.bg && bg !== void 0)
-    $$bindings.bg(bg);
-  if ($$props.outline === void 0 && $$bindings.outline && outline !== void 0)
-    $$bindings.outline(outline);
+  if ($$props.bgColor === void 0 && $$bindings.bgColor && bgColor !== void 0)
+    $$bindings.bgColor(bgColor);
+  if ($$props.borderColor === void 0 && $$bindings.borderColor && borderColor !== void 0)
+    $$bindings.borderColor(borderColor);
   if ($$props.id === void 0 && $$bindings.id && id !== void 0)
     $$bindings.id(id);
   if ($$props.size === void 0 && $$bindings.size && size !== void 0)
     $$bindings.size(size);
   $$result.css.add(css$3);
-  return `<button${add_attribute("id", id, 0)} class="${"text-" + escape(color) + " bg-" + escape(bg) + " outline-" + escape(outline) + " " + escape(size) + " svelte-145akts"}">${slots.default ? slots.default({}) : ``}</button>`;
+  return `<button${add_attribute("id", id, 0)} class="${[
+    "color-" + escape(color) + " bg-color-" + escape(bgColor) + " border-color-" + escape(borderColor) + " size-" + escape(size) + " rounded svelte-bsmwd5",
+    borderColor !== "none" ? "border" : ""
+  ].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
+</button>`;
 });
 var ContactForm_svelte_svelte_type_style_lang = "";
 const css$2 = {
@@ -47,7 +51,7 @@ const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) 
 
   ${validate_component(Button, "Button").$$render($$result, {
     id: "submit",
-    bg: "blue",
+    bgColor: "dark-blue",
     color: "white",
     size: "big"
   }, {}, {

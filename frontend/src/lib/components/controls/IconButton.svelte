@@ -7,11 +7,11 @@
 
 <button class="{type} {size} {color}" {title} on:click></button>
 
-<style lang="scss">
-  @import "src/styles/button.scss";
+<style lang="postcss">
+  @import "../../../styles/hover-grow.css";
 
   button {
-    @include button;
+    @mixin hover-grow;
 
     display: block;
     position: relative;
@@ -19,9 +19,14 @@
     width: 2rem;
     height: 2rem;
 
-    &.big {
+    &.medium {
       width: 3rem;
       height: 3rem;
+    }
+
+    &.big {
+      width: 4rem;
+      height: 4rem;
     }
 
     border: none;

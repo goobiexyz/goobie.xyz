@@ -76,10 +76,7 @@
 </header>
 
 
-<style lang="scss">
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-
+<style lang="postcss">
   @keyframes scroll {
     100% {
       background-position: 400px 173.2px;
@@ -93,7 +90,7 @@
 
     height: max-content;
     margin-top: 0;
-    padding: $double-margin $margin;
+    padding: var(--double-margin) var(--margin);
 
     overflow: hidden;
 
@@ -105,12 +102,12 @@
   }
 
   h1 {
-    margin-top: $margin;
+    margin-top: var(--margin);
     text-align: center;
   }
 
   nav {
-    margin-top: $margin;
+    margin-top: var(--margin);
     height: 224px;
   }
 
@@ -129,15 +126,15 @@
   }
 
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     header {
-      padding-top: $margin;
-      padding-bottom: calc(#{$margin} + 1rem);
+      padding-top: var(--margin);
+      padding-bottom: calc(var(--margin) + 1rem);
     }
   }
 
 
-  @media only screen and (max-width: $ss) {
+  @media only screen and (max-width: token(breakpoints.ss)) {
 
     .header-body {
       width: 80vw;

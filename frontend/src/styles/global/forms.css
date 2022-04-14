@@ -1,0 +1,10 @@
+input, textarea {
+  border: 2px solid var(--black);
+  border-radius: var(--rounded-1);
+  padding: 4px 8px;
+  color: var(--black);
+}
+
+label { font-weight: bold; }
+
+fieldset { border: none; }

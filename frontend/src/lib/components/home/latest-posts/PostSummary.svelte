@@ -1,43 +1,52 @@
 <script>
-  import Flex2Col from '../../layout/Flex2Col.svelte'
-  import Button from '../../controls/Button.svelte'
   import convertDate from '$lib/convert-date.js'
+  import Image from '$lib/components/media/Image.svelte'
+  import Box from '$lib/components/Box.svelte'
+  import breakpoints from '$lib/data/breakpoints.json'
 
   export let post
   let thumbnail = 'https://api.graciebell.art'+post.attributes.thumbnail.data.attributes.formats.thumbnail.url
   let type = post.attributes.media_type
   let title = post.attributes.title
   let date = post.attributes.date
+  let desc = post.attributes.description
+
+  let bp_s = parseInt(breakpoints.s)
+  let innerWidth // bound to window.innerWidth
+  $: isMaxWidthS = innerWidth <= bp_s
 </script>
 
 
+<svelte:window bind:innerWidth={innerWidth} />
 
-<article>
-  <div class='col-1'><img src={thumbnail} alt=''/></div>
 
-  <div class='col-2'>
-    <span class='content-type'>{type}</span>
-    <h3>{title}</h3>
-    <time>{convertDate(date)}</time>
+<Box
+  tag='article'
+  style='color: white; background: none; border-radius: 0;'>
+  <div class='columns'>
+    <div class='col-1'>
+      <Image src={thumbnail} alt='' style='border-radius: var(--rounded-2);'/>
+    </div>
+
+    <div class='col-2'>
+      <span class='content-type'>{type}</span>
+      <h3>{title}</h3>
+      <time>{convertDate(date)}</time>
+      <p class='description'>{desc}</p>
+    </div>
   </div>
-</article>
+</Box>
+
 
 
 <style lang='scss'>
   @import 'src/styles/breakpoints.scss';
   @import 'src/styles/spacing.scss';
 
-  article {
-    background: white;
-    padding: $half-margin;
-    border-radius: 16px;
-    color: var(--dark-blue);
-    display: flex;
-    width: 512px;
-
-    .col-1 {
-      margin-right: $half-margin;
-    }
+  .columns {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: var(--half-margin);
 
     .content-type {
       display: block;
@@ -53,43 +62,32 @@
       font-size: 1.25rem;
     }
 
-    img {
-      border-radius: 10px;
-      height: 123px;
-      width: 123px;
-      display: block;
-    }
-
     time {
-      margin-top: 8px;
+      margin-top: 2px;
       display: block;
       font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    .description {
+      margin-top: var(--margin);
     }
   }
 
 
-
-
   @media only screen and (max-width: $s) {
-    article {
-      width: 100%;
+    .columns {
+      justify-content: space-evenly;
+      grid-template-columns: min-content;
+
+      & :global(img) {
+        width: 200px;
+      }
     }
   }
 
 
   @media only screen and (max-width: $ss) {
-    article {
-      padding: 0 0 $margin 0;
-      background: none;
 
-      border-bottom: 1px white dashed;
-      border-radius: 0;
-      color: white;
-
-      img {
-        height: 80px;
-        width: 80px;
-      }
-    }
   }
 </style>

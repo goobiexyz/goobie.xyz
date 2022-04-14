@@ -38,16 +38,13 @@
 </Dfs.Page>
 
 
-<style lang='scss'>
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   .image-col {
     $col-size: 300px;
-    $gap-size: $double-margin;
+    $gap-size: var(--double-margin);
 
     display: grid;
-    grid-template-columns: fit-content(300px) fit-content(300px) fit-content(300px);
+    grid-template-columns: fit-content($col-size) fit-content($col-size) fit-content($col-size);
     grid-row-gap: $gap-size;
     grid-column-gap: $gap-size;
     justify-content: center;
@@ -55,9 +52,7 @@
     justify-items: center;
 
     img {
-      //display: block;
       max-width: 100%;
-      // background: var(--c3);
     }
 
     .wide {
@@ -74,15 +69,15 @@
   }
 
 
-  @media only screen and (max-width: $m) {
+  @media only screen and (max-width: token(breakpoints.m)) {
     .image-col {
-      grid-row-gap: $margin;
-      grid-column-gap: $margin;
+      grid-row-gap: var(--margin);
+      grid-column-gap: var(--margin);
     }
   }
 
 
-  @media only screen and (max-width: $ss) {
+  @media only screen and (max-width: token(breakpoints.ss)) {
     .image-col {
       grid-template-columns: 100%;
       .wide, .wide-2, .tall {

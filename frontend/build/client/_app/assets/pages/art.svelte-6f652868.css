@@ -1,0 +1,1 @@
+.gallery.svelte-1r35nzb{display:grid;grid-template-columns:repeat(5,1fr);grid-gap:.75rem}button.svelte-1r35nzb{overflow:hidden;transition:.1s transform}button.svelte-1r35nzb:hover{transform:scale(1.1)}button.svelte-1r35nzb:active{transform:scale(1)}@media only screen and (max-width: 768px){.gallery.svelte-1r35nzb{grid-template-columns:repeat(3,1fr)}}

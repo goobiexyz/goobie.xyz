@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../../../chunks/Page-d1a218d7.js";
+import { P as Page, S as Section } from "../../../../chunks/Page-02a8f5df.js";
 import { S as SvelteMarkdown } from "../../../../chunks/SvelteMarkdown-bfd616a7.js";
 async function load({ params, fetch }) {
   let id = params.id;

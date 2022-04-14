@@ -27,17 +27,15 @@
 </article>
 
 
-<style lang='scss'>
-  @import 'src/styles/spacing.scss';
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/faded-scroll.scss';
+<style lang='postcss'>
+  @import '../../../styles/faded-scroll.css';
 
   article {
     background: white;
     border-radius: 20px;
 
-    width: $s;
-    max-height: calc(100vh - 2 * #{$margin});
+    width: token(breakpoints.s);
+    max-height: calc(100vh - 2 * var(--margin));
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -45,13 +43,13 @@
 
   .article-body {
     overflow-y: scroll;
-    padding: $margin;
-    @include faded-scroll(12px, $margin)
+    padding: var(--margin);
+    @mixin faded-scroll 12px, var(--margin);
   }
 
   header {
     border-bottom: 1px dashed var(--black);
-    padding-bottom: $half-margin;
+    padding-bottom: var(--half-margin);
   }
 
   h1 {
@@ -70,7 +68,7 @@
   }
 
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     article {
       width: auto;
     }

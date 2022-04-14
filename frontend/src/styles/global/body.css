@@ -1,0 +1,5 @@
+body {
+  position: relative;
+  padding-bottom: var(--footer-height);
+  min-height: 100vh;
+}

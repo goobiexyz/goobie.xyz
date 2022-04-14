@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../chunks/index-bbc75d3b.js";
-import { P as Page, S as Section } from "../../chunks/Page-d1a218d7.js";
+import { P as Page, S as Section } from "../../chunks/Page-02a8f5df.js";
 var design_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".image-col.svelte-mp1hmt.svelte-mp1hmt{display:grid;grid-template-columns:fit-content(300px) fit-content(300px) fit-content(300px);grid-row-gap:calc(1.5rem * 2);grid-column-gap:calc(1.5rem * 2);justify-content:center;align-items:center;justify-items:center}.image-col.svelte-mp1hmt img.svelte-mp1hmt{max-width:100%}.image-col.svelte-mp1hmt .wide.svelte-mp1hmt{grid-column:span 3}.image-col.svelte-mp1hmt .wide-2.svelte-mp1hmt{grid-column:span 2}.image-col.svelte-mp1hmt .tall.svelte-mp1hmt{grid-row:span 2}@media only screen and (max-width: 900px){.image-col.svelte-mp1hmt.svelte-mp1hmt{grid-row-gap:1.5rem;grid-column-gap:1.5rem}}@media only screen and (max-width: 600px){.image-col.svelte-mp1hmt.svelte-mp1hmt{grid-template-columns:100%}.image-col.svelte-mp1hmt .wide.svelte-mp1hmt,.image-col.svelte-mp1hmt .wide-2.svelte-mp1hmt,.image-col.svelte-mp1hmt .tall.svelte-mp1hmt{grid-row:span 1;grid-column:span 1}}",
