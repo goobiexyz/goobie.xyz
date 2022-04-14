@@ -254,7 +254,7 @@ const ImgSCaption = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 var PostSummary_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: '.columns.svelte-1jr8s5p.svelte-1jr8s5p{display:grid;grid-template-columns:-webkit-max-content auto;grid-template-columns:max-content auto;grid-gap:var(--half-margin)}.columns.svelte-1jr8s5p .content-type.svelte-1jr8s5p{display:block;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}.columns.svelte-1jr8s5p h3.svelte-1jr8s5p{font-family:"urbane-bold";font-size:1.25rem}.columns.svelte-1jr8s5p time.svelte-1jr8s5p{margin-top:2px;display:block;font-family:monospace;font-size:0.9rem}.columns.svelte-1jr8s5p .description.svelte-1jr8s5p{margin-top:var(--margin)}@media only screen and (max-width: 768px){.columns.svelte-1jr8s5p.svelte-1jr8s5p{justify-content:space-evenly;grid-template-columns:-webkit-min-content;grid-template-columns:min-content}.columns.svelte-1jr8s5p img{width:200px}}',
+  code: ".col-1.svelte-v1u8kr,.col-2.svelte-v1u8kr{display:block}.col-2.svelte-v1u8kr{flex:1}.content-type.svelte-v1u8kr{display:block;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}h3.svelte-v1u8kr{font-family:'urbane-bold';font-size:1.25rem}time.svelte-v1u8kr{margin-top:2px;display:block;font-family:monospace;font-size:0.9rem}.description.svelte-v1u8kr{margin-top:var(--margin)}@media only screen and (max-width: 768px){.col-1.svelte-v1u8kr img{width:200px}}",
   map: null
 };
 const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -275,22 +275,26 @@ ${validate_component(Box, "Box").$$render($$result, {
     style: "color: white; background: none; border-radius: 0;"
   }, {}, {
     default: () => {
-      return `<div class="${"columns svelte-1jr8s5p"}"><div class="${"col-1"}">${validate_component(Image, "Image").$$render($$result, {
-        src: thumbnail,
-        alt: "",
-        style: "border-radius: var(--rounded-2);"
-      }, {}, {})}</div>
+      return `${validate_component(FlexCols, "FlexCols").$$render($$result, {}, {}, {
+        default: () => {
+          return `<div class="${"col-1 svelte-v1u8kr"}">${validate_component(Image, "Image").$$render($$result, {
+            src: thumbnail,
+            alt: "",
+            style: "border-radius: var(--rounded-2);"
+          }, {}, {})}</div>
 
-    <div class="${"col-2"}"><span class="${"content-type svelte-1jr8s5p"}">${escape(type)}</span>
-      <h3 class="${"svelte-1jr8s5p"}">${escape(title)}</h3>
-      <time class="${"svelte-1jr8s5p"}">${escape(convertDate(date))}</time>
-      <p class="${"description svelte-1jr8s5p"}">${escape(desc)}</p></div></div>`;
+    <div class="${"col-2 svelte-v1u8kr"}"><span class="${"content-type svelte-v1u8kr"}">${escape(type)}</span>
+      <h3 class="${"svelte-v1u8kr"}">${escape(title)}</h3>
+      <time class="${"svelte-v1u8kr"}">${escape(convertDate(date))}</time>
+      <p class="${"description svelte-v1u8kr"}">${escape(desc)}</p></div>`;
+        }
+      })}`;
     }
   })}`;
 });
 var LatestPosts_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "hr.svelte-3xrr4n{border:none;border-top:1px white dashed}hr.svelte-3xrr4n:last-child{display:none}button.svelte-3xrr4n{width:100%;text-align:left;transition:0.1s transform}button.svelte-3xrr4n:hover{transform:scale(1.03)}button.svelte-3xrr4n:active{transform:scale(1)}@media only screen and (max-width: 768px){.wrapper.svelte-3xrr4n{width:-webkit-min-content;width:-moz-min-content;width:min-content;margin:auto}}",
+  code: "hr.svelte-1y1hff8{border:none;border-top:1px white dashed}hr.svelte-1y1hff8:last-child{display:none}button.svelte-1y1hff8{width:100%;text-align:left;transition:0.1s transform}button.svelte-1y1hff8:hover{transform:scale(1.03)}button.svelte-1y1hff8:active{transform:scale(1)}@media only screen and (max-width: 768px){.wrapper.svelte-1y1hff8{width:-webkit-min-content;width:-moz-min-content;width:min-content;margin:auto}}",
   map: null
 };
 const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -299,13 +303,13 @@ const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.posts === void 0 && $$bindings.posts && posts !== void 0)
     $$bindings.posts(posts);
   $$result.css.add(css$1);
-  return `<div class="${"wrapper svelte-3xrr4n"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {}, {}, {
+  return `<div class="${"wrapper svelte-1y1hff8"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
         default: () => {
           return `${each(posts, (post) => {
-            return `<button class="${"svelte-3xrr4n"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</button>
-        <hr class="${"svelte-3xrr4n"}">`;
+            return `<button class="${"svelte-1y1hff8"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</button>
+        <hr class="${"svelte-1y1hff8"}">`;
           })}`;
         }
       })}`;
