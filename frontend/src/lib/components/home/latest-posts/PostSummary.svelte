@@ -3,6 +3,7 @@
   import Image from '$lib/components/media/Image.svelte'
   import Box from '$lib/components/Box.svelte'
   import breakpoints from '$lib/data/breakpoints.json'
+  import FlexCols from '$lib/components/layout/FlexCols.svelte'
 
   export let post
   let thumbnail = 'https://api.graciebell.art'+post.attributes.thumbnail.data.attributes.formats.thumbnail.url
@@ -23,7 +24,7 @@
 <Box
   tag='article'
   style='color: white; background: none; border-radius: 0;'>
-  <div class='columns'>
+  <FlexCols>
     <div class='col-1'>
       <Image src={thumbnail} alt='' style='border-radius: var(--rounded-2);'/>
     </div>
@@ -34,7 +35,7 @@
       <time>{convertDate(date)}</time>
       <p class='description'>{desc}</p>
     </div>
-  </div>
+  </FlexCols>
 </Box>
 
 
@@ -43,10 +44,13 @@
   @import 'src/styles/breakpoints.scss';
   @import 'src/styles/spacing.scss';
 
-  .columns {
-    display: grid;
-    grid-template-columns: max-content auto;
-    grid-gap: var(--half-margin);
+    .col-1, .col-2 {
+      display: block;
+    }
+
+    .col-2 {
+      flex: 1;
+    }
 
     .content-type {
       display: block;
@@ -72,14 +76,10 @@
     .description {
       margin-top: var(--margin);
     }
-  }
 
 
   @media only screen and (max-width: $s) {
-    .columns {
-      justify-content: space-evenly;
-      grid-template-columns: min-content;
-
+    .col-1 {
       & :global(img) {
         width: 200px;
       }
