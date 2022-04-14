@@ -49,6 +49,7 @@
   }
 
   @media only screen and (max-width: token(breakpoints.s)) {
+    /* shrinkwraps and centers the scroll box on mobile */
     .wrapper {
       width: min-content;
       margin: auto;
