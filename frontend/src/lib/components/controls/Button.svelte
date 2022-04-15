@@ -13,12 +13,10 @@
   {id}
   on:click
   class={size}
-  style={
-    `color: ${color};`+
-    `background: ${background};`+
-    `border: ${border} ${borderColor} solid;`+
-    `border-radius: ${rounded};`
-    }>
+  style:color
+  style:background
+  style:border='{border} {borderColor} solid'
+  style:border-radius={rounded}>
   <slot></slot>
 </button>
 
@@ -27,7 +25,7 @@
   @import '../../../styles/hover-grow.css';
 
   button {
-    @mixin hover-grow 1.15;
+    @mixin hover-grow 1.1;
 
     padding: 3px 12px 5px;
     font-weight: bold;
