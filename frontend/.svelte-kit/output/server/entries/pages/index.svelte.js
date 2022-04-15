@@ -1,12 +1,19 @@
 import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component, a as createEventDispatcher, d as each } from "../../chunks/index-0ee30357.js";
 import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
-import { F as FlexCols } from "../../chunks/FlexCols-7124888f.js";
+import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
 import { I as Image } from "../../chunks/Image-e7ebf645.js";
 import { c as convertDate, M as MediaModal } from "../../chunks/MediaModal-f5a88e57.js";
 import { B as Box } from "../../chunks/Box-76cefffb.js";
 import { S as ScrollBox } from "../../chunks/ScrollBox-663f56d0.js";
 import { S as SpacedDiv } from "../../chunks/SpacedDiv-a3cc0b62.js";
+function truncateString(s, limit) {
+  if (s.length > limit) {
+    return s.substring(0, limit) + " ...";
+  } else {
+    return s;
+  }
+}
 var NavButton_svelte_svelte_type_style_lang = "";
 const css$6 = {
   code: `a.svelte-1uv9swr.svelte-1uv9swr,a.svelte-1uv9swr.svelte-1uv9swr:hover,a.svelte-1uv9swr.svelte-1uv9swr:focus,a.svelte-1uv9swr.svelte-1uv9swr:active{text-decoration:none;color:inherit}.nav-button.svelte-1uv9swr.svelte-1uv9swr:hover{transform:scale(1.2)}.nav-button.svelte-1uv9swr.svelte-1uv9swr:active{transform:scale(1)}.nav-button.svelte-1uv9swr.svelte-1uv9swr{transition:transform 0.1s;box-sizing:content-box;display:block;position:relative;border:0.4rem white solid;border-radius:1rem;width:4rem;height:4rem;background:0;background-position:center;background-repeat:no-repeat;text-align:center;transition:transform 0.25s, opacity 0.25s;text-decoration:none}.nav-button.hidden.svelte-1uv9swr.svelte-1uv9swr{transform:perspective(500px) rotateX(90deg);perspective:500px;opacity:0;pointer-events:none;z-index:-1}.nav-button.svelte-1uv9swr span.svelte-1uv9swr{display:inline-block;line-height:4rem;white-space:nowrap;color:white;font-family:'urbane';font-weight:600;transform:translateY(3.5rem);position:relative}.nav-button.work.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_star.svg")}.nav-button.comms.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_money.svg")}.nav-button.contact.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_at.svg")}.nav-button.image.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_brush.svg")}.nav-button.design.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_shapes.svg")}.nav-button.music.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_music.svg")}.nav-button.code.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_code.svg")}.nav-button.video.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_video.svg")}.nav-button.comics.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_book.svg")}.nav-button.close.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_close.svg");border:none}.nav-button.back.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_back.svg");border:none;position:absolute;left:calc(-3rem - 76px)}@media only screen and (min-width: 601px){.nav-button.svelte-1uv9swr.svelte-1uv9swr::before{content:"";margin-left:-100%}.nav-button.svelte-1uv9swr.svelte-1uv9swr::after{content:"";margin-right:-100%}}@media only screen and (max-width: 600px){.nav-button.svelte-1uv9swr.svelte-1uv9swr{width:3rem;height:3rem;text-align:left;font-size:1.5rem;border:none;text-decoration:underline}.nav-button.back.svelte-1uv9swr.svelte-1uv9swr{position:static}.nav-button.svelte-1uv9swr span.svelte-1uv9swr{text-indent:4rem;height:-webkit-min-content;height:-moz-min-content;height:min-content;line-height:3rem;transform:none}}`,
@@ -263,7 +270,7 @@ const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) 
   let type = post.attributes.media_type;
   let title = post.attributes.title;
   let date = post.attributes.date;
-  let desc = post.attributes.description;
+  let desc = truncateString(post.attributes.description, 125);
   if ($$props.post === void 0 && $$bindings.post && post !== void 0)
     $$bindings.post(post);
   $$result.css.add(css$2);
@@ -319,7 +326,7 @@ const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".col-1.svelte-190uhy9{flex:1 1 20%}.col-2.svelte-190uhy9{flex:1 1 60%;min-width:35ch}@media only screen and (max-width: 600px){.col-2.svelte-190uhy9{min-width:100%}}",
+  code: ".col-1.svelte-1hh3xca{flex:1 1 20%;display:flex;justify-content:space-evenly}.col-2.svelte-1hh3xca{flex:1 1 60%;min-width:35ch}@media only screen and (max-width: 600px){.col-2.svelte-1hh3xca{min-width:100%}}",
   map: null
 };
 async function load() {
@@ -360,7 +367,7 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { header: false }, {},
           default: () => {
             return `${validate_component(FlexCols, "FlexCols").$$render($$result, {}, {}, {
               default: () => {
-                return `<div class="${"col-1 svelte-190uhy9"}">${validate_component(ImgSCaption, "ImgSCaption").$$render($$result, {
+                return `<div class="${"col-1 svelte-1hh3xca"}">${validate_component(ImgSCaption, "ImgSCaption").$$render($$result, {
                   src: "/images/gracie4.png",
                   style: "width:100%; max-width:16rem; border-radius:var(--rounded-2);",
                   alt: ""
@@ -369,7 +376,7 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { header: false }, {},
                     return `Art by <a href="${"https://twitter.com/ponycide"}">Ponycide.</a>`;
                   }
                 })}</div>
-      <div class="${"col-2 svelte-190uhy9"}">${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
+      <div class="${"col-2 svelte-1hh3xca"}">${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
                   default: () => {
                     return `<p>Hi there! My name is Grace and I call myself a multimedia artist because I&#39;m always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My specialties include graphic design, illustration, coding, video editing, and music composition.
           </p>

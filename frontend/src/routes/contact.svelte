@@ -60,7 +60,6 @@
 
   .col-2 {
     flex: 1 1;
-    justify-content: left;
   }
 
   dt {

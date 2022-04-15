@@ -1,7 +1,7 @@
 import { c as create_ssr_component, f as add_attribute, e as escape, n as null_to_empty, v as validate_component } from "../../chunks/index-0ee30357.js";
 import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
-import { F as FlexCols } from "../../chunks/FlexCols-7124888f.js";
+import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
 import { S as SpacedDiv } from "../../chunks/SpacedDiv-a3cc0b62.js";
 var Button_svelte_svelte_type_style_lang = "";
 const css$2 = {
@@ -71,7 +71,7 @@ const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 var contact_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".email-form.svelte-e62e5b{width:100%}.col-1.svelte-e62e5b{flex:2 1;min-width:75%}.col-1.svelte-e62e5b h2+*{margin-top:var(--half-margin)}.col-2.svelte-e62e5b{flex:1 1;justify-content:left}dt.svelte-e62e5b{font-weight:bold;margin-top:var(--half-margin)}",
+  code: ".email-form.svelte-ui1l3{width:100%}.col-1.svelte-ui1l3{flex:2 1;min-width:75%}.col-1.svelte-ui1l3 h2+*{margin-top:var(--half-margin)}.col-2.svelte-ui1l3{flex:1 1}dt.svelte-ui1l3{font-weight:bold;margin-top:var(--half-margin)}",
   map: null
 };
 const Contact = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -87,16 +87,16 @@ const Contact = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             rowGap: "var(--double-margin)"
           }, {}, {
             default: () => {
-              return `<div class="${"col-1 svelte-e62e5b"}"><div class="${"email-form svelte-e62e5b"}"><h2>Email</h2>
+              return `<div class="${"col-1 svelte-ui1l3"}"><div class="${"email-form svelte-ui1l3"}"><h2>Email</h2>
           ${validate_component(ContactForm, "ContactForm").$$render($$result, {}, {}, {})}</div></div>
 
-      <div class="${"col-2 svelte-e62e5b"}"><dl class="${"other-contacts"}"><h2>Social</h2>${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, { spacing: "half" }, {}, {
+      <div class="${"col-2 svelte-ui1l3"}"><dl class="${"other-contacts"}"><h2>Social</h2>${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, { spacing: "half" }, {}, {
                 default: () => {
-                  return `<div class="${"contact-item"}"><dt class="${"svelte-e62e5b"}">Twitter</dt>
+                  return `<div class="${"contact-item"}"><dt class="${"svelte-ui1l3"}">Twitter</dt>
               <dd><a${add_attribute("href", socialLinks.twitter, 0)}>@GracieArt</a></dd></div>
-            <div class="${"contact-item"}"><dt class="${"svelte-e62e5b"}">Telegram</dt>
+            <div class="${"contact-item"}"><dt class="${"svelte-ui1l3"}">Telegram</dt>
               <dd><a${add_attribute("href", socialLinks.telegram, 0)}>@GracieArt</a></dd></div>
-            <div class="${"contact-item"}"><dt class="${"svelte-e62e5b"}">Discord</dt>
+            <div class="${"contact-item"}"><dt class="${"svelte-ui1l3"}">Discord</dt>
               <dd><a${add_attribute("href", socialLinks.discord, 0)}>GracieArt#1312</a></dd></div>`;
                 }
               })}</dl></div>`;

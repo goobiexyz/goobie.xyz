@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component, e as escape, d as each } from "../../chunks/index-0ee30357.js";
 import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
 import { I as Image } from "../../chunks/Image-e7ebf645.js";
-import { F as FlexCols } from "../../chunks/FlexCols-7124888f.js";
+import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
 import { S as ScrollBox } from "../../chunks/ScrollBox-663f56d0.js";
 import "../../chunks/Box-76cefffb.js";
 const thumbsDir = "/images/thumbs/comms/";

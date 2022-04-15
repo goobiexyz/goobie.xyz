@@ -4,13 +4,14 @@
   import Box from '$lib/components/Box.svelte'
   import breakpoints from '$lib/data/breakpoints.json'
   import FlexCols from '$lib/components/layout/FlexCols.svelte'
+  import truncateString from '$lib/truncate-string.ts'
 
   export let post
   let thumbnail = 'https://api.graciebell.art'+post.attributes.thumbnail.data.attributes.formats.thumbnail.url
   let type = post.attributes.media_type
   let title = post.attributes.title
   let date = post.attributes.date
-  let desc = post.attributes.description
+  let desc = truncateString(post.attributes.description, 125)
 
   let bp_s = parseInt(breakpoints.s)
   let innerWidth // bound to window.innerWidth

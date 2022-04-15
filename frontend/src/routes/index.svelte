@@ -1,4 +1,6 @@
 <script context='module'>
+  import truncateString from '$lib/truncate-string.ts'
+
   export async function load() {
     let url = 'https://api.graciebell.art/api/posts'
     let params = [
@@ -76,6 +78,9 @@
 <style lang='postcss'>
   .col-1 {
     flex: 1 1 20%;
+
+    display: flex;
+    justify-content: space-evenly;
   }
   .col-2 {
     flex: 1 1 60%;

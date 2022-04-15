@@ -13,11 +13,5 @@
   .flex-2-col {
     display: flex;
     flex-wrap: wrap;
-
-    & :global(>*) {
-      display: flex;
-      justify-content: space-evenly;
-      justify-items: center;
-    }
   }
 </style>
