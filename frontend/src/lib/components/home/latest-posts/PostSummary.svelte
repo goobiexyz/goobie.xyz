@@ -7,17 +7,22 @@
   import truncateString from '$lib/truncate-string.ts'
 
   export let post
-  let thumbnail = 'https://api.graciebell.art'+post.attributes.thumbnail.data.attributes.formats.thumbnail.url
+
+  let thumbnailMeta = post.attributes.thumbnail.data.attributes
+  let rootUrl = 'https://api.graciebell.art'
+  let thumbnailUrl = rootUrl+thumbnailMeta.formats.thumbnail.url
+
   let type = post.attributes.media_type
   let title = post.attributes.title
   let date = post.attributes.date
   let desc = truncateString(post.attributes.description, 125)
+
   let isThumbnailLoaded = false
 </script>
 
 
 <svelte:head>
-  <link rel='preload' as='image' href={thumbnail} />
+  <link rel='preload' as='image' href={thumbnailUrl} />
 </svelte:head>
 
 
@@ -27,7 +32,7 @@
   <FlexCols>
     <div class='col-1'>
       <Image
-        src={thumbnail}
+        src={thumbnailUrl}
         alt=''
         style='border-radius: var(--rounded-2);'
       />

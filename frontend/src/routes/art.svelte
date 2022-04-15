@@ -31,11 +31,13 @@
   import constrain from '$lib/constrain.ts'
 
   let mediaModal
+
+  let apiUrl = 'https://api.graciebell.art'
   let pageNum = 1
   let lastPage = pagination.pageCount
+
   let posts = []
 
-  onMount(getPosts)
 
   async function getPosts() {
     if ($page.url.searchParams.has('page')) {
@@ -44,7 +46,7 @@
       pageNum = 1
     }
 
-    let url = 'https://api.graciebell.art/api/posts'
+    let url = `${apiUrl}/api/posts`
     let params = [
       `filters[media_type][$eq]=art`, // filter only art
       `sort=date:desc`, // sort by descending date
@@ -58,12 +60,16 @@
     posts = res.data
   }
 
+
   function changePageBy(n) {
     pageNum = constrain(pageNum + n, 1, lastPage)
     $page.url.searchParams.set('page', pageNum)
     goto($page.url.toString())
     getPosts()
   }
+
+
+  onMount(getPosts)
 </script>
 
 
@@ -79,14 +85,13 @@
 
     <div class='gallery'>
       {#each posts as post}
+        {@const thumbnailMeta = post.attributes.thumbnail.data.attributes}
+        {@const thumbnailUrl = apiUrl+thumbnailMeta.formats.thumbnail.url}
         <button
           title={post.attributes.title}
           on:click={() => mediaModal.openModal(post)}>
           <Image
-            src='https://api.graciebell.art{
-              post.attributes.thumbnail.data.
-              attributes.formats.thumbnail.url
-            }'
+            src={thumbnailUrl}
             style='border-radius: var(--rounded-2); width: 100%;'
             alt=''
           />
