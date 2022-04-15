@@ -29,7 +29,7 @@
     display: block;
 
     opacity: 0;
-    transition: opacity 0.1s ease-out;
+    transition: opacity 0.25s ease-out;
     &.loaded {
       opacity: 1;
     }

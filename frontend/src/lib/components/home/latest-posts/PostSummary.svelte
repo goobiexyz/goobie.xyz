@@ -12,14 +12,13 @@
   let title = post.attributes.title
   let date = post.attributes.date
   let desc = truncateString(post.attributes.description, 125)
-
-  let bp_s = parseInt(breakpoints.s)
-  let innerWidth // bound to window.innerWidth
-  $: isMaxWidthS = innerWidth <= bp_s
+  let isThumbnailLoaded = false
 </script>
 
 
-<svelte:window bind:innerWidth={innerWidth} />
+<svelte:head>
+  <link rel='preload' as='image' href={thumbnail} />
+</svelte:head>
 
 
 <Box
@@ -27,7 +26,11 @@
   style='color: white; background: none; border-radius: 0;'>
   <FlexCols>
     <div class='col-1'>
-      <Image src={thumbnail} alt='' style='border-radius: var(--rounded-2);'/>
+      <Image
+        src={thumbnail}
+        alt=''
+        style='border-radius: var(--rounded-2);'
+      />
     </div>
 
     <div class='col-2'>
