@@ -4,7 +4,7 @@
 
 
 <header>
-  <IconLink type='logo' size='medium' />
+  <IconLink type='logo' size='medium' color='white' />
   <h1><slot></slot></h1>
 </header>
 

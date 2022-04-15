@@ -5,7 +5,12 @@
   export let color = 'white'
 </script>
 
-<button class="{type} {size} {color}" {title} on:click></button>
+<button
+  class='{type} {size}'
+  style='--color: {color};'
+  {title}
+  on:click>
+</button>
 
 <style lang="postcss">
   @import "../../../styles/hover-grow.css";
@@ -41,12 +46,7 @@
     mask-position: center;
     mask-repeat: no-repeat;
 
-    &.white {
-      background: white;
-    }
-    &.dark-blue {
-      background: var(--dark-blue);
-    }
+    background: var(--color);
 
     &.logo {
       mask-image: url('/images/icons/b_logo.svg');

@@ -5,6 +5,8 @@
   import { createEventDispatcher } from 'svelte'
   let dispatch = createEventDispatcher()
   import IconButton from './IconButton.svelte'
+
+  let color = 'var(--dark-blue)'
 </script>
 
 
@@ -12,13 +14,13 @@
   <IconButton
     type='left-arrow'
     size='big'
-    color='dark-blue'
+    {color}
     on:click={() => dispatch('prev')} />
   <span class='page-number'>{pageNum} of {lastPage}</span>
   <IconButton
     type='right-arrow'
     size='big'
-    color='dark-blue'
+    {color}
     on:click={() => dispatch('next')} />
 </div>
 

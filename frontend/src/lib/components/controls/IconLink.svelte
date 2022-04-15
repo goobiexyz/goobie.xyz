@@ -3,6 +3,8 @@
 
   export let type
   export let size
+  export let color
+
   let title = ''
   let location = ''
 
@@ -35,4 +37,4 @@
 
 </script>
 
-<a {title} href="{location}"><IconButton {type} {size} /></a>
+<a {title} href="{location}"><IconButton {type} {size} {color} /></a>

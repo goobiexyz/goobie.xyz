@@ -1,13 +1,15 @@
 <script>
   import IconLink from '../controls/IconLink.svelte'
+
+  let color = 'white'
 </script>
 
 
 <footer>
-  <IconLink type='twitter' />
-  <IconLink type='youtube' />
-  <IconLink type='soundcloud' />
-  <IconLink type='github' />
+  <IconLink type='twitter' {color} />
+  <IconLink type='youtube' {color} />
+  <IconLink type='soundcloud' {color} />
+  <IconLink type='github' {color} />
 </footer>
 
 <style lang='postcss'>
