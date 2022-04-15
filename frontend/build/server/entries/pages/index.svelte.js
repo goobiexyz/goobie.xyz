@@ -2,8 +2,8 @@ import { c as create_ssr_component, e as escape, f as add_attribute, v as valida
 import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
-import { I as Image } from "../../chunks/Image-e7ebf645.js";
-import { c as convertDate, M as MediaModal } from "../../chunks/MediaModal-f5a88e57.js";
+import { I as Image } from "../../chunks/Image-4188858f.js";
+import { c as convertDate, M as MediaModal } from "../../chunks/MediaModal-9a33bf3d.js";
 import { B as Box } from "../../chunks/Box-76cefffb.js";
 import { S as ScrollBox } from "../../chunks/ScrollBox-663f56d0.js";
 import { S as SpacedDiv } from "../../chunks/SpacedDiv-a3cc0b62.js";
@@ -256,7 +256,7 @@ const ImgSCaption = create_ssr_component(($$result, $$props, $$bindings, slots) 
     $$bindings.style(style);
   $$result.css.add(css$3);
   return `<figure>${validate_component(Image, "Image").$$render($$result, { src, alt, style }, {}, {})}
-  <figcaption class="${"svelte-1tlalfw"}">${slots.default ? slots.default({}) : ``}</figcaption>
+  ${``}
 </figure>`;
 });
 var PostSummary_svelte_svelte_type_style_lang = "";
@@ -274,7 +274,7 @@ const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.post === void 0 && $$bindings.post && post !== void 0)
     $$bindings.post(post);
   $$result.css.add(css$2);
-  return `
+  return `${$$result.head += `<link rel="${"preload"}" as="${"image"}"${add_attribute("href", thumbnail, 0)} data-svelte="svelte-nju8n2">`, ""}
 
 
 ${validate_component(Box, "Box").$$render($$result, {
