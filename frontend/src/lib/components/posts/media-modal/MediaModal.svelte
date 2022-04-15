@@ -5,12 +5,16 @@
   import IconButton from '../../controls/IconButton.svelte'
   import { onMount } from 'svelte'
   import convertDate from '$lib/convert-date.js'
+  import { fly } from 'svelte/transition'
 
   let modal
+
   let open = false
   let loaded = false
   let showControls = true
+
   let post = {}
+  let mediaType
   let body
 
   onMount(() => {
@@ -31,6 +35,7 @@
     showControls = true
     loaded = false
     post = p
+    mediaType = post.attributes.media_type
     body.style.overflow = "hidden"
   }
 
@@ -49,112 +54,82 @@
 
 
 <div class='modal' class:open bind:this={modal}>
-  <div class='modal-controls {showControls ? "" : "hide"}' >
-    <IconButton type='back-circle' title='Back' size='big' on:click={closeModal}/>
-  </div>
-
   {#if open}
-    {#if post.attributes.media_type == 'art'}
-      <div class='modal-caption {showControls ? "" : "hide"}' on:click={toggleControls}>
+    {#if showControls}
+    <div
+      class='modal-controls'
+      class:hide={!showControls}
+      transition:fly={{ y: 50 }}>
+      <IconButton
+        type='back-circle'
+        title='Back'
+        size='big'
+        on:click={closeModal}
+      />
+    </div>
+    {/if}
+
+    {#if mediaType === 'art' && showControls}
+      <div
+        class='modal-caption'
+        class:hide={!showControls}
+        on:click={toggleControls}
+        transition:fly={{ y: -50 }}>
         <div class='modal-caption-interior'>
           <span class='modal-title'>{post.attributes.title}</span>
-          <time datetime={post.attributes.date}>{convertDate(post.attributes.date)}</time>
+          <time class='date' datetime={post.attributes.date}>
+            {convertDate(post.attributes.date)}
+          </time>
           <p class='desc'>{post.attributes.description}</p>
         </div>
       </div>
     {/if}
-  {/if}
 
-  <img class='loading-icon' class:loaded src='/images/icons/loading.svg' alt='Loading' />
+    {#if !loaded}
+      <img
+        class='loading-icon'
+        src='/images/icons/loading.svg'
+        alt='Loading'
+      />
+    {/if}
 
-  <div class='modal-body'>
-    {#if open}
+    <div class='modal-body'>
       <ModalContent
         {post}
         on:click={toggleControls}
         on:load={hideLoadingIcon}
       />
-    {/if}
-    <div class='out-click-zone' on:click={closeModal}></div>
-  </div>
+      <div class='out-click-zone' on:click={closeModal}></div>
+    </div>
+  {/if}
 </div>
 
 
 <style lang='postcss'>
+  /* The root container */
   .modal {
     position: fixed;
+    z-index: 100;
+
     width: 100vw;
     height: 100vh;
     max-height: -moz-available;
     height: -webkit-fill-available;
+
     background: rgba(0, 0, 0, 0.85);
 
-    z-index: 100;
-
-    opacity: 0;
+    /* transition */
     pointer-events: none;
-    transition: opacity 0.25s;
-
+    opacity: 0;
+    transition: opacity 0.5s;
     &.open {
       opacity: 1;
       pointer-events: auto;
     }
   }
 
-  .modal-controls, .modal-caption {
-    z-index: 200;
-    opacity: 1;
-    transition: 0.1s opacity;
 
-    &.hide {
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
-
-
-  .modal-controls {
-    position: absolute;
-    bottom: var(--margin);
-    left: var(--margin);
-  }
-
-
-  .modal-caption {
-    display: flex;
-    justify-content: space-evenly;
-
-    position: absolute;
-    top: 0;
-    background: rgba(0, 0, 0, 0.85);
-    width: 100%;
-    padding: var(--margin);
-    color: white;
-
-    .modal-title {
-      font-family: 'urbane-bold';
-      font-size: 1.4rem;
-      display: block;
-    }
-
-    time {
-      display: block;
-      font-family: monospace;
-      margin-top: 6px;
-      font-size: 0.9rem;
-    }
-
-    .desc {
-      margin-top: var(--half-margin);
-    }
-  }
-
-
-  .modal-caption-interior {
-    max-width: var(--s);
-  }
-
-
+  /* the container for the contents */
   .modal-body {
     display: flex;
     justify-content: center;
@@ -169,6 +144,7 @@
   }
 
 
+  /* Loading icon */
   @keyframes loading-icon-spin {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
@@ -188,15 +164,11 @@
     margin-left: -2rem;
 
     animation: loading-icon-spin 2s linear infinite;
-
-    opacity: 1;
-    transition: opacity 0.1s;
-
-    &.loaded {
-      opacity: 0;
-    }
   }
 
+
+
+  /* trigger to close the modal */
   .out-click-zone {
     position: absolute;
     height: 100vh;
@@ -205,4 +177,53 @@
     width: 100vw;
     z-index: 125;
   }
+
+
+  /* The overlays */
+  .modal-controls, .modal-caption {
+    position: absolute;
+    z-index: 200;
+  }
+
+  .modal-controls {
+    bottom: var(--margin);
+    left: var(--margin);
+  }
+
+  .modal-caption {
+    top: 0;
+
+    width: 100%;
+    padding: var(--margin);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+  }
+
+
+  /* caption interior */
+  .modal-caption-interior {
+    max-width: var(--s);
+  }
+
+  .modal-title {
+    font-family: 'urbane-bold';
+    font-size: 1.4rem;
+    display: block;
+  }
+
+  .date {
+    display: block;
+    font-family: monospace;
+    margin-top: 6px;
+    font-size: 0.9rem;
+  }
+
+  .desc {
+    margin-top: var(--half-margin);
+  }
+
 </style>
