@@ -1,11 +1,11 @@
-import { c as create_ssr_component, f as add_attribute, e as escape, n as null_to_empty, v as validate_component } from "../../chunks/index-0ee30357.js";
-import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
+import { c as create_ssr_component, f as add_attribute, e as escape, n as null_to_empty, k as add_styles, v as validate_component } from "../../chunks/index-3ede4686.js";
+import { P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
-import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
-import { S as SpacedDiv } from "../../chunks/SpacedDiv-a3cc0b62.js";
+import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
+import { S as SpacedDiv } from "../../chunks/SpacedDiv-6bdd6ed1.js";
 var Button_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: "button.svelte-d48683:hover{transform:scale(1.15)}button.svelte-d48683:active{transform:scale(1)}button.svelte-d48683{transition:transform 0.1s;padding:3px 12px 5px;font-weight:bold}.big.svelte-d48683{font-size:1.2rem;padding:5px 25px 7px 25px}",
+  code: "button.svelte-1e5w1mu:hover{transform:scale(1.1)}button.svelte-1e5w1mu:active{transform:scale(1)}button.svelte-1e5w1mu{transition:transform 0.1s;padding:3px 12px 5px;font-weight:bold}.big.svelte-1e5w1mu{font-size:1.2rem;padding:5px 25px 7px 25px}",
   map: null
 };
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -31,7 +31,12 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.rounded === void 0 && $$bindings.rounded && rounded !== void 0)
     $$bindings.rounded(rounded);
   $$result.css.add(css$2);
-  return `<button${add_attribute("id", id, 0)} class="${escape(null_to_empty(size)) + " svelte-d48683"}"${add_attribute("style", `color: ${color};background: ${background};border: ${border} ${borderColor} solid;border-radius: ${rounded};`, 0)}>${slots.default ? slots.default({}) : ``}
+  return `<button${add_attribute("id", id, 0)} class="${escape(null_to_empty(size)) + " svelte-1e5w1mu"}"${add_styles({
+    color,
+    background,
+    "border": `${border} ${borderColor} solid`,
+    "border-radius": rounded
+  })}>${slots.default ? slots.default({}) : ``}
 </button>`;
 });
 var ContactForm_svelte_svelte_type_style_lang = "";

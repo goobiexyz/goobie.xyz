@@ -1,9 +1,10 @@
-import { c as create_ssr_component, v as validate_component, e as escape, d as each } from "../../chunks/index-0ee30357.js";
-import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
-import { I as Image } from "../../chunks/Image-4188858f.js";
-import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
-import { S as ScrollBox } from "../../chunks/ScrollBox-663f56d0.js";
-import "../../chunks/Box-76cefffb.js";
+import { c as create_ssr_component, v as validate_component, e as escape, i as is_promise, j as noop, d as each } from "../../chunks/index-3ede4686.js";
+import { P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
+import { I as Image } from "../../chunks/Image-de277fa9.js";
+import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
+import { S as ScrollBox } from "../../chunks/ScrollBox-7d1e4b05.js";
+import "../../chunks/Box-7abaf6cf.js";
+const queueUrl = "https://api.trello.com/1/lists/5f63a1e27578fe449b995c56/cards";
 const thumbsDir = "/images/thumbs/comms/";
 const charArt = {
   extraCharPrice: "10",
@@ -119,6 +120,7 @@ const extras = [
   }
 ];
 var commsData = {
+  queueUrl,
   thumbsDir,
   charArt,
   extras
@@ -154,23 +156,34 @@ const CommCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 });
 var CommsQueue_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".queue-container.svelte-pa61o3.svelte-pa61o3{width:75%;margin:auto;transition:opacity 1s}.queue-container.hidden.svelte-pa61o3.svelte-pa61o3{opacity:0}.queue-item.svelte-pa61o3.svelte-pa61o3{width:100%}.queue-item.svelte-pa61o3.svelte-pa61o3:not(:first-child){margin-top:0.75rem;border-top:1px dashed var(--black);padding-top:0.75rem}.queue-item.svelte-pa61o3 .name.svelte-pa61o3,.queue-item.svelte-pa61o3 .labels.svelte-pa61o3{display:block}.queue-item.svelte-pa61o3 .labels.svelte-pa61o3{font-size:small;color:var(--dark-pink)}@media only screen and (max-width: 768px){.queue-container.svelte-pa61o3.svelte-pa61o3{width:100%}}",
+  code: ".queue-container.svelte-10gqgtj.svelte-10gqgtj{width:75%;margin:auto}.queue-item.svelte-10gqgtj.svelte-10gqgtj{width:100%}.queue-item.svelte-10gqgtj.svelte-10gqgtj:not(:first-child){margin-top:var(--half-margin);border-top:1px dashed var(--black);padding-top:var(--half-margin)}.queue-item.svelte-10gqgtj .name.svelte-10gqgtj,.queue-item.svelte-10gqgtj .labels.svelte-10gqgtj{display:block}.queue-item.svelte-10gqgtj .labels.svelte-10gqgtj{font-size:small;color:var(--dark-pink)}@media only screen and (max-width: 768px){.queue-container.svelte-10gqgtj.svelte-10gqgtj{width:100%}}",
   map: null
 };
 const CommsQueue = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let queue = [];
   $$result.css.add(css$1);
-  return `<div class="${"queue-container " + escape("hidden") + " svelte-pa61o3"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {
-    accent: "black",
+  return `<div class="${"queue-container svelte-10gqgtj"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {
+    accent: "var(--black)",
     height: "320px",
     border: "var(--border-thin)"
   }, {}, {
     default: () => {
-      return `${each(queue, (comm) => {
-        return `<div class="${"queue-item svelte-pa61o3"}"><span class="${"name svelte-pa61o3"}">${escape(comm.name)}</span>
-        <span class="${"labels svelte-pa61o3"}">${escape(comm.labels.map((l) => l.name).join(", "))}</span>
-      </div>`;
-      })}`;
+      return `${function(__value) {
+        if (is_promise(__value)) {
+          __value.then(null, noop);
+          return `
+      <p>Loading...</p>
+    `;
+        }
+        return function(queue) {
+          return `
+      ${each(queue, (comm) => {
+            return `<div class="${"queue-item svelte-10gqgtj"}"><span class="${"name svelte-10gqgtj"}">${escape(comm.name)}</span>
+          <span class="${"labels svelte-10gqgtj"}">${escape(comm.labels.map((l) => l.name).join(", "))}</span>
+        </div>`;
+          })}
+    `;
+        }(__value);
+      }(fetch(commsData.queueUrl).then((res) => res.json()))}`;
     }
   })}
 </div>`;

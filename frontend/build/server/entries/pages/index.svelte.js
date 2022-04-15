@@ -1,12 +1,12 @@
-import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component, a as createEventDispatcher, d as each } from "../../chunks/index-0ee30357.js";
-import { P as Page, S as Section } from "../../chunks/Page-b367a379.js";
+import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component, a as createEventDispatcher, d as each } from "../../chunks/index-3ede4686.js";
+import { P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
-import { F as FlexCols } from "../../chunks/FlexCols-75cd31a5.js";
-import { I as Image } from "../../chunks/Image-4188858f.js";
-import { c as convertDate, M as MediaModal } from "../../chunks/MediaModal-9a33bf3d.js";
-import { B as Box } from "../../chunks/Box-76cefffb.js";
-import { S as ScrollBox } from "../../chunks/ScrollBox-663f56d0.js";
-import { S as SpacedDiv } from "../../chunks/SpacedDiv-a3cc0b62.js";
+import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
+import { I as Image } from "../../chunks/Image-de277fa9.js";
+import { c as convertDate, M as MediaModal } from "../../chunks/MediaModal-eb5d4731.js";
+import { B as Box } from "../../chunks/Box-7abaf6cf.js";
+import { S as ScrollBox } from "../../chunks/ScrollBox-7d1e4b05.js";
+import { S as SpacedDiv } from "../../chunks/SpacedDiv-6bdd6ed1.js";
 function truncateString(s, limit) {
   if (s.length > limit) {
     return s.substring(0, limit) + " ...";
@@ -264,9 +264,11 @@ const css$2 = {
   code: ".col-1.svelte-v1u8kr,.col-2.svelte-v1u8kr{display:block}.col-2.svelte-v1u8kr{flex:1}.content-type.svelte-v1u8kr{display:block;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}h3.svelte-v1u8kr{font-family:'urbane-bold';font-size:1.25rem}time.svelte-v1u8kr{margin-top:2px;display:block;font-family:monospace;font-size:0.9rem}.description.svelte-v1u8kr{margin-top:var(--margin)}@media only screen and (max-width: 768px){.col-1.svelte-v1u8kr img{width:200px}}",
   map: null
 };
+let rootUrl = "https://api.graciebell.art";
 const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { post } = $$props;
-  let thumbnail = "https://api.graciebell.art" + post.attributes.thumbnail.data.attributes.formats.thumbnail.url;
+  let thumbnailMeta = post.attributes.thumbnail.data.attributes;
+  let thumbnailUrl = rootUrl + thumbnailMeta.formats.thumbnail.url;
   let type = post.attributes.media_type;
   let title = post.attributes.title;
   let date = post.attributes.date;
@@ -274,7 +276,7 @@ const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) 
   if ($$props.post === void 0 && $$bindings.post && post !== void 0)
     $$bindings.post(post);
   $$result.css.add(css$2);
-  return `${$$result.head += `<link rel="${"preload"}" as="${"image"}"${add_attribute("href", thumbnail, 0)} data-svelte="svelte-nju8n2">`, ""}
+  return `${$$result.head += `<link rel="${"preload"}" as="${"image"}"${add_attribute("href", thumbnailUrl, 0)} data-svelte="svelte-106wkyz">`, ""}
 
 
 ${validate_component(Box, "Box").$$render($$result, {
@@ -285,7 +287,7 @@ ${validate_component(Box, "Box").$$render($$result, {
       return `${validate_component(FlexCols, "FlexCols").$$render($$result, {}, {}, {
         default: () => {
           return `<div class="${"col-1 svelte-v1u8kr"}">${validate_component(Image, "Image").$$render($$result, {
-            src: thumbnail,
+            src: thumbnailUrl,
             alt: "",
             style: "border-radius: var(--rounded-2);"
           }, {}, {})}</div>

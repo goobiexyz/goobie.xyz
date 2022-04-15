@@ -1,8 +1,8 @@
-import { g as getContext, c as create_ssr_component, a as createEventDispatcher, v as validate_component, e as escape, b as subscribe, d as each, f as add_attribute } from "../../chunks/index-0ee30357.js";
-import { I as IconButton, P as Page, S as Section } from "../../chunks/Page-b367a379.js";
-import { I as Image } from "../../chunks/Image-4188858f.js";
-import { M as MediaModal } from "../../chunks/MediaModal-9a33bf3d.js";
-import "../../chunks/SpacedDiv-a3cc0b62.js";
+import { g as getContext, c as create_ssr_component, a as createEventDispatcher, v as validate_component, e as escape, b as subscribe, d as each, f as add_attribute } from "../../chunks/index-3ede4686.js";
+import { I as IconButton, P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
+import { I as Image } from "../../chunks/Image-de277fa9.js";
+import { M as MediaModal } from "../../chunks/MediaModal-eb5d4731.js";
+import "../../chunks/SpacedDiv-6bdd6ed1.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
   return {
@@ -33,6 +33,7 @@ const css$1 = {
   code: ".page-controls.svelte-1x15rsl{display:flex;align-items:center;justify-content:center}.page-number.svelte-1x15rsl{margin:0 var(--margin);font-size:1.2rem;width:100px;text-align:center}",
   map: null
 };
+let color = "var(--dark-blue)";
 const PageControls = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { pageNum } = $$props;
   let { lastPage } = $$props;
@@ -42,17 +43,9 @@ const PageControls = create_ssr_component(($$result, $$props, $$bindings, slots)
   if ($$props.lastPage === void 0 && $$bindings.lastPage && lastPage !== void 0)
     $$bindings.lastPage(lastPage);
   $$result.css.add(css$1);
-  return `<div class="${"page-controls svelte-1x15rsl"}">${validate_component(IconButton, "IconButton").$$render($$result, {
-    type: "left-arrow",
-    size: "big",
-    color: "dark-blue"
-  }, {}, {})}
+  return `<div class="${"page-controls svelte-1x15rsl"}">${validate_component(IconButton, "IconButton").$$render($$result, { type: "left-arrow", size: "big", color }, {}, {})}
   <span class="${"page-number svelte-1x15rsl"}">${escape(pageNum)} of ${escape(lastPage)}</span>
-  ${validate_component(IconButton, "IconButton").$$render($$result, {
-    type: "right-arrow",
-    size: "big",
-    color: "dark-blue"
-  }, {}, {})}
+  ${validate_component(IconButton, "IconButton").$$render($$result, { type: "right-arrow", size: "big", color }, {}, {})}
 </div>`;
 });
 var art_svelte_svelte_type_style_lang = "";
@@ -69,6 +62,7 @@ async function load({ fetch }) {
     props: { pagination: data.meta.pagination }
   };
 }
+let apiUrl = "https://api.graciebell.art";
 const Art = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => value);
@@ -97,8 +91,11 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { title: "Art" }, {}, 
             return `${validate_component(PageControls, "PageControls").$$render($$result, { pageNum, lastPage }, {}, {})}
 
     <div class="${"gallery svelte-ujxgij"}">${each(posts, (post) => {
-              return `<button${add_attribute("title", post.attributes.title, 0)} class="${"svelte-ujxgij"}">${validate_component(Image, "Image").$$render($$result, {
-                src: "https://api.graciebell.art" + post.attributes.thumbnail.data.attributes.formats.thumbnail.url,
+              let thumbnailMeta = post.attributes.thumbnail.data.attributes, thumbnailUrl = apiUrl + thumbnailMeta.formats.thumbnail.url;
+              return `
+        
+        <button${add_attribute("title", post.attributes.title, 0)} class="${"svelte-ujxgij"}">${validate_component(Image, "Image").$$render($$result, {
+                src: thumbnailUrl,
                 style: "border-radius: var(--rounded-2); width: 100%;",
                 alt: ""
               }, {}, {})}
