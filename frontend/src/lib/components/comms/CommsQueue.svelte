@@ -1,51 +1,41 @@
 <script>
-  import { onMount } from 'svelte'
+  import { fade, slide } from 'svelte/transition'
+  import commsData from '$lib/data/comms-data.json'
   import ScrollBox from '../layout/ScrollBox.svelte'
-
-  let queue = []
-  let isQueueVisible = false
-
-  onMount(async () => {
-    let response = await fetch('https://api.trello.com/1/lists/5f63a1e27578fe449b995c56/cards')
-    queue = await response.json()
-    isQueueVisible = true
-  })
 </script>
 
 
-<div class='queue-container {isQueueVisible ? '' : 'hidden'}'>
-  <ScrollBox accent='black' height='320px' border='var(--border-thin)'>
-    {#each queue as comm}
-      <div class='queue-item'>
-        <span class='name'>{comm.name}</span>
-        <span class='labels'>{comm.labels.map(l => l.name).join(', ')}</span>
-      </div>
-    {/each}
+<div class='queue-container'>
+  <ScrollBox accent='var(--black)' height='320px' border='var(--border-thin)'>
+    {#await fetch(commsData.queueUrl).then(res => res.json())}
+      <p>Loading...</p>
+    {:then queue}
+      {#each queue as comm}
+        <div class='queue-item' transition:slide>
+          <span class='name'>{comm.name}</span>
+          <span class='labels'>{comm.labels.map(l => l.name).join(', ')}</span>
+        </div>
+      {/each}
+    {:catch error}
+      <p>{error.message}</p>
+    {/await}
   </ScrollBox>
 </div>
 
 
-<style lang='scss'>
-  @import 'src/styles/breakpoints.scss';
-  @import 'src/styles/spacing.scss';
-
+<style lang='postcss'>
   .queue-container {
     width: 75%;
     margin: auto;
-
-    transition: opacity 1s;
-    &.hidden {
-      opacity: 0;
-    }
   }
 
   .queue-item {
     width: 100%;
 
     &:not(:first-child) {
-      margin-top: $half-margin;
+      margin-top: var(--half-margin);
       border-top: 1px dashed var(--black);
-      padding-top: $half-margin;
+      padding-top: var(--half-margin);
     }
 
     .name, .labels {
@@ -58,7 +48,7 @@
     }
   }
 
-  @media only screen and (max-width: $s) {
+  @media only screen and (max-width: token(breakpoints.s)) {
     .queue-container {
       width: 100%;
     }

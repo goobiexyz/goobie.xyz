@@ -6,6 +6,15 @@
   export let border = 'var(--border)'
   export let padding = 'var(--margin)'
   export let height = '600px'
+
+  let borderColor
+  switch (accent) {
+    case 'black':
+      borderColor = 'var(--black)'
+      break
+    default:
+      borderColor = accent
+  }
 </script>
 
 
@@ -15,11 +24,10 @@
     `padding: 0;`
   }>
   <div
-    class='scroll-box {accent}'
-    style={
-      `padding: ${padding};`+
-      `height: ${height};`
-    }>
+    class='scroll-box'
+    style:padding
+    style:height
+    style='--scrollbar-color: {accent};'>
     <slot />
   </div>
 </Box>
@@ -42,10 +50,7 @@
 
     /* Scrollbar */
     /* Firefox */
-    scrollbar-color: white transparent; /* foreground background */
-    &.black {
-      scrollbar-color: var(--black) transparent;
-    }
+    scrollbar-color: var(--scrollbar-color) transparent;
 
     /* Webkit / Blink */
     &::-webkit-scrollbar {
@@ -56,20 +61,12 @@
       height: 3px
     }
     &::-webkit-scrollbar-thumb {
-      background-color: white;
+      background-color: var(--scrollbar-color);
       border-radius: 9999px; /* always round */
-    }
-    &.black::-webkit-scrollbar-thumb {
-      background-color: var(--black);
     }
 
     &::-webkit-scrollbar-track {
       background-color: transparent;
     }
-  }
-
-
-  @media only screen and (max-width: token(breakpoints.s)) {
-
   }
 </style>
