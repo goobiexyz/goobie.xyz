@@ -11,7 +11,7 @@
       <p>Loading...</p>
     {:then queue}
       {#each queue as comm}
-        <div class='queue-item' transition:slide>
+        <div class='queue-item' in:slide>
           <span class='name'>{comm.name}</span>
           <span class='labels'>{comm.labels.map(l => l.name).join(', ')}</span>
         </div>
