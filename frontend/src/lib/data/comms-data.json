@@ -1,4 +1,5 @@
 {
+  "queueUrl" : "https://api.trello.com/1/lists/5f63a1e27578fe449b995c56/cards",
   "thumbsDir" : "/images/thumbs/comms/",
   "charArt" : {
     "extraCharPrice" : "10",
