@@ -46,8 +46,11 @@ const css$1 = {
 };
 const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<form target="${"_blank"}" action="${"https://formsubmit.co/mail@graciebell.art"}" method="${"post"}" class="${"svelte-a7aypw"}"><fieldset class="${"horizontal svelte-a7aypw"}"><fieldset class="${"svelte-a7aypw"}"><label class="${"required svelte-a7aypw"}" for="${"name"}">Name</label>
-      <input type="${"text"}" id="${"name"}" placeholder="${"Your name..."}" required class="${"svelte-a7aypw"}"></fieldset>
+  return `<form target="${"_blank"}" action="${"https://formsubmit.co/0a9aa64c158dfc069b31d069e891a721"}" method="${"post"}" class="${"svelte-a7aypw"}"><label for="${"subject"}" style="${"display:none"}" class="${"svelte-a7aypw"}">Subject</label>
+  <input type="${"text"}" id="${"subject"}" name="${"_honey"}" style="${"display:none"}" class="${"svelte-a7aypw"}">
+
+  <fieldset class="${"horizontal svelte-a7aypw"}"><fieldset class="${"svelte-a7aypw"}"><label class="${"required svelte-a7aypw"}" for="${"name"}">Name</label>
+      <input type="${"text"}" id="${"name"}" name="${"name"}" placeholder="${"Your name..."}" required class="${"svelte-a7aypw"}"></fieldset>
 
     <fieldset class="${"svelte-a7aypw"}"><label for="${"pronouns"}" class="${"svelte-a7aypw"}">Pronouns</label>
       <input type="${"text"}" id="${"pronouns"}" name="${"pronouns"}" placeholder="${"They/she/he..."}" class="${"svelte-a7aypw"}"></fieldset></fieldset>
@@ -56,7 +59,7 @@ const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) 
     <input type="${"text"}" id="${"email"}" name="${"email"}" placeholder="${"yourname@example.com"}" required class="${"svelte-a7aypw"}"></fieldset>
 
   <fieldset class="${"svelte-a7aypw"}"><label class="${"required svelte-a7aypw"}" for="${"message"}">Message</label>
-    <textarea id="${"message"}" name="${"message"}" placeholder="${"Write something..."}" required class="${"svelte-a7aypw"}"></textarea></fieldset>
+    <textarea id="${"message"}" name="${"message"}" placeholder="${"Write something..."}" required class="${"svelte-a7aypw"}">${"\n    "}</textarea></fieldset>
 
   <small style="${"color: var(--red);"}">*Required field</small>
 
