@@ -25,7 +25,7 @@
   import * as Dfs from '$lib/defaults.js'
   import HomeHeader from "$lib/components/home/header/HomeHeader.svelte"
   import FlexCols from '$lib/components/layout/FlexCols.svelte'
-  import ImgSCaption from '$lib/components/media/ImgSCaption.svelte'
+  import Image from '$lib/components/media/Image.svelte'
   import LatestPosts from '$lib/components/home/latest-posts/LatestPosts.svelte'
   import MediaModal from '$lib/components/posts/media-modal/MediaModal.svelte'
   import SpacedDiv from '$lib/components/layout/SpacedDiv.svelte'
@@ -43,12 +43,11 @@
   <Dfs.Section id="about" heading="Meet Gracie" headingColor="blue">
     <FlexCols>
       <div class='col-1'>
-        <ImgSCaption
-          src='/images/gracie4.png'
-          style='width:100%; max-width:16rem; border-radius:var(--rounded-2);'
+        <Image
+          src='/images/grace_portrait.jpg'
+          style='max-width:16rem; border-radius:var(--rounded-2);'
           alt=''>
-          Art by <a href='https://twitter.com/ponycide'>Ponycide.</a>
-        </ImgSCaption>
+        </Image>
       </div>
       <div class='col-2'>
         <SpacedDiv>
