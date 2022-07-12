@@ -43,19 +43,21 @@
   <Dfs.Section id="about" heading="Meet Gracie" headingColor="blue">
     <FlexCols>
       <div class='col-1'>
-        <Image
-          src='/images/grace_portrait.jpg'
-          style='max-width:16rem; border-radius:var(--rounded-2);'
-          alt=''>
-        </Image>
+        <div>
+          <Image
+            src='/images/grace_portrait.jpg'
+            style='max-width:13.66rem; border-radius:var(--rounded-2);'
+            alt=''>
+          </Image>
+        </div>
       </div>
       <div class='col-2'>
         <SpacedDiv>
           <p>
-            Hi there! My name is Grace and I call myself a multimedia artist because I'm always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My specialties include graphic design, illustration, coding, video editing, and music composition.
+            Hi there! My name is Grace and I call myself a multimedia artist because I'm always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My skills include design, illustration, coding, composing, and video editing.
           </p>
           <p>
-            My commissions for character art and graphic design are currently OPEN! <a href='comms'>Click here for more information</a>. And don't hesitate to contact me about any other ideas and projects you may have.
+            I'm currently taking commissions for character art and graphic design. <a href='comms'>Click here for more information</a>. And don't hesitate to contact me about any other ideas and projects you may have. I have a wide range of skills that I love to apply wherever I can!
           </p>
         </SpacedDiv>
       </div>
