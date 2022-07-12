@@ -15,7 +15,7 @@ function truncateString(s, limit) {
   }
 }
 var NavButton_svelte_svelte_type_style_lang = "";
-const css$6 = {
+const css$5 = {
   code: `a.svelte-1uv9swr.svelte-1uv9swr,a.svelte-1uv9swr.svelte-1uv9swr:hover,a.svelte-1uv9swr.svelte-1uv9swr:focus,a.svelte-1uv9swr.svelte-1uv9swr:active{text-decoration:none;color:inherit}.nav-button.svelte-1uv9swr.svelte-1uv9swr:hover{transform:scale(1.2)}.nav-button.svelte-1uv9swr.svelte-1uv9swr:active{transform:scale(1)}.nav-button.svelte-1uv9swr.svelte-1uv9swr{transition:transform 0.1s;box-sizing:content-box;display:block;position:relative;border:0.4rem white solid;border-radius:1rem;width:4rem;height:4rem;background:0;background-position:center;background-repeat:no-repeat;text-align:center;transition:transform 0.25s, opacity 0.25s;text-decoration:none}.nav-button.hidden.svelte-1uv9swr.svelte-1uv9swr{transform:perspective(500px) rotateX(90deg);perspective:500px;opacity:0;pointer-events:none;z-index:-1}.nav-button.svelte-1uv9swr span.svelte-1uv9swr{display:inline-block;line-height:4rem;white-space:nowrap;color:white;font-family:'urbane';font-weight:600;transform:translateY(3.5rem);position:relative}.nav-button.work.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_star.svg")}.nav-button.comms.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_money.svg")}.nav-button.contact.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_at.svg")}.nav-button.image.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_brush.svg")}.nav-button.design.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_shapes.svg")}.nav-button.music.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_music.svg")}.nav-button.code.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_code.svg")}.nav-button.video.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_video.svg")}.nav-button.comics.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_book.svg")}.nav-button.close.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_close.svg");border:none}.nav-button.back.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_back.svg");border:none;position:absolute;left:calc(-3rem - 76px)}@media only screen and (min-width: 601px){.nav-button.svelte-1uv9swr.svelte-1uv9swr::before{content:"";margin-left:-100%}.nav-button.svelte-1uv9swr.svelte-1uv9swr::after{content:"";margin-right:-100%}}@media only screen and (max-width: 600px){.nav-button.svelte-1uv9swr.svelte-1uv9swr{width:3rem;height:3rem;text-align:left;font-size:1.5rem;border:none;text-decoration:underline}.nav-button.back.svelte-1uv9swr.svelte-1uv9swr{position:static}.nav-button.svelte-1uv9swr span.svelte-1uv9swr{text-indent:4rem;height:-webkit-min-content;height:-moz-min-content;height:min-content;line-height:3rem;transform:none}}`,
   map: null
 };
@@ -39,11 +39,11 @@ const NavButton = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.hide(hide);
   if ($$props.show === void 0 && $$bindings.show && show !== void 0)
     $$bindings.show(show);
-  $$result.css.add(css$6);
+  $$result.css.add(css$5);
   return `${href ? `<a class="${["nav-button " + escape(icon) + " svelte-1uv9swr", hidden ? "hidden" : ""].join(" ").trim()}"${add_attribute("href", href, 0)}><span class="${"svelte-1uv9swr"}">${slots.default ? slots.default({}) : ``}</span></a>` : `<button class="${["nav-button " + escape(icon) + " svelte-1uv9swr", hidden ? "hidden" : ""].join(" ").trim()}"><span class="${"svelte-1uv9swr"}">${slots.default ? slots.default({}) : ``}</span></button>`}`;
 });
 var NavBGroup_svelte_svelte_type_style_lang = "";
-const css$5 = {
+const css$4 = {
   code: ".bgroup.svelte-d3ey9j{display:grid;position:relative;z-index:0;justify-content:center;align-items:center;grid-template-columns:76px 76px 76px;grid-column-gap:3rem;grid-row-gap:3rem;width:-webkit-min-content;width:-moz-min-content;width:min-content;margin:auto}.bgroup.hidden.svelte-d3ey9j{display:none;z-index:-100}@media only screen and (max-width: 600px){.bgroup.svelte-d3ey9j{grid-template-columns:1fr;grid-row-gap:1rem;margin:0}}",
   map: null
 };
@@ -61,19 +61,19 @@ const NavBGroup = create_ssr_component(($$result, $$props, $$bindings, slots) =>
     $$bindings.hide(hide);
   if ($$props.show === void 0 && $$bindings.show && show !== void 0)
     $$bindings.show(show);
-  $$result.css.add(css$5);
+  $$result.css.add(css$4);
   return `<div class="${["bgroup svelte-d3ey9j", hidden ? "hidden" : ""].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
 </div>`;
 });
 var HomeHeader_svelte_svelte_type_style_lang = "";
-const css$4 = {
+const css$3 = {
   code: "@-webkit-keyframes svelte-9xc59j-scroll{100%{background-position:400px 173.2px}}@keyframes svelte-9xc59j-scroll{100%{background-position:400px 173.2px}}header.svelte-9xc59j{background:url('/images/backgrounds/bg-dots.png') repeat;background-attachment:fixed;-webkit-animation:8s svelte-9xc59j-scroll infinite linear;animation:8s svelte-9xc59j-scroll infinite linear;height:-webkit-max-content;height:-moz-max-content;height:max-content;margin-top:0;padding:var(--double-margin) var(--margin);overflow:hidden;border-bottom:5rem solid;border-image-slice:0 0 100% 0;border-image-repeat:repeat;border-image-outset:2px;border-image-source:url('/images/borders/benday_inverted.svg')}h1.svelte-9xc59j{margin-top:var(--margin);text-align:center}nav.svelte-9xc59j{margin-top:var(--margin);height:224px}.header-body.svelte-9xc59j{transform:translateY(58px);transition:transform 0.25s;position:relative}.header-body.expanded.svelte-9xc59j{transform:translateY(0px)}.logo.svelte-9xc59j{width:32rem}@media only screen and (max-width: 768px){header.svelte-9xc59j{padding-top:var(--margin);padding-bottom:calc(var(--margin) + 1rem)}}@media only screen and (max-width: 600px){.header-body.svelte-9xc59j{width:80vw;margin:auto;transform:translateY(0)}nav.svelte-9xc59j{display:block;height:-webkit-min-content;height:-moz-min-content;height:min-content}.logo.svelte-9xc59j{width:100%}}",
   map: null
 };
 const HomeHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let b0, b1, b2, b3, b4, b5, b6, b7, b8, b9;
   let bgroup0, bgroup1;
-  $$result.css.add(css$4);
+  $$result.css.add(css$3);
   let $$settled;
   let $$rendered;
   do {
@@ -239,26 +239,6 @@ const HomeHeader = create_ssr_component(($$result, $$props, $$bindings, slots) =
   } while (!$$settled);
   return $$rendered;
 });
-var ImgSCaption_svelte_svelte_type_style_lang = "";
-const css$3 = {
-  code: "figcaption.svelte-1tlalfw{margin-top:6px;font-family:'urbane';font-size:small;color:var(--black)}",
-  map: null
-};
-const ImgSCaption = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { src } = $$props;
-  let { alt } = $$props;
-  let { style } = $$props;
-  if ($$props.src === void 0 && $$bindings.src && src !== void 0)
-    $$bindings.src(src);
-  if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
-    $$bindings.alt(alt);
-  if ($$props.style === void 0 && $$bindings.style && style !== void 0)
-    $$bindings.style(style);
-  $$result.css.add(css$3);
-  return `<figure>${validate_component(Image, "Image").$$render($$result, { src, alt, style }, {}, {})}
-  ${``}
-</figure>`;
-});
 var PostSummary_svelte_svelte_type_style_lang = "";
 const css$2 = {
   code: ".col-1.svelte-v1u8kr,.col-2.svelte-v1u8kr{display:block}.col-2.svelte-v1u8kr{flex:1}.content-type.svelte-v1u8kr{display:block;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}h3.svelte-v1u8kr{font-family:'urbane-bold';font-size:1.25rem}time.svelte-v1u8kr{margin-top:2px;display:block;font-family:monospace;font-size:0.9rem}.description.svelte-v1u8kr{margin-top:var(--margin)}@media only screen and (max-width: 768px){.col-1.svelte-v1u8kr img{width:200px}}",
@@ -369,20 +349,16 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { header: false }, {},
           default: () => {
             return `${validate_component(FlexCols, "FlexCols").$$render($$result, {}, {}, {
               default: () => {
-                return `<div class="${"col-1 svelte-1hh3xca"}">${validate_component(ImgSCaption, "ImgSCaption").$$render($$result, {
-                  src: "/images/gracie4.png",
-                  style: "width:100%; max-width:16rem; border-radius:var(--rounded-2);",
+                return `<div class="${"col-1 svelte-1hh3xca"}"><div>${validate_component(Image, "Image").$$render($$result, {
+                  src: "/images/grace_portrait.jpg",
+                  style: "max-width:13.66rem; border-radius:var(--rounded-2);",
                   alt: ""
-                }, {}, {
-                  default: () => {
-                    return `Art by <a href="${"https://twitter.com/ponycide"}">Ponycide.</a>`;
-                  }
-                })}</div>
+                }, {}, {})}</div></div>
       <div class="${"col-2 svelte-1hh3xca"}">${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
                   default: () => {
-                    return `<p>Hi there! My name is Grace and I call myself a multimedia artist because I&#39;m always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My specialties include graphic design, illustration, coding, video editing, and music composition.
+                    return `<p>Hi there! My name is Grace and I call myself a multimedia artist because I&#39;m always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My skills include design, illustration, coding, composing, and video editing.
           </p>
-          <p>My commissions for character art and graphic design are currently OPEN! <a href="${"comms"}">Click here for more information</a>. And don&#39;t hesitate to contact me about any other ideas and projects you may have.
+          <p>I&#39;m currently taking commissions for character art and graphic design. <a href="${"comms"}">Click here for more information</a>. And don&#39;t hesitate to contact me about any other ideas and projects you may have. I have a wide range of skills that I love to apply wherever I can!
           </p>`;
                   }
                 })}</div>`;
