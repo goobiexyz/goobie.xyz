@@ -12,6 +12,7 @@
   </Dfs.Section>
   <Dfs.Section heading='Portfolio' simple='true'>
     <div class="image-col">
+      <img src="{imgDir}bubblebot_logo.jpg" alt="" class="wide">
       <img src="{imgDir}gbell_icon.jpg" alt="">
       <img src="{imgDir}rute_logo.jpg" alt="">
       <img src="{imgDir}gooden_logo.jpg" alt="">

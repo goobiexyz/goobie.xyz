@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-f765fab8.js",
+    "file": "start-f4dcc3b4.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -101,7 +101,7 @@
     ]
   },
   "src/routes/design.svelte": {
-    "file": "pages/design.svelte-5e1e66b6.js",
+    "file": "pages/design.svelte-f307e0ae.js",
     "src": "src/routes/design.svelte",
     "isEntry": true,
     "isDynamicEntry": true,

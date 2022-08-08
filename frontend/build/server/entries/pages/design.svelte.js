@@ -17,7 +17,8 @@ const Design = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       })}
   ${validate_component(Section, "Dfs.Section").$$render($$result, { heading: "Portfolio", simple: "true" }, {}, {
         default: () => {
-          return `<div class="${"image-col svelte-1hjwa6d"}"><img src="${escape(imgDir) + "gbell_icon.jpg"}" alt="${""}" class="${"svelte-1hjwa6d"}">
+          return `<div class="${"image-col svelte-1hjwa6d"}"><img src="${escape(imgDir) + "bubblebot_logo.jpg"}" alt="${""}" class="${"wide svelte-1hjwa6d"}">
+      <img src="${escape(imgDir) + "gbell_icon.jpg"}" alt="${""}" class="${"svelte-1hjwa6d"}">
       <img src="${escape(imgDir) + "rute_logo.jpg"}" alt="${""}" class="${"svelte-1hjwa6d"}">
       <img src="${escape(imgDir) + "gooden_logo.jpg"}" alt="${""}" class="${"svelte-1hjwa6d"}">
       <img src="${escape(imgDir) + "pv_logo.jpg"}" alt="${""}" class="${"svelte-1hjwa6d"}">
