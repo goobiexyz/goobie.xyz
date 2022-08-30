@@ -24,11 +24,11 @@
       <div class='list'>
         <h3>General Terms:</h3>
         <ul>
-          <li>I will not start working on the drawing until I am paid in full</li>
-          <li>You can use the final drawing however you want as long as I'm credited where appropriate</li>
-          <li>Unless you request to keep the drawing private, there is a good chance I will be posting it online, including it in my portfolio, and using it to advertise my commissions</li>
-          <li>I will show you work-in-progress pictures as I am sketching, giving you the opportunity to provide feedback</li>
-          <li>Once I finish the final sketch, I will wait until you've explicitly approved it before proceeding, after which I will not make any more adjustments to the character's pose</li>
+          <li>I will not start working until I am paid in full.</li>
+          <li>You have the right to use the finished work however you want, as long as you give me credit for creating it.</li>
+          <li>The finished work will be public and I may use it to advertise my commissions.</li>
+          <li>During the sketching process, I will share work-in-progress screenshots. This will be your opportunity to provide feedback. Please be specific and concise.</li>
+          <li>I will not accept any additions to the scene, changes to anything that differs from the sketch, or requests for alternate versions once the final sketch has been approved and I've already moved forward with the final render.</li>
         </ul>
       </div>
     </div>
@@ -39,7 +39,7 @@
         <ul>
           <li>Characters you have permission to use</li>
           <li>Fan characters and OCs</li>
-          <li>Anthropomorphic characters are my specialty, but I'm open to most other types of creatures</li>
+          <li>Anthropomorphic characters</li>
           <li>Safe content or adult content</li>
         </ul>
       </div>
@@ -48,9 +48,9 @@
         <h3>I Cannot Draw:</h3>
         <ul>
           <li>Characters you don't have permission to use</li>
-          <li>Feral animals (because I haven't learned how)</li>
-          <li>Most illegal activities and offensive themes</li>
-          <li>If you are unsure if your idea is something I can draw, don't be shy to ask me about it</li>
+          <li>Most non-anthro characters</li>
+          <li>Anything that grosses me out or makes me uncomfortable</li>
+          <li>I'm not going to make a comprehensive list of things that make me uncomfortable, so please send me your idea and I'll tell you whether I'd be willing to draw it or not.</li>
         </ul>
       </div>
     </div>

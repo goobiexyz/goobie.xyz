@@ -216,23 +216,23 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, {
           return `${validate_component(FlexCols, "FlexCols").$$render($$result, { colGap: "var(--double-margin)" }, {}, {
             default: () => {
               return `<div class="${"column svelte-av9zi3"}" style="${"flex: 1;"}"><div class="${"list svelte-av9zi3"}"><h3>General Terms:</h3>
-        <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">I will not start working on the drawing until I am paid in full</li>
-          <li class="${"svelte-av9zi3"}">You can use the final drawing however you want as long as I&#39;m credited where appropriate</li>
-          <li class="${"svelte-av9zi3"}">Unless you request to keep the drawing private, there is a good chance I will be posting it online, including it in my portfolio, and using it to advertise my commissions</li>
-          <li class="${"svelte-av9zi3"}">I will show you work-in-progress pictures as I am sketching, giving you the opportunity to provide feedback</li>
-          <li class="${"svelte-av9zi3"}">Once I finish the final sketch, I will wait until you&#39;ve explicitly approved it before proceeding, after which I will not make any more adjustments to the character&#39;s pose</li></ul></div></div>
+        <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">I will not start working until I am paid in full.</li>
+          <li class="${"svelte-av9zi3"}">You have the right to use the finished work however you want, as long as you give me credit for creating it.</li>
+          <li class="${"svelte-av9zi3"}">The finished work will be public and I may use it to advertise my commissions.</li>
+          <li class="${"svelte-av9zi3"}">During the sketching process, I will share work-in-progress screenshots. This will be your opportunity to provide feedback. Please be specific and concise.</li>
+          <li class="${"svelte-av9zi3"}">I will not accept any additions to the scene, changes to anything that differs from the sketch, or requests for alternate versions once the final sketch has been approved and I&#39;ve already moved forward with the final render.</li></ul></div></div>
 
     <div class="${"column svelte-av9zi3"}" style="${"flex: 1; flex-direction: column;"}"><div class="${"list svelte-av9zi3"}"><h3>I Can Draw:</h3>
         <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">Characters you have permission to use</li>
           <li class="${"svelte-av9zi3"}">Fan characters and OCs</li>
-          <li class="${"svelte-av9zi3"}">Anthropomorphic characters are my specialty, but I&#39;m open to most other types of creatures</li>
+          <li class="${"svelte-av9zi3"}">Anthropomorphic characters</li>
           <li class="${"svelte-av9zi3"}">Safe content or adult content</li></ul></div>
 
       <div class="${"list svelte-av9zi3"}"><h3>I Cannot Draw:</h3>
         <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">Characters you don&#39;t have permission to use</li>
-          <li class="${"svelte-av9zi3"}">Feral animals (because I haven&#39;t learned how)</li>
-          <li class="${"svelte-av9zi3"}">Most illegal activities and offensive themes</li>
-          <li class="${"svelte-av9zi3"}">If you are unsure if your idea is something I can draw, don&#39;t be shy to ask me about it</li></ul></div></div>`;
+          <li class="${"svelte-av9zi3"}">Most non-anthro characters</li>
+          <li class="${"svelte-av9zi3"}">Anything that grosses me out or makes me uncomfortable</li>
+          <li class="${"svelte-av9zi3"}">I&#39;m not going to make a comprehensive list of things that make me uncomfortable, so please send me your idea and I&#39;ll tell you whether I&#39;d be willing to draw it or not.</li></ul></div></div>`;
             }
           })}`;
         }
