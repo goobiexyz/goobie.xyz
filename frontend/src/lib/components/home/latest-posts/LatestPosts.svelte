@@ -1,5 +1,5 @@
 <script>
-  export let posts
+  export let postList
 
   import PostSummary from './PostSummary.svelte'
   import ScrollBox from '../../layout/ScrollBox.svelte'
@@ -13,10 +13,14 @@
 <div class='wrapper'>
   <ScrollBox>
     <SpacedDiv>
-      {#each posts as post}
-        <button on:click={ () => dispatch( 'postClick', { post } ) }>
-          <PostSummary {post} />
-        </button>
+      {#each postList as post}
+        {#if post.type == 'art'}
+          <button on:click={ () => dispatch( 'postClick', { post } ) }>
+            <PostSummary {post} />
+          </button>
+        {:else if post.type == 'comic'}
+          <a href={post.href}><PostSummary {post} /></a>
+        {/if}
         <hr />
       {/each}
     </SpacedDiv>
@@ -34,7 +38,9 @@
     }
   }
 
-  button {
+  button, a {
+    display: block;
+    text-decoration: none;
     width: 100%;
     text-align: left;
 

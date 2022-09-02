@@ -7,16 +7,12 @@
   import truncateString from '$lib/truncate-string.ts'
 
   export let post
+  if (post.type == 'comic') {
+    console.log(post.attributes.comic.data.attributes.type)
+  }
+  let isMultiVolumeComic = post.type == 'comic' && post.attributes.comic.data.attributes.type == 'multi_volume'
 
-  let thumbnailMeta = post.attributes.thumbnail.data.attributes
-  let rootUrl = 'https://api.graciebell.art'
-  let thumbnailUrl = rootUrl+thumbnailMeta.formats.thumbnail.url
-
-  let type = post.attributes.media_type
-  let title = post.attributes.title
-  let date = post.attributes.date
-  let desc = truncateString(post.attributes.description, 125)
-
+  let thumbnailUrl = 'https://api.graciebell.art'+post.thumbnailUrl
   let isThumbnailLoaded = false
 </script>
 
@@ -39,10 +35,26 @@
     </div>
 
     <div class='col-2'>
-      <span class='content-type'>{type}</span>
-      <h3>{title}</h3>
-      <time>{convertDate(date)}</time>
-      <p class='description'>{desc}</p>
+
+      <span class='content-type'>
+        {post.type}
+      </span>
+
+      {#if isMultiVolumeComic}
+        <p class='comic-title'>
+          {post.attributes.comic.data.attributes.title}
+        </p>
+      {/if}
+
+      <h3>
+        {#if isMultiVolumeComic}
+          Ch. {post.attributes.chapter_number} -
+        {/if}
+        {post.title}
+      </h3>
+      <time>{convertDate(post.date)}</time>
+      <p class='description'>{truncateString(post.desc, 125)}</p>
+
     </div>
   </FlexCols>
 </Box>
@@ -65,6 +77,12 @@
       font-size: 0.8rem;
       letter-spacing: 4px;
       font-weight: bold;
+    }
+
+    .comic-title {
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+      height: 1.5rem;
     }
 
     h3 {

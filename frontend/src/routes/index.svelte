@@ -1,26 +1,83 @@
-<script context='module'>
+<script context='module' lang='ts'>
   import truncateString from '$lib/truncate-string.ts'
+  import apiFetch from '$lib/apiFetch.ts'
 
   export async function load() {
-    let url = 'https://api.graciebell.art/api/posts'
-    let params = [
+    let props = {
+      latestPosts : []
+    }
+
+    //get all the art posts
+    let art = await apiFetch(
+      'posts',
       'sort=date:desc',
       'populate[0]=thumbnail',
       'populate[1]=media_file',
       'pagination[limit]=5'
-    ]
-    let res = await fetch(`${url}?${params.join('&')}`).then(r => r.json())
-    return {
-      props: {
-        posts: res.data
+    )
+    if (art != null) {
+      props.latestPosts = art.map((post) => {
+        let a = post.attributes
+        return {
+          thumbnailUrl : a.thumbnail.data.attributes.formats.thumbnail.url,
+          type         : 'art',
+          title        : a.title,
+          date         : a.date,
+          desc         : a.description,
+          attributes   : a
+        }
+      })
+    }
+
+
+    let comicChapters = await apiFetch(
+      'comic-chapters',
+      'sort=release_date:desc',
+      'populate[0]=thumbnail',
+      'populate[1]=comic',
+      'pagination[limit]=5'
+    )
+    if (comicChapters != null) {
+      for (const ch of comicChapters) {
+        let a = ch.attributes
+
+        let thumbnailUrl = ''
+        if (a.thumbnail.data != null) {
+          thumbnailUrl = a.thumbnail.data.attributes.formats.thumbnail.url
+        } else {
+
+          let comic = await apiFetch(
+            'comics',
+            'filters[url][$eq]='+a.comic.data.attributes.url,
+            'populate[0]=thumbnail'
+          )
+
+          if (comic != null) {
+            let thumb = comic[0].attributes.thumbnail.data.attributes
+            thumbnailUrl = thumb.formats.thumbnail.url
+          }
+        }
+        props.latestPosts.push({
+          attributes   : a,
+          thumbnailUrl : thumbnailUrl,
+          type         : 'comic',
+          title        : a.title,
+          date         : a.release_date,
+          desc         : a.description,
+          href         : '/comics/'+a.comic.data.attributes.url+'/'+a.chapter_number
+        })
       }
     }
+
+
+    props.latestPosts.sort((a, b) => (a.date > b.date) ? -1 : 1)
+    return { props }
   }
 </script>
 
 
 <script>
-  export let posts
+  export let latestPosts
 
   import * as Dfs from '$lib/defaults.js'
   import HomeHeader from "$lib/components/home/header/HomeHeader.svelte"
@@ -34,6 +91,7 @@
   function openModal(event) {
     mediaModal.openModal(event.detail.post)
   }
+
 </script>
 
 
@@ -71,7 +129,7 @@
     headingColor='white'
     bg='blue-stripes'
     topBorder='clouds'>
-    <LatestPosts {posts} on:postClick={openModal} />
+    <LatestPosts postList={latestPosts} on:postClick={openModal} />
   </Dfs.Section>
 </Dfs.Page>
 
