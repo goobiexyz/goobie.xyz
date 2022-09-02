@@ -71,7 +71,15 @@
     }
 
     .content-type {
+      background: white;
+      color: var(--dark-blue);
       display: block;
+      width: min-content;
+      padding: 3px;
+      padding-left: 6px;
+      border-radius: 0.3rem;
+      line-height: 1rem;
+      margin-bottom: 0.4rem;
 
       text-transform: uppercase;
       font-size: 0.8rem;
@@ -81,7 +89,6 @@
 
     .comic-title {
       font-size: 1.2rem;
-      margin-top: 0.3rem;
       height: 1.5rem;
     }
 
