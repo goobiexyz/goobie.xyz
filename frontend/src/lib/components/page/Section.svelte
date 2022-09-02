@@ -55,7 +55,6 @@
         background: url('/images/backgrounds/gracie-pattern.png');
         background-attachment: fixed;
         animation: 2s scroll infinite linear, 5s bouncy infinite ease-in-out;
-
       }
     }
 

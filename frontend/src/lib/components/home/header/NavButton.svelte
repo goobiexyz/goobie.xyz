@@ -111,7 +111,7 @@
       border: none;
     }
     &.back {
-      background-image: url("/images/icons/b_back.svg");
+      background-image: url("/images/icons/b_line_arrow.svg");
       border: none;
       position: absolute;
       left: calc(-1 * $bgroup-gap - $bgroup-col);

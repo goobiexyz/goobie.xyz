@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte'
+  import { lazyLoad } from '$lib/actions/lazyLoad.js'
 
   export let src
   export let alt = ''
@@ -14,12 +15,20 @@
 
 
 {#if ready}
-  <img {src} {alt} {style}
-    class:loaded
-    loading={lazy ? 'lazy' : ''}
-    on:load
-    on:load={ () => loaded = true }
-  />
+  {#if lazy}
+    <img {alt} {style}
+      class:loaded
+      use:lazyLoad={src}
+      on:load
+      on:load={ () => loaded = true }
+    />
+  {:else}
+    <img {src} {alt} {style}
+      class:loaded
+      on:load
+      on:load={ () => loaded = true }
+    />
+  {/if}
 {/if}
 
 <style lang='scss'>

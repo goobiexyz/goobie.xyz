@@ -1,6 +1,7 @@
 <script>
   export let pageNum
   export let lastPage
+  export let customText = ""
 
   import { createEventDispatcher } from 'svelte'
   let dispatch = createEventDispatcher()
@@ -16,7 +17,13 @@
     size='big'
     {color}
     on:click={() => dispatch('prev')} />
-  <span class='page-number'>{pageNum} of {lastPage}</span>
+  <span class='page-number'>
+    {#if customText == ""}
+      {pageNum} of {lastPage}
+    {:else}
+      {customText}
+    {/if}
+  </span>
   <IconButton
     type='right-arrow'
     size='big'

@@ -1,8 +1,11 @@
 <script>
   export let title = ''
   export let header = true
+  export let footer = true
+  export let dark = false
   import Footer from './Footer.svelte'
   import Header from './Header.svelte'
+
 </script>
 
 
@@ -19,10 +22,23 @@
 
   <link rel="alternate icon" type="image/png" href="/images/favicons/favicon.png">
   <link rel="icon" type="image/svg" href="/images/favicons/favicon.svg">
+  {#if dark}
+    <style>
+
+      body {
+        background: var(--black);
+      }
+    </style>
+  {/if}
 </svelte:head>
+
+<svelte:body class:dark />
 
 {#if header}
   <Header>{title}</Header>
 {/if}
 <main><slot></slot></main>
-<Footer />
+
+{#if footer}
+  <Footer />
+{/if}
