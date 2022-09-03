@@ -55,7 +55,7 @@
 <Dfs.Page title='Comics'>
   <Dfs.Section simple='true' spacing='double'>
 
-    <a href="/comics">🡰 Back</a>
+    <a href="/comics">Comics</a>
 
     <FlexCols>
       <div class='col-1'>

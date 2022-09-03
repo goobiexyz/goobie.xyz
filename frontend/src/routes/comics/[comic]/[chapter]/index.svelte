@@ -65,7 +65,7 @@
   <Dfs.Section simple='true' spacing='double'>
     <header>
       <nav>
-        <a class='back' href='/comics/{$page.params.comic}'>🡰 Back</a>
+        <a class='back' href='/comics/{$page.params.comic}'>Chapters</a>
         <h1 style='color:white'>
           {comicData.type == "multi_volume" ? "Ch. "+chapterData.index+" - " : ""}
           {chapterData.title}
