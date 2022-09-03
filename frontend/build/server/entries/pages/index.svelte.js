@@ -1,12 +1,14 @@
 import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component, a as createEventDispatcher, d as each } from "../../chunks/index-3ede4686.js";
-import { P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
+import { a as apiFetch } from "../../chunks/apiFetch-1e72d496.js";
+import { P as Page, S as Section } from "../../chunks/Page-3b245b46.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
 import { I as Image } from "../../chunks/Image-de277fa9.js";
-import { c as convertDate, M as MediaModal } from "../../chunks/MediaModal-eb5d4731.js";
+import { c as convertDate } from "../../chunks/convert-date-64d95c73.js";
 import { B as Box } from "../../chunks/Box-7abaf6cf.js";
 import { S as ScrollBox } from "../../chunks/ScrollBox-7d1e4b05.js";
 import { S as SpacedDiv } from "../../chunks/SpacedDiv-6bdd6ed1.js";
+import { M as MediaModal } from "../../chunks/MediaModal-9a94fcea.js";
 function truncateString(s, limit) {
   if (s.length > limit) {
     return s.substring(0, limit) + " ...";
@@ -16,7 +18,7 @@ function truncateString(s, limit) {
 }
 var NavButton_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: `a.svelte-1uv9swr.svelte-1uv9swr,a.svelte-1uv9swr.svelte-1uv9swr:hover,a.svelte-1uv9swr.svelte-1uv9swr:focus,a.svelte-1uv9swr.svelte-1uv9swr:active{text-decoration:none;color:inherit}.nav-button.svelte-1uv9swr.svelte-1uv9swr:hover{transform:scale(1.2)}.nav-button.svelte-1uv9swr.svelte-1uv9swr:active{transform:scale(1)}.nav-button.svelte-1uv9swr.svelte-1uv9swr{transition:transform 0.1s;box-sizing:content-box;display:block;position:relative;border:0.4rem white solid;border-radius:1rem;width:4rem;height:4rem;background:0;background-position:center;background-repeat:no-repeat;text-align:center;transition:transform 0.25s, opacity 0.25s;text-decoration:none}.nav-button.hidden.svelte-1uv9swr.svelte-1uv9swr{transform:perspective(500px) rotateX(90deg);perspective:500px;opacity:0;pointer-events:none;z-index:-1}.nav-button.svelte-1uv9swr span.svelte-1uv9swr{display:inline-block;line-height:4rem;white-space:nowrap;color:white;font-family:'urbane';font-weight:600;transform:translateY(3.5rem);position:relative}.nav-button.work.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_star.svg")}.nav-button.comms.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_money.svg")}.nav-button.contact.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_at.svg")}.nav-button.image.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_brush.svg")}.nav-button.design.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_shapes.svg")}.nav-button.music.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_music.svg")}.nav-button.code.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_code.svg")}.nav-button.video.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_video.svg")}.nav-button.comics.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_book.svg")}.nav-button.close.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_close.svg");border:none}.nav-button.back.svelte-1uv9swr.svelte-1uv9swr{background-image:url("/images/icons/b_back.svg");border:none;position:absolute;left:calc(-3rem - 76px)}@media only screen and (min-width: 601px){.nav-button.svelte-1uv9swr.svelte-1uv9swr::before{content:"";margin-left:-100%}.nav-button.svelte-1uv9swr.svelte-1uv9swr::after{content:"";margin-right:-100%}}@media only screen and (max-width: 600px){.nav-button.svelte-1uv9swr.svelte-1uv9swr{width:3rem;height:3rem;text-align:left;font-size:1.5rem;border:none;text-decoration:underline}.nav-button.back.svelte-1uv9swr.svelte-1uv9swr{position:static}.nav-button.svelte-1uv9swr span.svelte-1uv9swr{text-indent:4rem;height:-webkit-min-content;height:-moz-min-content;height:min-content;line-height:3rem;transform:none}}`,
+  code: `a.svelte-1vaydiy.svelte-1vaydiy,a.svelte-1vaydiy.svelte-1vaydiy:hover,a.svelte-1vaydiy.svelte-1vaydiy:focus,a.svelte-1vaydiy.svelte-1vaydiy:active{text-decoration:none;color:inherit}.nav-button.svelte-1vaydiy.svelte-1vaydiy:hover{transform:scale(1.2)}.nav-button.svelte-1vaydiy.svelte-1vaydiy:active{transform:scale(1)}.nav-button.svelte-1vaydiy.svelte-1vaydiy{transition:transform 0.1s;box-sizing:content-box;display:block;position:relative;border:0.4rem white solid;border-radius:1rem;width:4rem;height:4rem;background:0;background-position:center;background-repeat:no-repeat;text-align:center;transition:transform 0.25s, opacity 0.25s;text-decoration:none}.nav-button.hidden.svelte-1vaydiy.svelte-1vaydiy{transform:perspective(500px) rotateX(90deg);perspective:500px;opacity:0;pointer-events:none;z-index:-1}.nav-button.svelte-1vaydiy span.svelte-1vaydiy{display:inline-block;line-height:4rem;white-space:nowrap;color:white;font-family:'urbane';font-weight:600;transform:translateY(3.5rem);position:relative}.nav-button.work.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_star.svg")}.nav-button.comms.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_money.svg")}.nav-button.contact.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_at.svg")}.nav-button.image.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_brush.svg")}.nav-button.design.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_shapes.svg")}.nav-button.music.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_music.svg")}.nav-button.code.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_code.svg")}.nav-button.video.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_video.svg")}.nav-button.comics.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_book.svg")}.nav-button.close.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_close.svg");border:none}.nav-button.back.svelte-1vaydiy.svelte-1vaydiy{background-image:url("/images/icons/b_line_arrow.svg");border:none;position:absolute;left:calc(-3rem - 76px)}@media only screen and (min-width: 601px){.nav-button.svelte-1vaydiy.svelte-1vaydiy::before{content:"";margin-left:-100%}.nav-button.svelte-1vaydiy.svelte-1vaydiy::after{content:"";margin-right:-100%}}@media only screen and (max-width: 600px){.nav-button.svelte-1vaydiy.svelte-1vaydiy{width:3rem;height:3rem;text-align:left;font-size:1.5rem;border:none;text-decoration:underline}.nav-button.back.svelte-1vaydiy.svelte-1vaydiy{position:static}.nav-button.svelte-1vaydiy span.svelte-1vaydiy{text-indent:4rem;height:-webkit-min-content;height:-moz-min-content;height:min-content;line-height:3rem;transform:none}}`,
   map: null
 };
 const NavButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -40,7 +42,7 @@ const NavButton = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   if ($$props.show === void 0 && $$bindings.show && show !== void 0)
     $$bindings.show(show);
   $$result.css.add(css$5);
-  return `${href ? `<a class="${["nav-button " + escape(icon) + " svelte-1uv9swr", hidden ? "hidden" : ""].join(" ").trim()}"${add_attribute("href", href, 0)}><span class="${"svelte-1uv9swr"}">${slots.default ? slots.default({}) : ``}</span></a>` : `<button class="${["nav-button " + escape(icon) + " svelte-1uv9swr", hidden ? "hidden" : ""].join(" ").trim()}"><span class="${"svelte-1uv9swr"}">${slots.default ? slots.default({}) : ``}</span></button>`}`;
+  return `${href ? `<a class="${["nav-button " + escape(icon) + " svelte-1vaydiy", hidden ? "hidden" : ""].join(" ").trim()}"${add_attribute("href", href, 0)}><span class="${"svelte-1vaydiy"}">${slots.default ? slots.default({}) : ``}</span></a>` : `<button class="${["nav-button " + escape(icon) + " svelte-1vaydiy", hidden ? "hidden" : ""].join(" ").trim()}"><span class="${"svelte-1vaydiy"}">${slots.default ? slots.default({}) : ``}</span></button>`}`;
 });
 var NavBGroup_svelte_svelte_type_style_lang = "";
 const css$4 = {
@@ -241,18 +243,16 @@ const HomeHeader = create_ssr_component(($$result, $$props, $$bindings, slots) =
 });
 var PostSummary_svelte_svelte_type_style_lang = "";
 const css$2 = {
-  code: ".col-1.svelte-v1u8kr,.col-2.svelte-v1u8kr{display:block}.col-2.svelte-v1u8kr{flex:1}.content-type.svelte-v1u8kr{display:block;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}h3.svelte-v1u8kr{font-family:'urbane-bold';font-size:1.25rem}time.svelte-v1u8kr{margin-top:2px;display:block;font-family:monospace;font-size:0.9rem}.description.svelte-v1u8kr{margin-top:var(--margin)}@media only screen and (max-width: 768px){.col-1.svelte-v1u8kr img{width:200px}}",
+  code: ".col-1.svelte-1vth5tf,.col-2.svelte-1vth5tf{display:block}.col-2.svelte-1vth5tf{flex:1}.content-type.svelte-1vth5tf{background:white;color:var(--dark-blue);display:block;width:-webkit-min-content;width:-moz-min-content;width:min-content;padding:3px;padding-left:6px;border-radius:0.3rem;line-height:1rem;margin-bottom:0.4rem;text-transform:uppercase;font-size:0.8rem;letter-spacing:4px;font-weight:bold}.comic-title.svelte-1vth5tf{font-size:1.2rem;height:1.5rem}h3.svelte-1vth5tf{font-family:'urbane-bold';font-size:1.25rem}time.svelte-1vth5tf{margin-top:2px;display:block;font-family:monospace;font-size:0.9rem}.description.svelte-1vth5tf{margin-top:var(--margin)}@media only screen and (max-width: 768px){.col-1.svelte-1vth5tf img{width:200px}}",
   map: null
 };
-let rootUrl = "https://api.graciebell.art";
 const PostSummary = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { post } = $$props;
-  let thumbnailMeta = post.attributes.thumbnail.data.attributes;
-  let thumbnailUrl = rootUrl + thumbnailMeta.formats.thumbnail.url;
-  let type = post.attributes.media_type;
-  let title = post.attributes.title;
-  let date = post.attributes.date;
-  let desc = truncateString(post.attributes.description, 125);
+  if (post.type == "comic") {
+    console.log(post.attributes.comic.data.attributes.type);
+  }
+  let isMultiVolumeComic = post.type == "comic" && post.attributes.comic.data.attributes.type == "multi_volume";
+  let thumbnailUrl = "https://api.graciebell.art" + post.thumbnailUrl;
   if ($$props.post === void 0 && $$bindings.post && post !== void 0)
     $$bindings.post(post);
   $$result.css.add(css$2);
@@ -266,16 +266,20 @@ ${validate_component(Box, "Box").$$render($$result, {
     default: () => {
       return `${validate_component(FlexCols, "FlexCols").$$render($$result, {}, {}, {
         default: () => {
-          return `<div class="${"col-1 svelte-v1u8kr"}">${validate_component(Image, "Image").$$render($$result, {
+          return `<div class="${"col-1 svelte-1vth5tf"}">${validate_component(Image, "Image").$$render($$result, {
             src: thumbnailUrl,
             alt: "",
             style: "border-radius: var(--rounded-2);"
           }, {}, {})}</div>
 
-    <div class="${"col-2 svelte-v1u8kr"}"><span class="${"content-type svelte-v1u8kr"}">${escape(type)}</span>
-      <h3 class="${"svelte-v1u8kr"}">${escape(title)}</h3>
-      <time class="${"svelte-v1u8kr"}">${escape(convertDate(date))}</time>
-      <p class="${"description svelte-v1u8kr"}">${escape(desc)}</p></div>`;
+    <div class="${"col-2 svelte-1vth5tf"}"><span class="${"content-type svelte-1vth5tf"}">${escape(post.type)}</span>
+
+      ${isMultiVolumeComic ? `<p class="${"comic-title svelte-1vth5tf"}">${escape(post.attributes.comic.data.attributes.title)}</p>` : ``}
+
+      <h3 class="${"svelte-1vth5tf"}">${isMultiVolumeComic ? `Ch. ${escape(post.attributes.chapter_number)} -` : ``}
+        ${escape(post.title)}</h3>
+      <time class="${"svelte-1vth5tf"}">${escape(convertDate(post.date))}</time>
+      <p class="${"description svelte-1vth5tf"}">${escape(truncateString(post.desc, 125))}</p></div>`;
         }
       })}`;
     }
@@ -283,22 +287,23 @@ ${validate_component(Box, "Box").$$render($$result, {
 });
 var LatestPosts_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "hr.svelte-1y1hff8{border:none;border-top:1px white dashed}hr.svelte-1y1hff8:last-child{display:none}button.svelte-1y1hff8{width:100%;text-align:left;transition:0.1s transform}button.svelte-1y1hff8:hover{transform:scale(1.03)}button.svelte-1y1hff8:active{transform:scale(1)}@media only screen and (max-width: 768px){.wrapper.svelte-1y1hff8{width:-webkit-min-content;width:-moz-min-content;width:min-content;margin:auto}}",
+  code: "hr.svelte-1pypco2{border:none;border-top:1px white dashed}hr.svelte-1pypco2:last-child{display:none}button.svelte-1pypco2,a.svelte-1pypco2{display:block;text-decoration:none;width:100%;text-align:left;transition:0.1s transform}button.svelte-1pypco2:hover,a.svelte-1pypco2:hover{transform:scale(1.03)}button.svelte-1pypco2:active,a.svelte-1pypco2:active{transform:scale(1)}@media only screen and (max-width: 768px){.wrapper.svelte-1pypco2{width:-webkit-min-content;width:-moz-min-content;width:min-content;margin:auto}}",
   map: null
 };
 const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { posts } = $$props;
+  let { postList } = $$props;
   createEventDispatcher();
-  if ($$props.posts === void 0 && $$bindings.posts && posts !== void 0)
-    $$bindings.posts(posts);
+  if ($$props.postList === void 0 && $$bindings.postList && postList !== void 0)
+    $$bindings.postList(postList);
   $$result.css.add(css$1);
-  return `<div class="${"wrapper svelte-1y1hff8"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {}, {}, {
+  return `<div class="${"wrapper svelte-1pypco2"}">${validate_component(ScrollBox, "ScrollBox").$$render($$result, {}, {}, {
     default: () => {
       return `${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
         default: () => {
-          return `${each(posts, (post) => {
-            return `<button class="${"svelte-1y1hff8"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</button>
-        <hr class="${"svelte-1y1hff8"}">`;
+          return `${each(postList, (post) => {
+            return `${post.type == "art" ? `<button class="${"svelte-1pypco2"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}
+          </button>` : `${post.type == "comic" ? `<a${add_attribute("href", post.href, 0)} class="${"svelte-1pypco2"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</a>` : ``}`}
+        <hr class="${"svelte-1pypco2"}">`;
           })}`;
         }
       })}`;
@@ -312,21 +317,54 @@ const css = {
   map: null
 };
 async function load() {
-  let url = "https://api.graciebell.art/api/posts";
-  let params = [
-    "sort=date:desc",
-    "populate[0]=thumbnail",
-    "populate[1]=media_file",
-    "pagination[limit]=5"
-  ];
-  let res = await fetch(`${url}?${params.join("&")}`).then((r) => r.json());
-  return { props: { posts: res.data } };
+  let props = { latestPosts: [] };
+  let art = await apiFetch("posts", "sort=date:desc", "populate[0]=thumbnail", "populate[1]=media_file", "pagination[limit]=5");
+  if (art != null) {
+    props.latestPosts = art.map((post) => {
+      let a = post.attributes;
+      return {
+        thumbnailUrl: a.thumbnail.data.attributes.formats.thumbnail.url,
+        type: "art",
+        title: a.title,
+        date: a.date,
+        desc: a.description,
+        attributes: a
+      };
+    });
+  }
+  let comicChapters = await apiFetch("comic-chapters", "sort=release_date:desc", "populate[0]=thumbnail", "populate[1]=comic", "pagination[limit]=5");
+  if (comicChapters != null) {
+    for (const ch of comicChapters) {
+      let a = ch.attributes;
+      let thumbnailUrl = "";
+      if (a.thumbnail.data != null) {
+        thumbnailUrl = a.thumbnail.data.attributes.formats.thumbnail.url;
+      } else {
+        let comic = await apiFetch("comics", "filters[url][$eq]=" + a.comic.data.attributes.url, "populate[0]=thumbnail");
+        if (comic != null) {
+          let thumb = comic[0].attributes.thumbnail.data.attributes;
+          thumbnailUrl = thumb.formats.thumbnail.url;
+        }
+      }
+      props.latestPosts.push({
+        attributes: a,
+        thumbnailUrl,
+        type: "comic",
+        title: a.title,
+        date: a.release_date,
+        desc: a.description,
+        href: "/comics/" + a.comic.data.attributes.url + "/" + a.chapter_number
+      });
+    }
+  }
+  props.latestPosts.sort((a, b) => a.date > b.date ? -1 : 1);
+  return { props };
 }
 const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { posts } = $$props;
+  let { latestPosts } = $$props;
   let mediaModal;
-  if ($$props.posts === void 0 && $$bindings.posts && posts !== void 0)
-    $$bindings.posts(posts);
+  if ($$props.latestPosts === void 0 && $$bindings.latestPosts && latestPosts !== void 0)
+    $$bindings.latestPosts(latestPosts);
   $$result.css.add(css);
   let $$settled;
   let $$rendered;
@@ -376,7 +414,7 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { header: false }, {},
           topBorder: "clouds"
         }, {}, {
           default: () => {
-            return `${validate_component(LatestPosts, "LatestPosts").$$render($$result, { posts }, {}, {})}`;
+            return `${validate_component(LatestPosts, "LatestPosts").$$render($$result, { postList: latestPosts }, {}, {})}`;
           }
         })}`;
       }

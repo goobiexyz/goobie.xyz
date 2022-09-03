@@ -1,6 +1,6 @@
-import * as module from '../entries/pages/comms.svelte.js';
+import * as module from '../entries/pages/comics/_comic_/index.svelte.js';
 
 export { module };
-export const entry = 'pages/comms.svelte-9ad92d7c.js';
-export const js = ["pages/comms.svelte-9ad92d7c.js","chunks/index-1b48d7d4.js","chunks/Page-a380a2d0.js","chunks/index-d440240c.js","chunks/FlexCols-d097b2c9.js","chunks/ScrollBox-bba1d0e4.js","chunks/Box-24934c49.js"];
-export const css = ["assets/pages/comms.svelte-8db1965e.css","assets/Page-6ce58a4d.css","assets/index-9d2bf9c8.css","assets/FlexCols-2819c656.css","assets/ScrollBox-0f787271.css","assets/Box-625d340e.css"];
+export const entry = 'pages/comics/_comic_/index.svelte-fd54d254.js';
+export const js = ["pages/comics/_comic_/index.svelte-fd54d254.js","chunks/index-467184d8.js","chunks/apiFetch-1e72d496.js","chunks/Page-43e49a77.js","chunks/FlexCols-97b3ceef.js","chunks/SpacedDiv-9b4a7d42.js","chunks/Image-2e50915c.js","chunks/convert-date-64d95c73.js"];
+export const css = ["assets/pages/comics/_comic_/index.svelte-ec121c24.css","assets/Page-de4a5924.css","assets/FlexCols-2819c656.css","assets/SpacedDiv-a813fb49.css","assets/Image-0490c909.css"];

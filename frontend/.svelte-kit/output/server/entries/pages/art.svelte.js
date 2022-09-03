@@ -1,33 +1,10 @@
-import { g as getContext, c as create_ssr_component, a as createEventDispatcher, v as validate_component, e as escape, b as subscribe, d as each, f as add_attribute } from "../../chunks/index-3ede4686.js";
-import { I as IconButton, P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
+import { c as create_ssr_component, a as createEventDispatcher, v as validate_component, e as escape, b as subscribe, d as each, f as add_attribute } from "../../chunks/index-3ede4686.js";
+import { I as IconButton, P as Page, S as Section } from "../../chunks/Page-3b245b46.js";
+import { p as page } from "../../chunks/stores-fadc4c08.js";
 import { I as Image } from "../../chunks/Image-de277fa9.js";
-import { M as MediaModal } from "../../chunks/MediaModal-eb5d4731.js";
+import { M as MediaModal } from "../../chunks/MediaModal-9a94fcea.js";
 import "../../chunks/SpacedDiv-6bdd6ed1.js";
-const getStores = () => {
-  const stores = getContext("__svelte__");
-  return {
-    page: {
-      subscribe: stores.page.subscribe
-    },
-    navigating: {
-      subscribe: stores.navigating.subscribe
-    },
-    get preloading() {
-      console.error("stores.preloading is deprecated; use stores.navigating instead");
-      return {
-        subscribe: stores.navigating.subscribe
-      };
-    },
-    session: stores.session,
-    updated: stores.updated
-  };
-};
-const page = {
-  subscribe(fn) {
-    const store = getStores().page;
-    return store.subscribe(fn);
-  }
-};
+import "../../chunks/convert-date-64d95c73.js";
 var PageControls_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".page-controls.svelte-1x15rsl{display:flex;align-items:center;justify-content:center}.page-number.svelte-1x15rsl{margin:0 var(--margin);font-size:1.2rem;width:100px;text-align:center}",
@@ -37,14 +14,17 @@ let color = "var(--dark-blue)";
 const PageControls = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { pageNum } = $$props;
   let { lastPage } = $$props;
+  let { customText = "" } = $$props;
   createEventDispatcher();
   if ($$props.pageNum === void 0 && $$bindings.pageNum && pageNum !== void 0)
     $$bindings.pageNum(pageNum);
   if ($$props.lastPage === void 0 && $$bindings.lastPage && lastPage !== void 0)
     $$bindings.lastPage(lastPage);
+  if ($$props.customText === void 0 && $$bindings.customText && customText !== void 0)
+    $$bindings.customText(customText);
   $$result.css.add(css$1);
   return `<div class="${"page-controls svelte-1x15rsl"}">${validate_component(IconButton, "IconButton").$$render($$result, { type: "left-arrow", size: "big", color }, {}, {})}
-  <span class="${"page-number svelte-1x15rsl"}">${escape(pageNum)} of ${escape(lastPage)}</span>
+  <span class="${"page-number svelte-1x15rsl"}">${customText == "" ? `${escape(pageNum)} of ${escape(lastPage)}` : `${escape(customText)}`}</span>
   ${validate_component(IconButton, "IconButton").$$render($$result, { type: "right-arrow", size: "big", color }, {}, {})}
 </div>`;
 });

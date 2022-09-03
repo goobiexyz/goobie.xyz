@@ -1,5 +1,5 @@
 import { c as create_ssr_component, f as add_attribute, e as escape, n as null_to_empty, k as add_styles, v as validate_component } from "../../chunks/index-3ede4686.js";
-import { P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
+import { P as Page, S as Section } from "../../chunks/Page-3b245b46.js";
 import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
 import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
 import { S as SpacedDiv } from "../../chunks/SpacedDiv-6bdd6ed1.js";

@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component, e as escape, i as is_promise, j as noop, d as each } from "../../chunks/index-3ede4686.js";
-import { P as Page, S as Section } from "../../chunks/Page-7d422ec7.js";
+import { P as Page, S as Section } from "../../chunks/Page-3b245b46.js";
 import { I as Image } from "../../chunks/Image-de277fa9.js";
 import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
 import { S as ScrollBox } from "../../chunks/ScrollBox-7d1e4b05.js";
