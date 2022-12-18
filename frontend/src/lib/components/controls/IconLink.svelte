@@ -1,5 +1,6 @@
 <script>
   import IconButton from './IconButton.svelte'
+  import socialLinks from '$lib/social-links.json'
 
   export let type
   export let size
@@ -16,22 +17,22 @@
 
     case "twitter":
       title = "Twitter"
-      location = "https://twitter.com/gracieart"
+      location = socialLinks.twitter
       break
 
     case "youtube":
       title = "YouTube"
-      location = "https://youtube.com/graciebell"
+      location = socialLinks.youtube
       break
 
     case "soundcloud":
       title = "SoundCloud"
-      location = "https://soundcloud.com/gracieart"
+      location = socialLinks.soundcloud
       break
 
     case "github":
       title = "GitHub"
-      location = "https://github.com/gracieart"
+      location = socialLinks.github
       break
   }
 
