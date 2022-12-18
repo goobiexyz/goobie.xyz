@@ -1,6 +1,6 @@
 import { c as create_ssr_component, b as subscribe, v as validate_component, e as escape, d as each } from "../../../../../chunks/index-3ede4686.js";
 import { a as apiFetch } from "../../../../../chunks/apiFetch-1e72d496.js";
-import { P as Page, S as Section } from "../../../../../chunks/Page-3b245b46.js";
+import { P as Page, S as Section } from "../../../../../chunks/Page-65c0d5b3.js";
 import { I as Image } from "../../../../../chunks/Image-de277fa9.js";
 import { p as page } from "../../../../../chunks/stores-fadc4c08.js";
 var index_svelte_svelte_type_style_lang = "";

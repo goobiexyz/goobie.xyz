@@ -1,14 +1,13 @@
 import { c as create_ssr_component, e as escape, f as add_attribute, v as validate_component, a as createEventDispatcher, d as each } from "../../chunks/index-3ede4686.js";
 import { a as apiFetch } from "../../chunks/apiFetch-1e72d496.js";
-import { P as Page, S as Section } from "../../chunks/Page-3b245b46.js";
-import { s as socialLinks } from "../../chunks/social-links-dba47162.js";
+import { s as socialLinks, P as Page, S as Section } from "../../chunks/Page-65c0d5b3.js";
 import { F as FlexCols } from "../../chunks/FlexCols-9f55f005.js";
 import { I as Image } from "../../chunks/Image-de277fa9.js";
 import { c as convertDate } from "../../chunks/convert-date-64d95c73.js";
 import { B as Box } from "../../chunks/Box-7abaf6cf.js";
 import { S as ScrollBox } from "../../chunks/ScrollBox-7d1e4b05.js";
 import { S as SpacedDiv } from "../../chunks/SpacedDiv-6bdd6ed1.js";
-import { M as MediaModal } from "../../chunks/MediaModal-9a94fcea.js";
+import { M as MediaModal } from "../../chunks/MediaModal-b9a39eee.js";
 function truncateString(s, limit) {
   if (s.length > limit) {
     return s.substring(0, limit) + " ...";
@@ -301,8 +300,8 @@ const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) 
       return `${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
         default: () => {
           return `${each(postList, (post) => {
-            return `${post.type == "art" ? `<button class="${"svelte-1pypco2"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}
-          </button>` : `${post.type == "comic" ? `<a${add_attribute("href", post.href, 0)} class="${"svelte-1pypco2"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</a>` : ``}`}
+            return `${post.type == "comic" ? `<a${add_attribute("href", post.href, 0)} class="${"svelte-1pypco2"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}</a>` : `<button class="${"svelte-1pypco2"}">${validate_component(PostSummary, "PostSummary").$$render($$result, { post }, {}, {})}
+          </button>`}
         <hr class="${"svelte-1pypco2"}">`;
           })}`;
         }
@@ -324,7 +323,7 @@ async function load() {
       let a = post.attributes;
       return {
         thumbnailUrl: a.thumbnail.data.attributes.formats.thumbnail.url,
-        type: "art",
+        type: a.media_type,
         title: a.title,
         date: a.date,
         desc: a.description,

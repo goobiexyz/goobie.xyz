@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component, e as escape } from "../../chunks/index-3ede4686.js";
-import { P as Page, S as Section } from "../../chunks/Page-3b245b46.js";
+import { P as Page, S as Section } from "../../chunks/Page-65c0d5b3.js";
 var design_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".image-col.svelte-1hjwa6d.svelte-1hjwa6d{display:grid;grid-template-columns:fit-content(300px) fit-content(300px) fit-content(300px);grid-row-gap:var(--double-margin);grid-column-gap:var(--double-margin);justify-content:center;align-items:center;justify-items:center}.image-col.svelte-1hjwa6d img.svelte-1hjwa6d{max-width:100%}.image-col.svelte-1hjwa6d .wide.svelte-1hjwa6d{grid-column:span 3}.image-col.svelte-1hjwa6d .wide-2.svelte-1hjwa6d{grid-column:span 2}.image-col.svelte-1hjwa6d .tall.svelte-1hjwa6d{grid-row:span 2}@media only screen and (max-width: 900px){.image-col.svelte-1hjwa6d.svelte-1hjwa6d{grid-row-gap:var(--margin);grid-column-gap:var(--margin)}}@media only screen and (max-width: 600px){.image-col.svelte-1hjwa6d.svelte-1hjwa6d{grid-template-columns:100%}.image-col.svelte-1hjwa6d .wide.svelte-1hjwa6d,.image-col.svelte-1hjwa6d .wide-2.svelte-1hjwa6d,.image-col.svelte-1hjwa6d .tall.svelte-1hjwa6d{grid-row:span 1;grid-column:span 1}}",

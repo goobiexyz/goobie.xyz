@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component, d as each, e as escape } from "../../../chunks/index-3ede4686.js";
 import { a as apiFetch } from "../../../chunks/apiFetch-1e72d496.js";
-import { P as Page, S as Section } from "../../../chunks/Page-3b245b46.js";
+import { P as Page, S as Section } from "../../../chunks/Page-65c0d5b3.js";
 import { c as convertDate } from "../../../chunks/convert-date-64d95c73.js";
 import { I as Image } from "../../../chunks/Image-de277fa9.js";
 var index_svelte_svelte_type_style_lang = "";
