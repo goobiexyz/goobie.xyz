@@ -68,6 +68,18 @@
       mask-image: url('/images/icons/b_github.svg');
       -webkit-mask-image: url('/images/icons/b_github.svg');
     }
+    &.tumblr {
+      mask-image: url('/images/icons/b_tumblr.svg');
+      -webkit-mask-image: url('/images/icons/b_tumblr.svg');
+    }
+    &.spacehey {
+      mask-image: url('/images/icons/b_spacehey.svg');
+      -webkit-mask-image: url('/images/icons/b_spacehey.svg');
+    }
+    &.mastodon {
+      mask-image: url('/images/icons/b_mastodon.svg');
+      -webkit-mask-image: url('/images/icons/b_mastodon.svg');
+    }
     &.close {
       mask-image: url('/images/icons/b_close.svg');
       -webkit-mask-image: url('/images/icons/b_close.svg');

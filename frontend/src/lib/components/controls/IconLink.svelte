@@ -11,29 +11,45 @@
 
   switch (type) {
     case "logo":
-      title = "Home"
-      location = "/"
-      break
+    title = "Home"
+    location = "/"
+    break
 
     case "twitter":
-      title = "Twitter"
-      location = socialLinks.twitter
-      break
+    title = "Twitter"
+    location = socialLinks.twitter
+    break
 
     case "youtube":
-      title = "YouTube"
-      location = socialLinks.youtube
-      break
+    title = "YouTube"
+    location = socialLinks.youtube
+    break
 
     case "soundcloud":
-      title = "SoundCloud"
-      location = socialLinks.soundcloud
-      break
+    title = "SoundCloud"
+    location = socialLinks.soundcloud
+    break
 
     case "github":
-      title = "GitHub"
-      location = socialLinks.github
-      break
+    title = "GitHub"
+    location = socialLinks.github
+    break
+
+    case "tumblr":
+    title = "Tumblr"
+    location = socialLinks.tumblr
+    break
+
+    case "spacehey":
+    title = "SpaceHey"
+    location = socialLinks.spacehey
+    break
+
+    case "mastodon":
+    title = "Mastodon"
+    location = socialLinks.mastodon
+    break
+
   }
 
 </script>
