@@ -20,7 +20,7 @@
         let a = post.attributes
         return {
           thumbnailUrl : a.thumbnail.data.attributes.formats.thumbnail.url,
-          type         : 'art',
+          type         : a.media_type,
           title        : a.title,
           date         : a.date,
           desc         : a.description,

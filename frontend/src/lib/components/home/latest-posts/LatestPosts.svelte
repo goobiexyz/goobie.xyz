@@ -14,12 +14,12 @@
   <ScrollBox>
     <SpacedDiv>
       {#each postList as post}
-        {#if post.type == 'art'}
+        {#if post.type == 'comic'}
+          <a href={post.href}><PostSummary {post} /></a>
+        {:else}
           <button on:click={ () => dispatch( 'postClick', { post } ) }>
             <PostSummary {post} />
           </button>
-        {:else if post.type == 'comic'}
-          <a href={post.href}><PostSummary {post} /></a>
         {/if}
         <hr />
       {/each}
