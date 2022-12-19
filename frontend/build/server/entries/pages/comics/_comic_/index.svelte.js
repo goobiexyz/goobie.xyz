@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component, e as escape, d as each } from "../../../../chunks/index-3ede4686.js";
 import { a as apiFetch } from "../../../../chunks/apiFetch-1e72d496.js";
-import { P as Page, S as Section } from "../../../../chunks/Page-65c0d5b3.js";
+import { P as Page, S as Section } from "../../../../chunks/Page-481419e6.js";
 import { F as FlexCols } from "../../../../chunks/FlexCols-9f55f005.js";
 import { S as SpacedDiv } from "../../../../chunks/SpacedDiv-6bdd6ed1.js";
 import { I as Image } from "../../../../chunks/Image-de277fa9.js";
