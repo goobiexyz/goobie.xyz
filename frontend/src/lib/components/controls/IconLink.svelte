@@ -50,6 +50,10 @@
     location = socialLinks.mastodon
     break
 
+    case "newgrounds":
+    title = "Newgrounds"
+    location = socialLinks.newgrounds
+
   }
 
 </script>

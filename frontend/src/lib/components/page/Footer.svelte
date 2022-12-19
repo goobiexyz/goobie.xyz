@@ -7,11 +7,12 @@
 
 <footer>
   <IconLink type='youtube' {color} />
-  <IconLink type='soundcloud' {color} />
+  <IconLink type='newgrounds' {color} />
   <IconLink type='github' {color} />
-  <IconLink type='spacehey' {color} />
+  <IconLink type='soundcloud' {color} />
   <IconLink type='tumblr' {color} />
   <IconLink type='mastodon' {color} />
+  <IconLink type='spacehey' {color} />
   <IconLink type='twitter' {color} />
 
 </footer>
@@ -32,6 +33,20 @@
 
     & :global(>*) {
       margin: 0 var(--half-margin);
+    }
+  }
+
+  @media only screen and (max-width: token(breakpoints.ss)) {
+    footer {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+
+      & :global(>*) {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 </style>

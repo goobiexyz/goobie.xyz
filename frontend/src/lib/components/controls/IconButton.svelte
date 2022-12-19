@@ -80,6 +80,10 @@
       mask-image: url('/images/icons/b_mastodon.svg');
       -webkit-mask-image: url('/images/icons/b_mastodon.svg');
     }
+    &.newgrounds {
+      mask-image: url('/images/icons/b_newgrounds.svg');
+      -webkit-mask-image: url('/images/icons/b_newgrounds.svg');
+    }
     &.close {
       mask-image: url('/images/icons/b_close.svg');
       -webkit-mask-image: url('/images/icons/b_close.svg');
