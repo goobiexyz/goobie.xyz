@@ -312,7 +312,7 @@ const LatestPosts = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".col-1.svelte-1hh3xca{flex:1 1 20%;display:flex;justify-content:space-evenly}.col-2.svelte-1hh3xca{flex:1 1 60%;min-width:35ch}@media only screen and (max-width: 600px){.col-2.svelte-1hh3xca{min-width:100%}}",
+  code: ".col-1.svelte-1v2ypha{flex:1 1 20%;display:flex;justify-content:space-evenly}.col-2.svelte-1v2ypha{flex:1 1 60%;min-width:35ch;display:flex;align-items:center}@media only screen and (max-width: 600px){.col-2.svelte-1v2ypha{min-width:100%}}",
   map: null
 };
 async function load() {
@@ -386,12 +386,12 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, { header: false }, {},
           default: () => {
             return `${validate_component(FlexCols, "FlexCols").$$render($$result, {}, {}, {
               default: () => {
-                return `<div class="${"col-1 svelte-1hh3xca"}"><div>${validate_component(Image, "Image").$$render($$result, {
-                  src: "/images/grace_portrait.jpg",
+                return `<div class="${"col-1 svelte-1v2ypha"}"><div>${validate_component(Image, "Image").$$render($$result, {
+                  src: "/images/grace_portrait_casual.jpg",
                   style: "max-width:13.66rem; border-radius:var(--rounded-2);",
                   alt: ""
                 }, {}, {})}</div></div>
-      <div class="${"col-2 svelte-1hh3xca"}">${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
+      <div class="${"col-2 svelte-1v2ypha"}">${validate_component(SpacedDiv, "SpacedDiv").$$render($$result, {}, {}, {
                   default: () => {
                     return `<p>Hi there! My name is Grace and I call myself a multimedia artist because I&#39;m always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My skills include design, illustration, coding, composing, and video editing.
           </p>
