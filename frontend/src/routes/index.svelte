@@ -103,7 +103,7 @@
       <div class='col-1'>
         <div>
           <Image
-            src='/images/grace_portrait.jpg'
+            src='/images/grace_portrait_casual.jpg'
             style='max-width:13.66rem; border-radius:var(--rounded-2);'
             alt=''>
           </Image>
@@ -144,6 +144,8 @@
   .col-2 {
     flex: 1 1 60%;
     min-width: 35ch;
+    display: flex;
+    align-items: center;
   }
 
   @media only screen and (max-width: token(breakpoints.ss)) {
