@@ -6,6 +6,7 @@
 <form target='_blank' action='https://formsubmit.co/0a9aa64c158dfc069b31d069e891a721' method='post'>
   <label for='subject' style='display:none'>Subject</label>
   <input type='text' id='subject' name='_honey' style='display:none'>
+  <input type="hidden" name="_blacklist" value="SEO">
 
   <fieldset class='horizontal'>
     <fieldset>
