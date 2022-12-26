@@ -47,6 +47,7 @@ const ContactForm = create_ssr_component(($$result, $$props, $$bindings, slots) 
   $$result.css.add(css$1);
   return `<form target="${"_blank"}" action="${"https://formsubmit.co/0a9aa64c158dfc069b31d069e891a721"}" method="${"post"}" class="${"svelte-a7aypw"}"><label for="${"subject"}" style="${"display:none"}" class="${"svelte-a7aypw"}">Subject</label>
   <input type="${"text"}" id="${"subject"}" name="${"_honey"}" style="${"display:none"}" class="${"svelte-a7aypw"}">
+  <input type="${"hidden"}" name="${"_blacklist"}" value="${"SEO"}" class="${"svelte-a7aypw"}">
 
   <fieldset class="${"horizontal svelte-a7aypw"}"><fieldset class="${"svelte-a7aypw"}"><label class="${"required svelte-a7aypw"}" for="${"name"}">Name</label>
       <input type="${"text"}" id="${"name"}" name="${"name"}" placeholder="${"Your name..."}" required class="${"svelte-a7aypw"}"></fieldset>
