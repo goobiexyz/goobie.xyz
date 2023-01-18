@@ -89,19 +89,11 @@
 
   "extras" : [
     {
-      "name"   : "Vector Face",
-      "price"  : "20",
-      "thumb"  : "xtra_vector_face.jpg",
-      "notes"  : "Choose between lined or lineless",
-      "code"   : "VEC"
-    },
-
-    {
       "name"    : "Social Stickers",
-      "price"   : "20",
+      "price"   : "15",
       "unit"    : "sticker",
       "thumb"   : "xtra_stickers.jpg",
-      "notes"   : "First order must have at least 3 stickers, but may have fewer in future purchases.",
+      "notes"   : "Price may vary depending on the complexity of the sticker",
       "code"    : "SS"
     },
 
@@ -109,7 +101,7 @@
       "name"    : "Ref Sheet",
       "price"   : "50",
       "thumb"   : "xtra_ref.jpg",
-      "notes"   : "May cost more or less depending on the complexity of the order",
+      "notes"   : "Price may vary depending on the complexity of the order",
       "code"    : "REF"
     },
 
@@ -117,7 +109,7 @@
       "name"    : "Graphic Design",
       "price"   : "40",
       "thumb"   : "xtra_graphic_design.jpg",
-      "notes"   : "May cost more or less depending on the complexity of the order"
+      "notes"   : "Price may vary depending on the complexity of the order"
     }
   ]
 }
