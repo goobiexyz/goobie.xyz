@@ -18,39 +18,41 @@
   </Dfs.Section>
 
 
-  <Dfs.Section heading='Info' simple=true>
+  <Dfs.Section heading='Terms of Service' simple=true>
   <FlexCols colGap='var(--double-margin)'>
-    <div class='column' style='flex: 1;'>
+    <div class='column' style='flex: 1; flex-direction: column;'>
       <div class='list'>
-        <h3>General Terms:</h3>
+        <h3>What I Can Draw</h3>
+        <ul>
+          <li>I have the right to turn down a commission for any reason, including if I'm just not interested in the idea.</li>
+          <li>I draw safe and adult content.</li>
+          <li>I won't draw underage characters.</li>
+        </ul>
+      </div>
+
+      <div class='list'>
+        <h3>Payment</h3>
         <ul>
           <li>I will not start working until I am paid in full.</li>
-          <li>You have the right to use the finished work however you want, as long as you give me credit for creating it.</li>
-          <li>The finished work will be public and I may use it to advertise my commissions.</li>
-          <li>During the sketching process, I will share work-in-progress screenshots. This will be your opportunity to provide feedback. Please be specific and concise.</li>
-          <li>I will not accept any additions to the scene, changes to anything that differs from the sketch, or requests for alternate versions once the final sketch has been approved and I've already moved forward with the final render.</li>
+          <li>Payments will be done through PayPal in USD.</li>
+          <li>No refunds unless I decide to cancel the order.</li>
         </ul>
       </div>
     </div>
 
     <div class='column' style='flex: 1; flex-direction: column;'>
       <div class='list'>
-        <h3>I Can Draw:</h3>
+        <h3>Changes/Edits</h3>
         <ul>
-          <li>Characters you have permission to use</li>
-          <li>Fan characters and OCs</li>
-          <li>Anthropomorphic characters</li>
-          <li>Safe content or adult content</li>
+          <li>I will share work-in-progress screenshots during the sketching process. This will be your opportunity to provide feedback. Please be specific and concise.</li>
+          <li>Once the final sketch has been approved, I will start working on the final render and will not accept any more requests for edits or changes, unless they have to do with color.</li>
         </ul>
       </div>
 
       <div class='list'>
-        <h3>I Cannot Draw:</h3>
+        <h3>Rights</h3>
         <ul>
-          <li>Characters you don't have permission to use</li>
-          <li>Most non-anthro characters</li>
-          <li>Anything that grosses me out or makes me uncomfortable</li>
-          <li>I'm not going to make a comprehensive list of things that make me uncomfortable, so please send me your idea and I'll tell you whether I'd be willing to draw it or not.</li>
+          <li>You will have complete ownership over the finished piece, however you must credit me where appropriate, and I reserve the right to post it to social media and use it to advertise my commissions.</li>
         </ul>
       </div>
     </div>
