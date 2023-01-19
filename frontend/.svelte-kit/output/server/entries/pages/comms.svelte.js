@@ -91,32 +91,25 @@ const charArt = {
 };
 const extras = [
   {
-    name: "Vector Face",
-    price: "20",
-    thumb: "xtra_vector_face.jpg",
-    notes: "Choose between lined or lineless",
-    code: "VEC"
-  },
-  {
     name: "Social Stickers",
-    price: "20",
+    price: "15",
     unit: "sticker",
     thumb: "xtra_stickers.jpg",
-    notes: "First order must have at least 3 stickers, but may have fewer in future purchases.",
+    notes: "Price may vary depending on the complexity of the sticker",
     code: "SS"
   },
   {
     name: "Ref Sheet",
     price: "50",
     thumb: "xtra_ref.jpg",
-    notes: "May cost more or less depending on the complexity of the order",
+    notes: "Price may vary depending on the complexity of the order",
     code: "REF"
   },
   {
     name: "Graphic Design",
     price: "40",
     thumb: "xtra_graphic_design.jpg",
-    notes: "May cost more or less depending on the complexity of the order"
+    notes: "Price may vary depending on the complexity of the order"
   }
 ];
 var commsData = {
@@ -211,28 +204,29 @@ ${validate_component(Page, "Dfs.Page").$$render($$result, {
       })}
 
 
-  ${validate_component(Section, "Dfs.Section").$$render($$result, { heading: "Info", simple: "true" }, {}, {
+  ${validate_component(Section, "Dfs.Section").$$render($$result, {
+        heading: "Terms of Service",
+        simple: "true"
+      }, {}, {
         default: () => {
           return `${validate_component(FlexCols, "FlexCols").$$render($$result, { colGap: "var(--double-margin)" }, {}, {
             default: () => {
-              return `<div class="${"column svelte-av9zi3"}" style="${"flex: 1;"}"><div class="${"list svelte-av9zi3"}"><h3>General Terms:</h3>
+              return `<div class="${"column svelte-av9zi3"}" style="${"flex: 1; flex-direction: column;"}"><div class="${"list svelte-av9zi3"}"><h3>What I Can Draw</h3>
+        <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">I have the right to turn down a commission for any reason, including if I&#39;m just not interested in the idea.</li>
+          <li class="${"svelte-av9zi3"}">I draw safe and adult content.</li>
+          <li class="${"svelte-av9zi3"}">I won&#39;t draw underage characters.</li></ul></div>
+
+      <div class="${"list svelte-av9zi3"}"><h3>Payment</h3>
         <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">I will not start working until I am paid in full.</li>
-          <li class="${"svelte-av9zi3"}">You have the right to use the finished work however you want, as long as you give me credit for creating it.</li>
-          <li class="${"svelte-av9zi3"}">The finished work will be public and I may use it to advertise my commissions.</li>
-          <li class="${"svelte-av9zi3"}">During the sketching process, I will share work-in-progress screenshots. This will be your opportunity to provide feedback. Please be specific and concise.</li>
-          <li class="${"svelte-av9zi3"}">I will not accept any additions to the scene, changes to anything that differs from the sketch, or requests for alternate versions once the final sketch has been approved and I&#39;ve already moved forward with the final render.</li></ul></div></div>
+          <li class="${"svelte-av9zi3"}">Payments will be done through PayPal in USD.</li>
+          <li class="${"svelte-av9zi3"}">No refunds unless I decide to cancel the order.</li></ul></div></div>
 
-    <div class="${"column svelte-av9zi3"}" style="${"flex: 1; flex-direction: column;"}"><div class="${"list svelte-av9zi3"}"><h3>I Can Draw:</h3>
-        <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">Characters you have permission to use</li>
-          <li class="${"svelte-av9zi3"}">Fan characters and OCs</li>
-          <li class="${"svelte-av9zi3"}">Anthropomorphic characters</li>
-          <li class="${"svelte-av9zi3"}">Safe content or adult content</li></ul></div>
+    <div class="${"column svelte-av9zi3"}" style="${"flex: 1; flex-direction: column;"}"><div class="${"list svelte-av9zi3"}"><h3>Changes/Edits</h3>
+        <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">I will share work-in-progress screenshots during the sketching process. This will be your opportunity to provide feedback. Please be specific and concise.</li>
+          <li class="${"svelte-av9zi3"}">Once the final sketch has been approved, I will start working on the final render and will not accept any more requests for edits or changes, unless they have to do with color.</li></ul></div>
 
-      <div class="${"list svelte-av9zi3"}"><h3>I Cannot Draw:</h3>
-        <ul class="${"svelte-av9zi3"}"><li class="${"svelte-av9zi3"}">Characters you don&#39;t have permission to use</li>
-          <li class="${"svelte-av9zi3"}">Most non-anthro characters</li>
-          <li class="${"svelte-av9zi3"}">Anything that grosses me out or makes me uncomfortable</li>
-          <li class="${"svelte-av9zi3"}">I&#39;m not going to make a comprehensive list of things that make me uncomfortable, so please send me your idea and I&#39;ll tell you whether I&#39;d be willing to draw it or not.</li></ul></div></div>`;
+      <div class="${"list svelte-av9zi3"}"><h3>Rights</h3>
+        <ul class="${"svelte-av9zi3"}"><li>You will have complete ownership over the finished piece, however you must credit me where appropriate, and I reserve the right to post it to social media and use it to advertise my commissions.</li></ul></div></div>`;
             }
           })}`;
         }
