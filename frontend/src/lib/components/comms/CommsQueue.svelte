@@ -1,4 +1,8 @@
-<script>
+<script lang='ts'>
+  export let commsOpen : Boolean
+  export let openSlots : Number
+  export let openDate : String
+
   import { fade, slide } from 'svelte/transition'
   import commsData from '$lib/data/comms-data.json'
   import ScrollBox from '../layout/ScrollBox.svelte'
@@ -6,6 +10,16 @@
 
 
 <div class='queue-container'>
+  <div class='comms-status'>
+    {#if commsOpen}
+      <p><strong>Commissions: OPEN</strong></p>
+    {:else}
+      <p><strong>Commissions: CLOSED</strong></p>
+      <p>will reopen: <datetime>{openDate}</datetime></p>
+    {/if}
+  </div>
+  
+
   <ScrollBox accent='var(--black)' height='320px' border='var(--border-thin)'>
     {#await fetch(commsData.queueUrl).then(res => res.json())}
       <p>Loading...</p>
@@ -24,6 +38,17 @@
 
 
 <style lang='postcss'>
+  datetime {
+    font-family: mono;
+  }
+
+  .comms-status {
+    margin-bottom: var(--half-margin);
+    text-align: center;
+  }
+
+  
+
   .queue-container {
     width: 75%;
     margin: auto;

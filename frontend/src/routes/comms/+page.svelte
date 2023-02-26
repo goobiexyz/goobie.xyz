@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+  export let data
+
   import * as Dfs from '$lib/defaults.js'
   import commsData from '$lib/data/comms-data.json'
   import CommCard from '$lib/components/comms/CommCard.svelte'
@@ -14,7 +16,8 @@
 
 <Dfs.Page title='{innerWidth < 600 ? 'Comms.' : 'Commissions'}'>
   <Dfs.Section heading='Queue' simple=true>
-    <CommsQueue />
+    
+    <CommsQueue commsOpen={data.open} openSlots={data.openSlots} openDate={data.openDate} />
   </Dfs.Section>
 
 
