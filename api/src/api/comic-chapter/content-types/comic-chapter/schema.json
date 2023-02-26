@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comic_chapters",
+  "info": {
+    "singularName": "comic-chapter",
+    "pluralName": "comic-chapters",
+    "displayName": "Comic Chapter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "release_date": {
+      "type": "date",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "pages": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "comic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comic.comic",
+      "inversedBy": "comic_chapters"
+    },
+    "chapter_number": {
+      "min": 1,
+      "default": 1,
+      "type": "integer",
+      "required": true
+    }
+  }
+}
