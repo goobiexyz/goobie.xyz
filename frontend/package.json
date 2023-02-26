@@ -29,6 +29,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-node": "^1.2.0",
     "postcss-mixins": "^9.0.4",
     "ress": "^5.0.2",
     "sass": "^1.58.3",
