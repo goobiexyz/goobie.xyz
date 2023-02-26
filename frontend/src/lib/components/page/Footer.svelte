@@ -6,14 +6,15 @@
 
 
 <footer>
-  <IconLink type='youtube' {color} />
+  <IconLink type='twitter' {color} />
   <IconLink type='newgrounds' {color} />
   <IconLink type='github' {color} />
+  <IconLink type='youtube' {color} />
   <IconLink type='soundcloud' {color} />
-  <IconLink type='tumblr' {color} />
-  <IconLink type='mastodon' {color} />
-  <IconLink type='spacehey' {color} />
-  <IconLink type='twitter' {color} />
+  <!-- <IconLink type='tumblr' {color} /> -->
+  <!-- <IconLink type='mastodon' {color} /> -->
+  <!-- <IconLink type='spacehey' {color} /> -->
+  
 
 </footer>
 
