@@ -1,21 +1,12 @@
-import { c as create_ssr_component, e as escape } from "../../chunks/index-3ede4686.js";
-function load({ error, status }) {
-  return { props: { error, status } };
-}
+import { c as create_ssr_component, b as subscribe, e as escape } from "../../chunks/index.js";
+import { p as page } from "../../chunks/stores.js";
 const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { status } = $$props;
-  let { error } = $$props;
-  if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-    $$bindings.status(status);
-  if ($$props.error === void 0 && $$bindings.error && error !== void 0)
-    $$bindings.error(error);
-  return `<h1>${escape(status)}</h1>
-
-<pre>${escape(error.message)}</pre>
-
-
-
-${error.frame ? `<pre>${escape(error.frame)}</pre>` : ``}
-${error.stack ? `<pre>${escape(error.stack)}</pre>` : ``}`;
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  $$unsubscribe_page();
+  return `<h1>${escape($page.status)}</h1>
+<p>${escape($page.error?.message)}</p>`;
 });
-export { Error as default, load };
+export {
+  Error as default
+};

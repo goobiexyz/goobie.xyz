@@ -1,6 +1,10 @@
-import * as module from '../entries/pages/comics/_comic_/_chapter_/index.svelte.js';
+import * as server from '../entries/pages/art/_page.server.ts.js';
 
-export { module };
-export const entry = 'pages/comics/_comic_/_chapter_/index.svelte-6930a90f.js';
-export const js = ["pages/comics/_comic_/_chapter_/index.svelte-6930a90f.js","chunks/index-467184d8.js","chunks/apiFetch-1e72d496.js","chunks/Page-d4bb80b1.js","chunks/Image-2e50915c.js","chunks/stores-ad8a1bc6.js"];
-export const css = ["assets/pages/comics/_comic_/_chapter_/index.svelte-2ab18fa1.css","assets/Page-693d77bd.css","assets/Image-0490c909.css"];
+export const index = 3;
+export const component = async () => (await import('../entries/pages/art/_page.svelte.js')).default;
+export const file = '_app/immutable/entry/art-page.svelte.e26986a3.js';
+export { server };
+export const server_id = "src/routes/art/+page.server.ts";
+export const imports = ["_app/immutable/entry/art-page.svelte.e26986a3.js","_app/immutable/chunks/index.f91f41ce.js","_app/immutable/chunks/Page.4488cce5.js","_app/immutable/chunks/singletons.99ab03bd.js","_app/immutable/chunks/stores.87d077fd.js","_app/immutable/chunks/Image.447b0612.js","_app/immutable/chunks/MediaModal.01a198d3.js","_app/immutable/chunks/SpacedDiv.010afb1c.js","_app/immutable/chunks/convert-date.b3743535.js","_app/immutable/chunks/index.b8a214a0.js"];
+export const stylesheets = ["_app/immutable/assets/_page.36e719d8.css","_app/immutable/assets/Page.9f350518.css","_app/immutable/assets/Image.5ec57a55.css","_app/immutable/assets/MediaModal.a2e3da28.css","_app/immutable/assets/SpacedDiv.87eb5ff2.css"];
+export const fonts = [];

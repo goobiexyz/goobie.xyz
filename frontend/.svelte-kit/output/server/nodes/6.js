@@ -1,6 +1,10 @@
-import * as module from '../entries/pages/comms.svelte.js';
+import * as server from '../entries/pages/comics/_comic_/_chapter_/_page.server.ts.js';
 
-export { module };
-export const entry = 'pages/comms.svelte-fb67dfad.js';
-export const js = ["pages/comms.svelte-fb67dfad.js","chunks/index-467184d8.js","chunks/Page-d4bb80b1.js","chunks/Image-2e50915c.js","chunks/FlexCols-97b3ceef.js","chunks/index-7e5993c4.js","chunks/ScrollBox-be4ac44b.js","chunks/Box-42cde86a.js"];
-export const css = ["assets/pages/comms.svelte-8db1965e.css","assets/Page-693d77bd.css","assets/Image-0490c909.css","assets/FlexCols-2819c656.css","assets/ScrollBox-0f787271.css","assets/Box-625d340e.css"];
+export const index = 6;
+export const component = async () => (await import('../entries/pages/comics/_comic_/_chapter_/_page.svelte.js')).default;
+export const file = '_app/immutable/entry/comics-_comic_-_chapter_-page.svelte.c355fe87.js';
+export { server };
+export const server_id = "src/routes/comics/[comic]/[chapter]/+page.server.ts";
+export const imports = ["_app/immutable/entry/comics-_comic_-_chapter_-page.svelte.c355fe87.js","_app/immutable/chunks/index.f91f41ce.js","_app/immutable/chunks/Page.4488cce5.js","_app/immutable/chunks/Image.447b0612.js","_app/immutable/chunks/stores.87d077fd.js","_app/immutable/chunks/singletons.99ab03bd.js"];
+export const stylesheets = ["_app/immutable/assets/_page.3e4e08d2.css","_app/immutable/assets/Page.9f350518.css","_app/immutable/assets/Image.5ec57a55.css"];
+export const fonts = [];
