@@ -39,7 +39,7 @@
 
 <style lang='postcss'>
   datetime {
-    font-family: mono;
+    font-family: monospace;
   }
 
   .comms-status {
