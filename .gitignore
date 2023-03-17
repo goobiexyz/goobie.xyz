@@ -103,13 +103,14 @@ node_modules
 testApp
 coverage
 
-############################
-# Strapi
-############################
 
-api/.env
-api/license.txt
-api/exports
-api/*.cache
-api/build
-api/.strapi-updater.json
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
