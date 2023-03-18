@@ -20,7 +20,7 @@
 <MediaModal bind:this={mediaModal} />
 <HomeHeader />
 <Dfs.Page header={false}>
-  <Dfs.Section id="about" heading="Meet Gracie" headingColor="blue">
+  <Dfs.Section id="about" heading="Meet Grace" headingColor="blue">
     <FlexCols>
       <div class='col-1'>
         <div>
