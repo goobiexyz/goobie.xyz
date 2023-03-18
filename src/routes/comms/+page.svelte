@@ -29,6 +29,7 @@
         <ul>
           <li>I have the right to turn down a commission for any reason, including if I'm just not interested in the idea.</li>
           <li>I draw safe and adult content.</li>
+          <li>I won't draw genitalia or sexual intercourse.</li>
           <li>I won't draw underage characters.</li>
         </ul>
       </div>
@@ -55,7 +56,7 @@
       <div class='list'>
         <h3>Rights</h3>
         <ul>
-          <li>You will have complete ownership over the finished piece, however you must credit me where appropriate, and I reserve the right to post it to social media and use it to advertise my commissions.</li>
+          <li>You will have complete ownership over the finished piece for personal use, however you must credit me where appropriate, and I reserve the right to post it to social media and use it to advertise my commissions.</li>
         </ul>
       </div>
     </div>
