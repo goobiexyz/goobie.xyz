@@ -7,10 +7,12 @@ export async function load() {
   let openSlots : Number = commsStatus.attributes.open_slots
   let openDate : String = convertDate(commsStatus.attributes.open_date)
   let open : Boolean = commsStatus.attributes.open
+  let showOpenDate : Boolean = commsStatus.attributes.show_open_date
 
   return {
     openSlots,
     openDate,
     open,
+    showOpenDate,
   }
 }

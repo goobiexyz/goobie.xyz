@@ -17,7 +17,12 @@
 <Dfs.Page title='{innerWidth < 600 ? 'Comms.' : 'Commissions'}'>
   <Dfs.Section heading='Queue' simple=true>
     
-    <CommsQueue commsOpen={data.open} openSlots={data.openSlots} openDate={data.openDate} />
+    <CommsQueue
+      commsOpen={data.open}
+      openSlots={data.openSlots}
+      openDate={data.openDate}
+      showOpenDate={data.showOpenDate}
+    />
   </Dfs.Section>
 
 

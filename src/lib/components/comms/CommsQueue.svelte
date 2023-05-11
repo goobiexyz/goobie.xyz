@@ -2,6 +2,7 @@
   export let commsOpen : Boolean
   export let openSlots : Number
   export let openDate : String
+  export let showOpenDate : Boolean
 
   import { fade, slide } from 'svelte/transition'
   import commsData from '$lib/data/comms-data.json'
@@ -15,7 +16,9 @@
       <p><strong>Commissions: OPEN</strong></p>
     {:else}
       <p><strong>Commissions: CLOSED</strong></p>
-      <p>will reopen: <datetime>{openDate}</datetime></p>
+      {#if showOpenDate}
+        <p>will reopen: <datetime>{openDate}</datetime></p>
+      {/if}
     {/if}
   </div>
   
