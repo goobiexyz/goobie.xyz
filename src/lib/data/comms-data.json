@@ -9,21 +9,21 @@
         "choices" : [
           {
             "name"    : "Close-up",
-            "price"   : "25",
+            "price"   : "30",
             "thumb"   : "view_closeup.jpg",
             "notes"   : "",
             "code"    : "CU"
           },
           {
             "name"    : "Medium",
-            "price"   : "30",
+            "price"   : "40",
             "thumb"   : "view_medium.jpg",
             "notes"   : "",
             "code"    : "M"
           },
           {
             "name"    : "Wide",
-            "price"   : "40",
+            "price"   : "50",
             "thumb"   : "view_wide.jpg",
             "notes"   : "",
             "code"    : "W"
@@ -50,7 +50,7 @@
           },
           {
             "name"    : "Photo",
-            "price"   : "0",
+            "price"   : "10",
             "thumb"   : "bg_photo.jpg",
             "notes"   : "You have to provide the photo",
             "code"    : "PH"
@@ -65,21 +65,22 @@
             "name"    : "Sketch",
             "price"   : "0",
             "thumb"   : "render_sketch.jpg",
-            "notes"   : "",
+            "notes"   : "+ $5 per additional character",
             "code"    : "SK"
           },
           {
             "name"    : "Flat Color",
-            "price"   : "5",
+            "price"   : "10",
             "thumb"   : "render_flat.jpg",
-            "notes"   : "",
+            "notes"   : "+ $10 per additional character",
             "code"    : "FC"
           },
           {
-            "name"    : "Shaded",
+            "name"    : "Shading",
             "price"   : "10",
+            "range"   : "20",
             "thumb"   : "render_shaded.jpg",
-            "notes"   : "",
+            "notes"   : "+ $10 to $20 per additional character",
             "code"    : "S"
           }
         ]
@@ -89,27 +90,42 @@
 
   "extras" : [
     {
+      "name"    : "Character Art",
+      "price"   : "30",
+      "range"   : "100",
+      "thumb"   : "view_wide.jpg",
+      "code"    : "SS"
+    },
+
+    {
+      "name"    : "Profile Picture",
+      "price"   : "30",
+      "range"   : "50",
+      "thumb"   : "view_closeup.jpg",
+      "code"    : "SS"
+    },
+
+    {
       "name"    : "Social Stickers",
       "price"   : "15",
       "unit"    : "sticker",
       "thumb"   : "xtra_stickers.jpg",
-      "notes"   : "Price may vary depending on the complexity of the sticker",
       "code"    : "SS"
     },
 
     {
       "name"    : "Ref Sheet",
       "price"   : "50",
+      "range"   : "100",
       "thumb"   : "xtra_ref.jpg",
-      "notes"   : "Price may vary depending on the complexity of the order",
       "code"    : "REF"
     },
 
     {
-      "name"    : "Graphic Design",
-      "price"   : "40",
-      "thumb"   : "xtra_graphic_design.jpg",
-      "notes"   : "Price may vary depending on the complexity of the order"
+      "name"    : "Logo Design",
+      "price"   : "50",
+      "unit"    : "logo",
+      "thumb"   : "xtra_graphic_design.jpg"
     }
   ]
 }

@@ -72,29 +72,8 @@
 
   </Dfs.Section>
 
-  <Dfs.Section heading='Pricing' spacing='double' simple='true'>
-    {#each commsData.charArt.options as opt, i}
-      <div class='comm-option'>
-        <h3 class='option-title'>{i+1}. Choose the {opt.name}</h3>
-        <div class='choices'>
-          {#each opt.choices as choice}
-            <CommCard
-              name={choice.name}
-              thumb={commsData.thumbsDir+choice.thumb}
-              notes={choice.notes}
-              price='{i > 0 ? '+ ' : ''}${choice.price}'>
-            </CommCard>
-          {/each}
-        </div>
-      </div>
-    {/each}
-    <div class='comm-option'>
-      <h3 class='option-title'>4. Extra Characters</h3>
-      <p>+ $10 for each additional character</p>
-    </div>
-  </Dfs.Section>
-
-  <Dfs.Section heading='Other Prices' spacing='double' simple='true'>
+  <Dfs.Section heading='General Prices' spacing='double' simple='true'>
+    <p>The following are common items I get commissioned for, so you can quickly get a rough idea of how much I might charge for what you want. Keep in mind these are just estimations, and the actual price will be affected by the specific details of your order. If you're looking for a more detailed price chart, scroll to the next section.</p>
     <div class='comm-option'>
       <div class='choices'>
         {#each commsData.extras as opt, i}
@@ -102,7 +81,7 @@
             name={opt.name}
             thumb={commsData.thumbsDir+opt.thumb}
             notes={opt.notes}
-            price='${opt.price}{opt.unit ? ' per '+opt.unit : ''}'>
+            price='${opt.price}{opt.range ? ' - $'+opt.range : ''}{opt.unit ? ' per '+opt.unit : ''}'>
           </CommCard>
         {/each}
         <CommCard
@@ -114,6 +93,31 @@
       </div>
     </div>
   </Dfs.Section>
+
+  <Dfs.Section heading='Price Chart' spacing='double' simple='true'>
+    <p>The following guide explains how I price <strong>character art</strong> commissions. You can use it to get a more precise idea of how much I might charge you for a comm, but for other types of commissions you're just going to have to ask me. And again, keep in mind this is just an estimation, certain details about the commission might affect the price in ways that aren't listed here.</p>
+    {#each commsData.charArt.options as opt, i}
+      <div class='comm-option'>
+        <h3 class='option-title'>{i+1}. Choose the {opt.name}</h3>
+        <div class='choices'>
+          {#each opt.choices as choice}
+            <CommCard
+              name={choice.name}
+              thumb={commsData.thumbsDir+choice.thumb}
+              notes={choice.notes}
+              price='{i > 0 ? '+ ' : ''}${choice.price}{choice.range ? ' to $'+choice.range : ''}{choice.unit ? ' per '+choice.unit : ''}'>
+            </CommCard>
+          {/each}
+        </div>
+      </div>
+    {/each}
+    <!-- <div class='comm-option'>
+      <h3 class='option-title'>4. Extra Characters</h3>
+      <p>+ $10 to $20 for each additional character</p>
+    </div> -->
+  </Dfs.Section>
+
+  
 </Dfs.Page>
 
 
