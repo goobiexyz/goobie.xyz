@@ -12,6 +12,13 @@
   </Dfs.Section>
   <Dfs.Section heading='Portfolio' simple='true'>
     <div class="image-col">
+      <img src="{imgDir}site mockup portfolio.jpg" alt="" class="wide">
+      <img src="{imgDir}gender zine.jpg" alt="" class="tall wide-2">
+      <img src="{imgDir}fcf_logo.jpg" alt="">
+      <img src="{imgDir}buntail.jpg" alt="">
+      <img src="{imgDir}dime_1.jpg" alt="" class="tall wide-2">
+      <img src="{imgDir}dime_2.jpg" alt="">
+      <img src="{imgDir}dime_3.jpg" alt="">
       <img src="{imgDir}bubblebot_logo.jpg" alt="" class="wide">
       <img src="{imgDir}gbell_icon.jpg" alt="">
       <img src="{imgDir}rute_logo.jpg" alt="">
