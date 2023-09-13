@@ -84,6 +84,14 @@
       mask-image: url('/images/icons/b_newgrounds.svg');
       -webkit-mask-image: url('/images/icons/b_newgrounds.svg');
     }
+    &.deviantart {
+      mask-image: url('/images/icons/b_deviantart.svg');
+      -webkit-mask-image: url('/images/icons/b_deviantart.svg');
+    }
+    &.instagram {
+      mask-image: url('/images/icons/b_instagram.svg');
+      -webkit-mask-image: url('/images/icons/b_instagram.svg');
+    }
     &.close {
       mask-image: url('/images/icons/b_close.svg');
       -webkit-mask-image: url('/images/icons/b_close.svg');

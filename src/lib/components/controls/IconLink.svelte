@@ -53,7 +53,16 @@
     case "newgrounds":
     title = "Newgrounds"
     location = socialLinks.newgrounds
+    break
 
+    case "instagram":
+    title = "Instagram"
+    location = socialLinks.instagram
+    break
+
+    case "deviantart":
+    title = "Deviantart"
+    location = socialLinks.deviantart
   }
 
 </script>
