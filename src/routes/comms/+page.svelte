@@ -43,7 +43,7 @@
         <h3>Payment</h3>
         <ul>
           <li>I will not start working until I am paid in full.</li>
-          <li>Payments will be done through PayPal in USD.</li>
+          <li>Payments will be done in USD through PayPal, Venmo, or Cash App.</li>
           <li>No refunds unless I decide to cancel the order.</li>
         </ul>
       </div>
