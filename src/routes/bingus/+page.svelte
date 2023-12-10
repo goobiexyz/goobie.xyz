@@ -72,6 +72,79 @@
         </div>
       </FlexCols>
     </Dfs.Section>
+
+    <Dfs.Section simple='true' spacing='double' heading="Experience">
+      <FlexCols colGap='var(--double-margin)'>
+        <div class='column' style='flex: 1; flex-direction: column;'>
+          <div class='list'>
+            <h3>Skills</h3>
+            <ul>
+              <li>Web design</li>
+              <li>Graphic design</li>
+              <li>Illustration</li>
+              <li>Videography</li>
+              <li>Music production</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class='column' style='flex: 1; flex-direction: column;'>
+          <div class='list'>
+            <h3>Projects</h3>
+            <ul>
+                <li>Fountain City Furs</li>
+                <li>Gender Neutral Orientation Notation</li>
+                <li>DIME</li>
+            </ul>
+          </div>
+        </div>
+      </FlexCols>
+    </Dfs.Section>
+
+    <Dfs.Section simple='true' spacing='double' heading="Work Experience">
+      <FlexCols colGap='var(--double-margin)'>
+        <div class='column' style='flex: 1; flex-direction: column;'>
+          <div class='list'>
+            <h3>Co-Owner of Fountain City Furs</h3>
+            <ul>
+              <li>July 2023 - Present</li>
+              <li>Organize and plan events for the KC fursuiting community, foster a safe space for KC's furry community, and film events for promotional videos for social media.</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class='column' style='flex: 1; flex-direction: column;'>
+          <div class='list'>
+            <h3>Graphic Designer for Donnelly College</h3>
+            <ul>
+                <li>2020 - Present</li>
+                <li>Design and edit the arts and literature journal for Donnelly College, utilizing industry standard software to arrange images and text to prepare for printing.</li>
+            </ul>
+          </div>
+        </div>
+      </FlexCols>
+      <FlexCols colGap='var(--double-margin)'>
+        <div class='column' style='flex: 1; flex-direction: column;'>
+          <div class='list'>
+            <h3>MakerSpace Project Leader</h3>
+            <ul>
+              <li>Oct. 2021 - March 2022</li>
+              <li>Developed a class to introduce kids and teens to advanced programming concepts. Collaborated with a team to create a well-paced curriculum that incorporated real world appliactions of abstract programming concepts.</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class='column' style='flex: 1; flex-direction: column;'>
+          <div class='list'>
+            <h3>Front of House Staff</h3>
+            <ul>
+                <li>2019 - 2021</li>
+                <li>Direct cars where to park, scan tickets at the gate, prepare and sell concessions.</li>
+            </ul>
+          </div>
+        </div>
+      </FlexCols>
+    </Dfs.Section>
   </Dfs.Page>
   
   <style lang='postcss'>
