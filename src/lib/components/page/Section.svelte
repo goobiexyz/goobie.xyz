@@ -3,6 +3,7 @@
   export let heading = ''
   export let bg = 'none'
   export let topBorder = 'none'
+  export let bottomBorder = 'none'
   export let headingColor = 'black'
   export let simple = false
   export let spacing = 'normal'
@@ -11,7 +12,7 @@
 
 <section
   {id}
-  class="bg-{bg} top-border-{topBorder}"
+  class="bg-{bg} top-border-{topBorder} bottom-border-{bottomBorder}"
   class:simple
   class:no-heading='{!heading}'>
   <div class="section-contents">
@@ -65,6 +66,12 @@
         border-image-slice: 100% 0 0 0;
         border-image-repeat: repeat;
         border-image-outset: 2px;
+      }
+    }
+
+    &.bottom-border- {
+      &clouds {
+
       }
     }
   }
