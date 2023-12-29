@@ -9,21 +9,21 @@
         "choices" : [
           {
             "name"    : "Close-up",
-            "price"   : "30",
+            "price"   : "15",
             "thumb"   : "view_closeup.jpg",
             "notes"   : "",
             "code"    : "CU"
           },
           {
             "name"    : "Medium",
-            "price"   : "40",
+            "price"   : "20",
             "thumb"   : "view_medium.jpg",
             "notes"   : "",
             "code"    : "M"
           },
           {
             "name"    : "Wide",
-            "price"   : "50",
+            "price"   : "30",
             "thumb"   : "view_wide.jpg",
             "notes"   : "",
             "code"    : "W"
@@ -91,23 +91,22 @@
   "extras" : [
     {
       "name"    : "Character Art",
-      "price"   : "30",
-      "range"   : "100",
+      "price"   : "20",
+      "range"   : "60",
       "thumb"   : "view_wide.jpg",
       "code"    : "SS"
     },
 
     {
       "name"    : "Profile Picture",
-      "price"   : "30",
-      "range"   : "50",
+      "price"   : "25",
       "thumb"   : "view_closeup.jpg",
       "code"    : "SS"
     },
 
     {
       "name"    : "Social Stickers",
-      "price"   : "15",
+      "price"   : "10",
       "unit"    : "sticker",
       "thumb"   : "xtra_stickers.jpg",
       "code"    : "SS"
@@ -115,15 +114,15 @@
 
     {
       "name"    : "Ref Sheet",
-      "price"   : "50",
-      "range"   : "100",
+      "price"   : "40",
+      "range"   : "90",
       "thumb"   : "xtra_ref.jpg",
       "code"    : "REF"
     },
 
     {
       "name"    : "Logo Design",
-      "price"   : "50",
+      "price"   : "40",
       "unit"    : "logo",
       "thumb"   : "xtra_graphic_design.jpg"
     }
