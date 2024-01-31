@@ -100,7 +100,7 @@
     {
       "name"    : "Profile Picture",
       "price"   : "25",
-      "thumb"   : "view_closeup.jpg",
+      "thumb"   : "xtra_pfp.jpg",
       "code"    : "SS"
     },
 
@@ -110,6 +110,14 @@
       "unit"    : "sticker",
       "thumb"   : "xtra_stickers.jpg",
       "code"    : "SS"
+    },
+
+    {
+      "name"    : "Emojis",
+      "price"   : "5",
+      "unit"    : "emoji",
+      "thumb"   : "xtra_emojis.jpg",
+      "code"    : "E"
     },
 
     {

@@ -6,11 +6,11 @@
 
 
 <footer>
-  <IconLink type='tumblr' {color} />
   <IconLink type='instagram' {color} />
-  <IconLink type='mastodon' {color} />
   <IconLink type='newgrounds' {color} />
   <IconLink type='deviantart' {color} />
+  <IconLink type='tumblr' {color} />
+  <IconLink type='mastodon' {color} />
   <IconLink type='github' {color} />
   <IconLink type='youtube' {color} />
   <IconLink type='soundcloud' {color} />
