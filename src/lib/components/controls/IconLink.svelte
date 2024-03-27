@@ -63,6 +63,21 @@
     case "deviantart":
     title = "Deviantart"
     location = socialLinks.deviantart
+    break
+
+    case "reddit":
+    title = "Reddit"
+    location = socialLinks.reddit
+    break
+
+    case "letterboxd":
+    title = "Letterboxd"
+    location = socialLinks.letterboxd
+    break
+
+    case "backloggd":
+    title = "Backloggd"
+    location = socialLinks.backloggd
   }
 
 </script>

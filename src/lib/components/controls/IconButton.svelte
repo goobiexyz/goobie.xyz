@@ -92,6 +92,18 @@
       mask-image: url('/images/icons/b_instagram.svg');
       -webkit-mask-image: url('/images/icons/b_instagram.svg');
     }
+    &.reddit {
+      mask-image: url('/images/icons/b_reddit.svg');
+      -webkit-mask-image: url('/images/icons/b_reddit.svg');
+    }
+    &.letterboxd {
+      mask-image: url('/images/icons/b_letterboxd.svg');
+      -webkit-mask-image: url('/images/icons/b_letterboxd.svg');
+    }
+    &.backloggd {
+      mask-image: url('/images/icons/b_backloggd.svg');
+      -webkit-mask-image: url('/images/icons/b_backloggd.svg');
+    }
     &.close {
       mask-image: url('/images/icons/b_close.svg');
       -webkit-mask-image: url('/images/icons/b_close.svg');

@@ -14,14 +14,14 @@
   class="nav-button {icon}"
   class:hidden
   {href}>
-  <span><slot /></span>
+  <span class="label"><span><slot /></span></span>
 </a>
 {:else}
 <button
   on:click
   class="nav-button {icon}"
   class:hidden>
-  <span><slot /></span>
+  <span class="label"><span><slot /></span></span>
 </button>
 {/if}
 
@@ -42,12 +42,12 @@
     box-sizing: content-box;
     display: block;
     position: relative;
-    border: 0.4rem white solid;
+    border: 0.4rem black solid;
     border-radius: 1rem;
     width: 4rem;
     height: 4rem;
 
-    background: 0;
+    background: white;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
@@ -64,19 +64,28 @@
       z-index: -1;
     }
 
-    span {
+    .label {
       display: inline-block;
 
       line-height: 4rem;
       white-space: nowrap;
-      color: white;
+      color: black;
       font-family: 'urbane';
       font-weight: 600;
+      
+
 
       transform: translateY(3.5rem);
 
       /* This fixed safari clipping it when in a button tag for some reason */
       position: relative;
+
+      span {
+        background: white;
+        padding: 2px 4px 2px 4px;
+        border-radius: 0.3em;
+        border: 2px black solid;
+      }
     }
 
     &.work {
@@ -84,6 +93,9 @@
     }
     &.comms {
       background-image: url("/images/icons/b_money.svg");
+    }
+    &.about {
+      background-image: url("/images/icons/b_person.svg");
     }
     &.contact {
       background-image: url("/images/icons/b_at.svg");
@@ -112,7 +124,7 @@
     }
     &.back {
       background-image: url("/images/icons/b_line_arrow.svg");
-      border: none;
+      //border: none;
       position: absolute;
       left: calc(-1 * $bgroup-gap - $bgroup-col);
     }
@@ -137,14 +149,14 @@
       height: 3rem;
       text-align: left;
       font-size: 1.5rem;
-      border: none;
+      //border: none;
       text-decoration: underline;
 
       &.back {
         position: static;
       }
 
-      span {
+      .label {
         text-indent: 4rem;
         height: min-content;
         line-height: 3rem;

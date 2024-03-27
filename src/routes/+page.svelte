@@ -8,7 +8,8 @@
   import LatestPosts from '$lib/components/home/latest-posts/LatestPosts.svelte'
   import MediaModal from '$lib/components/posts/media-modal/MediaModal.svelte'
   import SpacedDiv from '$lib/components/layout/SpacedDiv.svelte'
-    import Button from '$lib/components/controls/Button.svelte';
+  import Button from '$lib/components/controls/Button.svelte'
+  import Card from '$lib/components/containers/Card.svelte'
 
   let mediaModal
   function openModal(event) {
@@ -21,7 +22,7 @@
 <MediaModal bind:this={mediaModal} />
 <HomeHeader />
 <Dfs.Page header={false}>
-  <Dfs.Section id="about" heading="Meet Grace" headingColor="blue">
+  <Dfs.Section id="about" heading="Meet Goobie" headingColor="blue">
     <FlexCols>
       <div class='col-1'>
         <div>
@@ -35,10 +36,13 @@
       <div class='col-2'>
         <SpacedDiv>
           <p>
-            Hi there! My name is Grace and I call myself a multimedia artist because I'm always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My skills include design, illustration, coding, composing, and video editing.
+            Hi there! My name is Arden, or Goobie, and I call myself a multimedia artist because I'm always looking to challenge myself, try new things, and apply skills I learn in one medium to other mediums. My skills include design, illustration, coding, music production, and video editing.
           </p>
           <p>
-            I'm currently taking commissions for character art and graphic design. <a href='comms'>Click here for more information</a>. And don't hesitate to contact me about any other ideas and projects you may have. I have a wide range of skills that I love to apply wherever I can!
+            When I'm not creating things, I love to watch and collect movies, play video games, or go out riding on my Onewheel. I also help run the group <a href="https://linktr.ee/fountaincityfurs" target="_blank">Fountain City Furs</a>, where we plan local fursuiting events for the KC area.
+          </p>
+          <p>
+            Click "My Stuff" if you want to see the stuff I make, or scroll all the way down to see my socials!
           </p>
         </SpacedDiv>
       </div>
@@ -47,39 +51,44 @@
 
 
   <Dfs.Section
-    id='updates'
-    heading="What's New?"
+    id='discord'
+    heading="Discord Server"
     headingColor='white'
     bg='blue-stripes'
     topBorder='clouds'
     bottomBorder='clouds'>
-    <LatestPosts postList={data.latestPosts} on:postClick={openModal} />
-  </Dfs.Section>
-
-  <Dfs.Section
-    id='discord'
-    heading="Discord Server">
-    <FlexCols>
-      <div class='col-1'>
-        <div>
-          <Image
-            src='/images/camp_gracie.jpg'
-            style='max-width:260px; border-radius:var(--rounded-2);'
-            alt=''>
-          </Image>
+    <Card>
+      <FlexCols>
+        <div class='col-1'>
+          <div>
+            <Image
+              src='/images/camp_goobie.jpg'
+              style='max-width:260px; border-radius:var(--rounded-2);'
+              alt=''>
+            </Image>
+            <br />
+            <Image
+              src='/images/camp_goobie2.jpg'
+              style='max-width:260px; border-radius:var(--rounded-2);'
+              alt=''>
+            </Image>
+          </div>
         </div>
-      </div>
-      <div class='col-2'>
-        <SpacedDiv>
-          <p>
-            The official summer camp for Gracie Bell fans! Join for an awesome community of nice people and to talk with me about movies, games, and art. Even get exclusive WIPs and secret arts that you might not see on my socials. Join the voice calls for interesting conversations, games, watch-alongs, and to watch me draw.
-          </p>
-          <p>
-            <a href="https://discord.com/invite/c7hXSMB" target="_blank"><Button background="var(--pink)" color="white" size="big">Join now!</Button></a>
-          </p>
-        </SpacedDiv>
-      </div>
-    </FlexCols>
+        <div class='col-2'>
+          <SpacedDiv>
+            <h2>Camp Goobie!</h2>
+            <p>
+              CAMP GOOBIE is the prime vacation destination for sharing memes/shitposts, gaming, art, animations, movie-talk, fandom-talk, and y2k/early 2010s aesthetics. And if you're an individual that creates stuff in any medium, CAMP GOOBIE is the summer camp for you too!
+              <br /><br />
+              Join for an awesome community of freaks and geeks to chat and make friends with and join us in the voice chat for games, watch-alongs, or just to chat! Come vibe with us! 
+            </p>
+            <p>
+              <a href="https://discord.com/invite/c7hXSMB" target="_blank"><Button background="var(--pink)" color="white" size="big">Join now!</Button></a>
+            </p>
+          </SpacedDiv>
+        </div>
+      </FlexCols>
+    </Card>
     
   </Dfs.Section>
 </Dfs.Page>

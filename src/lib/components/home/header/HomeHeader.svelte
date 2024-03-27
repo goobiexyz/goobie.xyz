@@ -49,16 +49,13 @@
 <div class='header-bg'></div>
   <div class="header-body" class:expanded>
     <h1 id="logo">
-      <picture>
-        <source media="(max-width: 600px)" srcset="/images/logo_no_cloud.svg">
-        <img class="logo" src="/images/logo.svg" alt="Gracie Bell: Multimedia Artist">
-      </picture>
+      <img class="logo" src="/images/goobie logo.png" alt="Gracie Bell: Multimedia Artist">
     </h1>
 
     <nav>
       <NavBGroup bind:this={bgroup1} hidden="true">
         <NavButton bind:this={b3} on:click={openBGroup0} icon="back" hidden="true">Back</NavButton>
-        <NavButton bind:this={b4} icon="image" href="art" hidden="true">Art</NavButton>
+        <NavButton bind:this={b4} icon="image" href="{socialLinks.newgrounds}" hidden="true">Art</NavButton>
         <NavButton bind:this={b5} icon="design" href="design" hidden="true">Design</NavButton>
         <NavButton bind:this={b6} icon="comics" href="comics" hidden="true">Comics</NavButton>
         <NavButton bind:this={b7} icon="music" href="{socialLinks.soundcloud}" hidden="true">Music</NavButton>
@@ -67,8 +64,8 @@
       </NavBGroup>
 
       <NavBGroup bind:this={bgroup0}>
-        <NavButton bind:this={b0} on:click={openBGroup1} icon="work">My Work</NavButton>
-        <NavButton bind:this={b1} icon="comms" href="comms">Commissions</NavButton>
+        <NavButton bind:this={b0} on:click={openBGroup1} icon="work">My Stuff</NavButton>
+        <NavButton bind:this={b1} icon="about" href="#about">About Me</NavButton>
         <NavButton bind:this={b2} icon="contact" href="contact">Contact</NavButton>
       </NavBGroup>
     </nav>
@@ -79,14 +76,14 @@
 <style lang="postcss">
   @keyframes scroll {
     100% {
-      background-position: 400px 173.2px;
+      background-position: 600px 400px;
     }
   }
 
   header {
-    background: url('/images/backgrounds/bg-dots.png') repeat;
+    background: url('/images/backgrounds/bg-abstract.png') repeat;
     background-attachment: fixed;
-    animation: 8s scroll infinite linear;
+    animation: 20s scroll infinite linear;
 
     height: max-content;
     margin-top: 0;

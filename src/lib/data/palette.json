@@ -1,10 +1,10 @@
 {
-  "blue"      : "#0bb1ff",
-  "darkBlue" : "#0c8cfd",
+  "blue"      : "#0011FF",
+  "darkBlue" : "#0011FF",
   "mint"      : "#04e7c6",
-  "yellow"    : "#ffd75d",
-  "red"       : "#ff4f4e",
-  "pink"      : "#e976bd",
+  "yellow"    : "#ffd200",
+  "red"       : "#ee023f",
+  "pink"      : "#ff018e",
   "darkPink" : "#ce4a9c",
-  "black"     : "#351f3d"
+  "black"     : "#000"
 }
