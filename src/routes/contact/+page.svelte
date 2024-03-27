@@ -10,7 +10,7 @@
 
 <Dfs.Page title='Contact'>
   <Dfs.Section simple='true' spacing='double'>
-    <p>Contact me any way you'd like! However, if you are looking to get a commission, I would prefer it if you would contact me on either Telegram, Twitter, or Discord—if you use any of those services—because it will be much easier to discuss the details and to send work-in-progress pictures over direct messages rather than email, but that is not required.</p>
+    <p>The best way to contact me is via e-mail, or through messaging apps like Discord or Telegram. If you're sending me a message on Discord however, please note that I do not accept random friend requests, so you'll have to find a way to DM me without friending me. You can also message me on my other socials but I don't check those as often.</p>
 
     <FlexCols colGap='var(--double-margin)' rowGap='var(--double-margin)'>
       <div class='col-1'>
@@ -22,19 +22,15 @@
 
       <div class='col-2'>
         <dl class='other-contacts'>
-          <h2>Social</h2>
+          <h2>Messaging</h2>
           <SpacedDiv spacing='half'>
             <div class='contact-item'>
-              <dt>Twitter</dt>
-              <dd><a href='{socialLinks.twitter}'>@GracieArt</a></dd>
-            </div>
-            <div class='contact-item'>
               <dt>Telegram</dt>
-              <dd><a href='{socialLinks.telegram}'>@GracieArt</a></dd>
+              <dd><a href='{socialLinks.telegram}'>goobiegoober</a></dd>
             </div>
             <div class='contact-item'>
               <dt>Discord</dt>
-              <dd><a href='{socialLinks.discord}'>GracieArt#1312</a></dd>
+              <dd><a href='{socialLinks.discord}'>goobiexyz</a></dd>
             </div>
           </SpacedDiv>
         </dl>

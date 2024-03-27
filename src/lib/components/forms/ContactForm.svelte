@@ -3,7 +3,7 @@
 </script>
 
 
-<form target='_blank' action='https://formsubmit.co/0a9aa64c158dfc069b31d069e891a721' method='post'>
+<form target='_blank' action='https://formsubmit.co/7089a05da9432cd14cc114e7a8321023' method='post'>
   <label for='subject' style='display:none'>Subject</label>
   <input type='text' id='subject' name='_honey' style='display:none'>
   <input type="hidden" name="_blacklist" value="SEO">
@@ -20,12 +20,13 @@
     </fieldset>
 
     <fieldset>
-      <label for="pronouns">Pronouns</label>
+      <label class="required" for="pronouns">Pronouns</label>
       <input
         type='text'
         id='pronouns'
         name='pronouns'
-        placeholder='They/she/he...' />
+        placeholder='They/she/he...'
+        required />
     </fieldset>
   </fieldset>
 
