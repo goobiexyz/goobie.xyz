@@ -7,6 +7,7 @@
   export let headingColor = 'black'
   export let simple = false
   export let spacing = 'normal'
+  export let noHeadingBorder = false
 </script>
 
 
@@ -17,7 +18,7 @@
   class:no-heading='{!heading}'>
   <div class="section-contents">
     {#if heading}
-      <h2 class="section-heading {headingColor}"><span>{heading}</span></h2>
+      <h2 class="section-heading {headingColor} {noHeadingBorder ? '' : 'headingBorder'}"><span>{heading}</span></h2>
     {/if}
     <div class="section-body spacing-{spacing}"><slot></slot></div>
   </div>
@@ -111,24 +112,28 @@
       }
     }
 
-    &:before, &:after {
-      -webkit-mask-image: url('/images/borders/blue_dot.svg');
-      -webkit-mask-size: contain;
-      -webkit-mask-position: center;
-      -webkit-mask-size: 10px;
-      -webkit-mask-repeat: space no-repeat;
-      /* 'space' produced buggy results on chrome for linux */
-      /* I found an article about maybe using an svg line instead, in bookmarks */
+    &.headingBorder {
+        &:before, &:after {
+        -webkit-mask-image: url('/images/borders/blue_dot.svg');
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        -webkit-mask-size: 10px;
+        -webkit-mask-repeat: space no-repeat;
+        /* 'space' produced buggy results on chrome for linux */
+        /* I found an article about maybe using an svg line instead, in bookmarks */
 
-      mask-image: url('/images/borders/blue_dot.svg');
-      mask-size: contain;
-      mask-position: center;
-      mask-size: 10px;
-      mask-repeat: space no-repeat;
+        mask-image: url('/images/borders/blue_dot.svg');
+        mask-size: contain;
+        mask-position: center;
+        mask-size: 10px;
+        mask-repeat: space no-repeat;
 
-      width: 50%;
-      content: ' ';
+        width: 50%;
+        content: ' ';
+      }
     }
+    
+
 
     & > span {
       white-space: nowrap;
