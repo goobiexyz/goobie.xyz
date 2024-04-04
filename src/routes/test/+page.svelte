@@ -4,7 +4,7 @@
 </script>
 
 
-<Dfs.Page title='Test'>
+<Dfs.Page title='Test' noMeta>
   <Dfs.Section simple='true'>
     <Box bgColor="blue" color="white" borderColor="red">eskajfhlksjghlkjdsfg</Box>
   </Dfs.Section>

@@ -5,7 +5,7 @@
   </script>
   
   
-  <Dfs.Page title='Error'>
+  <Dfs.Page title='Error' noEmbed>
     <Dfs.Section simple='true' spacing='' heading='{$page.status}: {$page.error.message}' noHeadingBorder>
         <SpacedDiv style="text-align:center;">
             <a href="/">Click here to put the CD back in your computer.</a>
