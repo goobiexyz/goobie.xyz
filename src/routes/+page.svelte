@@ -27,7 +27,7 @@
       <div class='col-1'>
         <div>
           <Image
-            src='/images/grace_portrait_casual.jpg'
+            src='/images/goobie.jpg'
             style='max-width:13.66rem; border-radius:var(--rounded-2);'
             alt=''>
           </Image>
