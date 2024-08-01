@@ -48,49 +48,6 @@
       </div>
     </FlexCols>
   </Dfs.Section>
-
-
-  <Dfs.Section
-    id='discord'
-    heading="Discord Server"
-    headingColor='white'
-    bg='blue-stripes'
-    topBorder='clouds'
-    bottomBorder='clouds'>
-    <Card>
-      <FlexCols>
-        <div class='col-1'>
-          <div>
-            <Image
-              src='/images/camp_goobie.jpg'
-              style='max-width:260px; border-radius:var(--rounded-2);'
-              alt=''>
-            </Image>
-            <br />
-            <Image
-              src='/images/camp_goobie2.jpg'
-              style='max-width:260px; border-radius:var(--rounded-2);'
-              alt=''>
-            </Image>
-          </div>
-        </div>
-        <div class='col-2'>
-          <SpacedDiv>
-            <h2>Camp Goobie!</h2>
-            <p>
-              CAMP GOOBIE is the prime vacation destination for sharing memes/shitposts, gaming, art, animations, movie-talk, fandom-talk, and y2k/early 2010s aesthetics. And if you're an individual that creates stuff in any medium, CAMP GOOBIE is the summer camp for you too!
-              <br /><br />
-              Join for an awesome community of freaks and geeks to chat and make friends with and join us in the voice chat for games, watch-alongs, or just to chat! Come vibe with us! 
-            </p>
-            <p>
-              <a href="https://discord.com/invite/c7hXSMB" target="_blank"><Button background="var(--pink)" color="white" size="big">Join now!</Button></a>
-            </p>
-          </SpacedDiv>
-        </div>
-      </FlexCols>
-    </Card>
-    
-  </Dfs.Section>
 </Dfs.Page>
 
 
