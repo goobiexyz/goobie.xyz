@@ -34,6 +34,6 @@
     font-size: small;
   }
   h4 {
-    color: var(--dark-pink);
+    color: var(--blue);
   }
 </style>

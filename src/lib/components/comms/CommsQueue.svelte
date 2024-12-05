@@ -11,7 +11,7 @@
 
 
 <div class='queue-container'>
-  <div class='comms-status'>
+  <!-- <div class='comms-status'>
     {#if commsOpen}
       <p><strong>Commissions: OPEN</strong></p>
     {:else}
@@ -20,7 +20,7 @@
         <p>will reopen: <datetime>{openDate}</datetime></p>
       {/if}
     {/if}
-  </div>
+  </div> -->
   
 
   <ScrollBox accent='var(--black)' height='320px' border='var(--border-thin)'>
@@ -72,7 +72,7 @@
 
     .labels {
       font-size: small;
-      color: var(--dark-pink);
+      color: var(--blue);
     }
   }
 
