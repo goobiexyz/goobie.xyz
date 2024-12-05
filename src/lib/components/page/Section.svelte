@@ -41,10 +41,10 @@
 
   section {
     overflow: auto;
-    padding: calc(var(--margin) * 4) 0;
+    padding-bottom: calc(var(--margin) * 3);
 
     &.simple {
-      padding: var(--double-margin) 0;
+      //padding: var(--double-margin) 0;
     }
 
     &.bg- {
