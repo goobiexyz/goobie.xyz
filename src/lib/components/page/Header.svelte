@@ -17,6 +17,7 @@
 
     border-bottom: 5rem solid;
     border-image: url('/images/borders/benday_pink.svg');
+    margin-bottom: calc(var(--margin) * 3);
     border-image-slice: 0 0 100% 0;
     border-image-repeat: repeat;
     border-image-outset: -2px;
