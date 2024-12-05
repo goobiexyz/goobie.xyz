@@ -38,22 +38,16 @@
             "name"    : "Simple",
             "price"   : "0",
             "thumb"   : "bg_simple.jpg",
-            "notes"   : "",
+            "notes"   : "Either a stock image, solid color, or pattern",
             "code"    : ""
           },
           {
             "name"    : "Detailed",
             "price"   : "10",
+            "ramge"   : "20",
             "thumb"   : "bg_detailed.jpg",
-            "notes"   : "May cost more or less depending on the complexity of the order",
+            "notes"   : "Drawn background, cost may vary depending on the complexity of the order",
             "code"    : "BG"
-          },
-          {
-            "name"    : "Photo",
-            "price"   : "10",
-            "thumb"   : "bg_photo.jpg",
-            "notes"   : "You have to provide the photo",
-            "code"    : "PH"
           }
         ]
       },
@@ -99,23 +93,23 @@
 
     {
       "name"    : "Profile Picture",
-      "price"   : "25",
+      "price"   : "18",
       "thumb"   : "xtra_pfp.jpg",
       "code"    : "SS"
     },
 
     {
-      "name"    : "Social Stickers",
-      "price"   : "10",
-      "unit"    : "sticker",
+      "name"    : "Telegram Stickers",
+      "price"   : "32",
+      "unit"    : "pack of 4",
       "thumb"   : "xtra_stickers.jpg",
       "code"    : "SS"
     },
 
     {
       "name"    : "Emojis",
-      "price"   : "5",
-      "unit"    : "emoji",
+      "price"   : "24",
+      "unit"    : "pack of 5",
       "thumb"   : "xtra_emojis.jpg",
       "code"    : "E"
     },
@@ -130,8 +124,9 @@
 
     {
       "name"    : "Logo Design",
-      "price"   : "40",
-      "unit"    : "logo",
+      "price"   : "50",
+      "range"   : "100",
+      "unit"    : "",
       "thumb"   : "xtra_graphic_design.jpg"
     }
   ]
