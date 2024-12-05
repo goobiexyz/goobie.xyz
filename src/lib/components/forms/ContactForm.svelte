@@ -36,8 +36,7 @@
       id='message'
       name='message'
       placeholder='Write something...'
-      required>
-    </textarea>
+      required></textarea>
   </fieldset>
 
   <small style='color: var(--red);'>*Required field</small>
