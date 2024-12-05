@@ -13,7 +13,7 @@
 <svelte:head>
   <title>{title ? title+' | ' : ''}goobie.xyz</title>
   {#if !noEmbed}
-    <meta name='description' content='Multimedia artist specializing in graphic design, illustration, coding, video editing, and music production' />
+    <meta name='description' content='the goob zone is real, where dreams come true' />
     <meta name='author' content='goobie' />
     <meta property='og:image' content='/images/goobie_social_image.jpg' />
     <meta property="og:image:width" content="1000" />
