@@ -10,7 +10,7 @@
 
 <Dfs.Page title='Contact'>
   <Dfs.Section simple='true' spacing='double'>
-    <p>The best way to contact me is via e-mail, or through messaging apps like Discord or Telegram. If you're sending me a message on Discord however, please note that I do not accept random friend requests, so you'll have to find a way to DM me without friending me. You can also message me on my other socials but I don't check those as often.</p>
+    <p>The best way to contact me is via e-mail, or through messaging apps like Discord or Telegram. If you're sending me a message on Discord however, please note that I do not accept random friend requests, so you'll have to find a way to DM me without friending me. You can also message me on my other socials but I might not check those as often.</p>
 
     <FlexCols colGap='var(--double-margin)' rowGap='var(--double-margin)'>
       <div class='col-1'>
