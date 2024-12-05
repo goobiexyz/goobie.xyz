@@ -13,10 +13,10 @@
   <!-- <IconLink type='mastodon' {color} /> -->
   <IconLink type='youtube' {color} />
   <IconLink type='soundcloud' {color} />
-  <IconLink type='reddit' {color} />
+  <!-- <IconLink type='reddit' {color} />
   <IconLink type='letterboxd' {color} />
   <IconLink type='backloggd' {color} />
-  <IconLink type='github' {color} />
+  <IconLink type='github' {color} /> -->
 
   
   
