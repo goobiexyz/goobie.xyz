@@ -55,11 +55,11 @@
     <nav>
       <NavBGroup bind:this={bgroup1} hidden="true">
         <NavButton bind:this={b3} on:click={openBGroup0} icon="back" hidden="true">Back</NavButton>
-        <NavButton bind:this={b4} icon="video" href="{socialLinks.youtube}" hidden="true">Videos</NavButton>
-        <NavButton bind:this={b5} icon="image" href="{socialLinks.newgrounds}" hidden="true">Art</NavButton>
-        <NavButton bind:this={b6} icon="music" href="{socialLinks.soundcloud}" hidden="true">Music</NavButton>
+        <NavButton bind:this={b4} icon="video" href="{socialLinks.youtube}" target="_blank" hidden="true">Videos</NavButton>
+        <NavButton bind:this={b5} icon="image" href="{socialLinks.newgrounds}" target="_blank" hidden="true">Art</NavButton>
+        <NavButton bind:this={b6} icon="music" href="{socialLinks.soundcloud}" target="_blank" hidden="true">Music</NavButton>
         <NavButton bind:this={b7} icon="design" href="dance" hidden="true">???</NavButton>
-        <NavButton bind:this={b8} icon="code" href="{socialLinks.github}" hidden="true">Code</NavButton>
+        <NavButton bind:this={b8} icon="code" href="{socialLinks.github}" target="_blank" hidden="true">Code</NavButton>
         <NavButton bind:this={b9} icon="comics" href="dance" hidden="true">???</NavButton>
       </NavBGroup>
 

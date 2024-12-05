@@ -1,6 +1,7 @@
 <script>
   export let icon
   export let href
+  export let target
   export let hidden = false
 
   export function hide() { hidden = true }
@@ -13,7 +14,7 @@
   on:click
   class="nav-button {icon}"
   class:hidden
-  target="_blank"
+  {target}
   {href}>
   <span class="label"><span><slot /></span></span>
 </a>
