@@ -18,26 +18,16 @@
         placeholder='Your name...'
         required />
     </fieldset>
-
+    
     <fieldset>
-      <label class="required" for="pronouns">Pronouns</label>
+      <label class='required' for='email'>Email</label>
       <input
         type='text'
-        id='pronouns'
-        name='pronouns'
-        placeholder='They/she/he...'
+        id='email'
+        name='email'
+        placeholder='yourname@example.com'
         required />
     </fieldset>
-  </fieldset>
-
-  <fieldset>
-    <label class='required' for='email'>Email</label>
-    <input
-      type='text'
-      id='email'
-      name='email'
-      placeholder='yourname@example.com'
-      required />
   </fieldset>
 
   <fieldset>
