@@ -34,7 +34,7 @@
         <ul>
           <li>I have the right to turn down a commission for any reason, including if I'm just not interested in the idea.</li>
           <li>I can draw either safe or suggestive content.</li>
-          <li>I won't draw genitalia or sexual intercourse.</li>
+          <li>I won't draw explicit sexual content.</li>
           <li>I won't draw underage characters.</li>
         </ul>
       </div>
