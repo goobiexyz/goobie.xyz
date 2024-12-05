@@ -58,14 +58,14 @@
         <NavButton bind:this={b4} icon="video" href="{socialLinks.youtube}" hidden="true">Videos</NavButton>
         <NavButton bind:this={b5} icon="image" href="{socialLinks.newgrounds}" hidden="true">Art</NavButton>
         <NavButton bind:this={b6} icon="music" href="{socialLinks.soundcloud}" hidden="true">Music</NavButton>
-        <NavButton bind:this={b7} icon="design" href="design" hidden="true">Design</NavButton>
+        <NavButton bind:this={b7} icon="design" href="dance" hidden="true">???</NavButton>
         <NavButton bind:this={b8} icon="code" href="{socialLinks.github}" hidden="true">Code</NavButton>
         <NavButton bind:this={b9} icon="comics" href="dance" hidden="true">???</NavButton>
       </NavBGroup>
 
       <NavBGroup bind:this={bgroup0}>
         <NavButton bind:this={b0} on:click={openBGroup1} icon="work">My Stuff</NavButton>
-        <NavButton bind:this={b1} icon="about" href="#about">About Me</NavButton>
+        <NavButton bind:this={b1} icon="comms" href="comms">Art Prices</NavButton>
         <NavButton bind:this={b2} icon="contact" href="contact">Contact</NavButton>
       </NavBGroup>
     </nav>
@@ -87,6 +87,7 @@
 
     height: max-content;
     margin-top: 0;
+    margin-bottom: calc(var(--margin) * 3);
     padding: var(--double-margin) var(--margin);
 
     overflow: hidden;

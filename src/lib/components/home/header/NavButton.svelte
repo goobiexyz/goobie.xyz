@@ -13,6 +13,7 @@
   on:click
   class="nav-button {icon}"
   class:hidden
+  target="_blank"
   {href}>
   <span class="label"><span><slot /></span></span>
 </a>
