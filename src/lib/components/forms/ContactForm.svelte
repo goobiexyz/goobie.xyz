@@ -3,7 +3,7 @@
 </script>
 
 
-<form target='_blank' action='https://formsubmit.co/graciebellart@gmail.com' method='post'>
+<form target='_blank' action='https://formsubmit.co/7089a05da9432cd14cc114e7a8321023' method='post'>
   <label for='subject' style='display:none'>Subject</label>
   <input type='text' id='subject' name='_honey' style='display:none'>
   <input type="hidden" name="_blacklist" value="SEO">
