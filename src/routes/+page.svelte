@@ -41,7 +41,7 @@
       <div class='col-1'>
         <div>
           <Image
-            src='/images/goobie.jpg'
+            src='/images/goobiebunny.jpg'
             style='max-width:13.66rem; border-radius:var(--rounded-2);'
             alt=''>
           </Image>
