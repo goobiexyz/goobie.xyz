@@ -62,26 +62,29 @@
       </div>
       </FlexCols>
   </Dfs.Section>
-  <Dfs.Section heading="What's New?" headingColor="blue">
-    <p>Check out the latest goobie stuff! Click on an item to check it out!</p>
-    <div class="latest-container">
-      <a href="{data.latestArt.link}" target="_blank">
-        <h3>Art</h3>
-        <img src="{data.latestArt.imgSrc}" />
-        <p>{preventOrphan(data.latestArt.title)}</p>
-      </a>
-      <a href="{data.latestVid.link}" target="_blank">
-        <h3>Video</h3>
-        <img src="{data.latestVid.imgSrc}" />
-        <p>{preventOrphan(data.latestVid.title)}</p>
-      </a>
-      <a href="https://on.soundcloud.com/DWswFJCknKSGsRB26" target="_blank">
-        <h3>Music</h3>
-        <img src="/images/daydreamsofabunny.jpg" />
-        <p>Daydreams of a Bunny</p>
-      </a>
-    </div>
-  </Dfs.Section>
+
+  {#if (data.latestArt && data.latestVid) }
+    <Dfs.Section heading="What's New?" headingColor="blue">
+      <p>Check out the latest goobie stuff! Click on an item to check it out!</p>
+      <div class="latest-container">
+        <a href="{data.latestArt.link}" target="_blank">
+          <h3>Art</h3>
+          <img src="{data.latestArt.imgSrc}" />
+          <p>{preventOrphan(data.latestArt.title)}</p>
+        </a>
+        <a href="{data.latestVid.link}" target="_blank">
+          <h3>Video</h3>
+          <img src="{data.latestVid.imgSrc}" />
+          <p>{preventOrphan(data.latestVid.title)}</p>
+        </a>
+        <a href="https://on.soundcloud.com/DWswFJCknKSGsRB26" target="_blank">
+          <h3>Music</h3>
+          <img src="/images/daydreamsofabunny.jpg" />
+          <p>Daydreams of a Bunny</p>
+        </a>
+      </div>
+    </Dfs.Section>
+  {/if}
 </Dfs.Page>
 
 
