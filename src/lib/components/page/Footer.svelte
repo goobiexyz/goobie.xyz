@@ -6,13 +6,14 @@
 
 
 <footer>
+  <IconLink type='etsy' {color} />
   <IconLink type='instagram' {color} />
   <IconLink type='newgrounds' {color} />
   <!-- <IconLink type='deviantart' {color} /> -->
   <!-- <IconLink type='tumblr' {color} /> -->
   <!-- <IconLink type='mastodon' {color} /> -->
   <IconLink type='youtube' {color} />
-  <IconLink type='soundcloud' {color} />
+  <!-- <IconLink type='soundcloud' {color} /> -->
   <!-- <IconLink type='reddit' {color} />
   <IconLink type='letterboxd' {color} />
   <IconLink type='backloggd' {color} />

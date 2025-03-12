@@ -21,7 +21,7 @@
     z-index: 0;
     justify-content: center;
     align-items: center;
-    grid-template-columns: $bgroup-col $bgroup-col $bgroup-col;
+    grid-template-columns: $bgroup-col $bgroup-col  $bgroup-col $bgroup-col;
     grid-column-gap: $bgroup-gap;
     grid-row-gap: $bgroup-gap;
     width: min-content;

@@ -10,18 +10,18 @@
     b0.hide()
     setTimeout(b1.hide, 50)
     setTimeout(b2.hide, 100)
+    setTimeout(b3.hide, 150)
     setTimeout(() => {
       bgroup1.show()
       bgroup0.hide()
       expanded = true
-    }, 200)
-    setTimeout(b3.show, 250)
-    setTimeout(b4.show, 300)
-    setTimeout(b5.show, 350)
-    setTimeout(b6.show, 400)
-    setTimeout(b7.show, 450)
-    setTimeout(b8.show, 500)
-    setTimeout(b9.show, 550)
+    }, 250)
+    setTimeout(b4.show, 350)
+    setTimeout(b5.show, 400)
+    setTimeout(b6.show, 450)
+    setTimeout(b7.show, 500)
+    setTimeout(b8.show, 550)
+    // setTimeout(b9.show, 550)
   }
 
 
@@ -32,7 +32,7 @@
     setTimeout(b6.hide, 150)
     setTimeout(b7.hide, 200)
     setTimeout(b8.hide, 250)
-    setTimeout(b9.hide, 300)
+    // setTimeout(b9.hide, 300)
     setTimeout(() => {
       bgroup1.hide()
       bgroup0.show()
@@ -41,6 +41,7 @@
     setTimeout(b0.show, 450)
     setTimeout(b1.show, 500)
     setTimeout(b2.show, 550)
+    setTimeout(b3.show, 600)
   }
 </script>
 
@@ -54,19 +55,19 @@
 
     <nav>
       <NavBGroup bind:this={bgroup1} hidden="true">
-        <NavButton bind:this={b3} on:click={openBGroup0} icon="back" hidden="true">Back</NavButton>
-        <NavButton bind:this={b4} icon="video" href="{socialLinks.youtube}" target="_blank" hidden="true">Videos</NavButton>
-        <NavButton bind:this={b5} icon="image" href="{socialLinks.newgrounds}" target="_blank" hidden="true">Art</NavButton>
-        <NavButton bind:this={b6} icon="music" href="{socialLinks.soundcloud}" target="_blank" hidden="true">Music</NavButton>
-        <NavButton bind:this={b7} icon="design" href="dance" hidden="true">???</NavButton>
+        <NavButton bind:this={b4} on:click={openBGroup0} icon="back" hidden="true">Back</NavButton>
+        <NavButton bind:this={b5} icon="video" href="{socialLinks.youtube}" target="_blank" hidden="true">Videos</NavButton>
+        <NavButton bind:this={b6} icon="image" href="{socialLinks.newgrounds}" target="_blank" hidden="true">Art</NavButton>
+        <NavButton bind:this={b7} icon="music" href="{socialLinks.soundcloud}" target="_blank" hidden="true">Music</NavButton>
         <NavButton bind:this={b8} icon="code" href="{socialLinks.github}" target="_blank" hidden="true">Code</NavButton>
-        <NavButton bind:this={b9} icon="comics" href="dance" hidden="true">???</NavButton>
+        <!-- <NavButton bind:this={b9} icon="comics" href="dance" hidden="true">???</NavButton> -->
       </NavBGroup>
 
       <NavBGroup bind:this={bgroup0}>
         <NavButton bind:this={b0} on:click={openBGroup1} icon="work">My Stuff</NavButton>
-        <NavButton bind:this={b1} icon="comms" href="comms">Art Prices</NavButton>
-        <NavButton bind:this={b2} icon="contact" href="contact">Contact</NavButton>
+        <NavButton bind:this={b1} icon="store" href="{socialLinks.etsy}">Shop</NavButton>
+        <NavButton bind:this={b2} icon="comms" href="comms">Comms</NavButton>
+        <NavButton bind:this={b3} icon="contact" href="contact">Contact</NavButton>
       </NavBGroup>
     </nav>
   </div>
@@ -114,9 +115,9 @@
     transition: transform 0.25s;
     position: relative;
 
-    &.expanded {
+    /* &.expanded {
       transform: translateY(0px);
-    }
+    } */
   }
 
   .logo {

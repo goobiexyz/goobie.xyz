@@ -78,6 +78,10 @@
     case "backloggd":
     title = "Backloggd"
     location = socialLinks.backloggd
+
+    case "etsy":
+    title = "Etsy Store"
+    location = socialLinks.etsy
   }
 
 </script>

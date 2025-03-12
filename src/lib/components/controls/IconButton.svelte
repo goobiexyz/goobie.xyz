@@ -104,6 +104,10 @@
       mask-image: url('/images/icons/b_backloggd.svg');
       -webkit-mask-image: url('/images/icons/b_backloggd.svg');
     }
+    &.etsy {
+      mask-image: url('/images/icons/b_etsy.svg');
+      -webkit-mask-image: url('/images/icons/b_etsy.svg');
+    }
     &.close {
       mask-image: url('/images/icons/b_close.svg');
       -webkit-mask-image: url('/images/icons/b_close.svg');

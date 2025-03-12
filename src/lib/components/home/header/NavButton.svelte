@@ -120,6 +120,9 @@
     &.comics {
       background-image: url("/images/icons/b_book.svg");
     }
+    &.store {
+      background-image: url("/images/icons/b_shirt.svg");
+    }
     &.close {
       background-image: url("/images/icons/b_close.svg");
       border: none;
