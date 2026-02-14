@@ -10,6 +10,8 @@
   import SpacedDiv from '$lib/components/layout/SpacedDiv.svelte'
   import Button from '$lib/components/controls/Button.svelte'
   import Card from '$lib/components/containers/Card.svelte'
+  import socialLinks from '$lib/social-links.json'
+
 
   let mediaModal
   function openModal(event) {
@@ -67,7 +69,7 @@
     <Dfs.Section heading="What's New?" headingColor="blue">
       <p>Check out the latest goobie stuff! Click on an item to check it out!</p>
       <div class="latest-container">
-        <a href="{data.latestArt.link}" target="_blank">
+        <a href="{socialLinks.newgrounds}" target="_blank">
           <h3>Art</h3>
           <img src="{data.latestArt.imgSrc}" />
           <p>{preventOrphan(data.latestArt.title)}</p>
