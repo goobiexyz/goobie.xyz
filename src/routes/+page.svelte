@@ -69,7 +69,7 @@
     <Dfs.Section heading="What's New?" headingColor="blue">
       <p>Check out the latest goobie stuff! Click on an item to check it out!</p>
       <div class="latest-container">
-        <a href="{socialLinks.newgrounds}" target="_blank">
+        <a href="{socialLinks.newgrounds}art" target="_blank">
           <h3>Art</h3>
           <img src="{data.latestArt.imgSrc}" />
           <p>{preventOrphan(data.latestArt.title)}</p>
