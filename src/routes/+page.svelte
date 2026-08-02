@@ -52,13 +52,13 @@
       <div class='col-2'>
         <SpacedDiv>
           <p>
-            Goobie is me! I like to call myself a multimedia artist because I like to experiment with lots of different kinds of art and media.
+            Goobie is me! I refer to myself as a multimedia artist because I like to experiment with many different types of art and media, from music to visual arts, dumb videos, and more.
           </p>
           <p>
-            When I'm not creating things, I love to watch and collect movies, play video games, or go out riding on my Onewheel. I also help run the group <a href="https://linktr.ee/fountaincityfurs" target="_blank">Fountain City Furs</a>, which organizes fursuiting events for the KC area.
+            When I'm not creating things, I love to watch and collect movies or play video games. My favorite movie is E.T., and my favorite games are Link to the Past, Hitman WOA, and TF2.
           </p>
           <p>
-            Click "My Stuff" if you want to see the stuff I make, or scroll all the way down to see my socials!
+            Interested in seeing my work? Click "My Stuff" at the top and check out all the stuff I've made, or scroll down to see my socials.
           </p>
         </SpacedDiv>
       </div>
@@ -67,7 +67,7 @@
 
   {#if (data.latestArt && data.latestVid) }
     <Dfs.Section heading="What's New?" headingColor="blue">
-      <p>Check out the latest goobie stuff! Click on an item to check it out!</p>
+      <p>Check out the latest stuff I've made! Click on an item to check it out!</p>
       <div class="latest-container">
         <a href="{socialLinks.newgrounds}art" target="_blank">
           <h3>Art</h3>
